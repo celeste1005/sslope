@@ -1,0 +1,678 @@
+{
+  "method": "Round observed targets and both model predictions to the same grid before computing window MAE; paired bootstrap by source date, 20,000 draws.",
+  "roundingStepsMm": [
+    1e-05,
+    2e-05,
+    5e-05,
+    0.0001
+  ],
+  "interpretation": "Positive LSTM-minus-hybrid differences favor the hybrid. Rounding is a sensitivity analysis of stored outputs, not a rerun of the FEM solver or a field-instrument precision study.",
+  "bySplit": {
+    "primary": {
+      "1": {
+        "in-sample": {
+          "nWindows": 1350,
+          "nDates": 75,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 8e-06,
+                "hybrid": 7.592592592592597e-06
+              },
+              "pairedDateDifferenceMeanMm": 4.0740740740740187e-07,
+              "pairedDateBootstrap95Mm": [
+                -2.222222222222222e-07,
+                1.466851851851819e-06
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 8.666666666666666e-06,
+                "hybrid": 8.192592592592596e-06
+              },
+              "pairedDateDifferenceMeanMm": 4.740740740740687e-07,
+              "pairedDateBootstrap95Mm": [
+                -2.2222222222222232e-07,
+                1.5703703703703543e-06
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 7.518518518518514e-06,
+                "hybrid": 7.33333333333333e-06
+              },
+              "pairedDateDifferenceMeanMm": 1.8518518518518516e-07,
+              "pairedDateBootstrap95Mm": [
+                -3.7037037037037005e-07,
+                9.62962962962962e-07
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 8.81481481481481e-06,
+                "hybrid": 8.296296296296294e-06
+              },
+              "pairedDateDifferenceMeanMm": 5.185185185185179e-07,
+              "pairedDateBootstrap95Mm": [
+                -2.2222222222222206e-07,
+                1.7777777777777756e-06
+              ],
+              "hybridLowerWindowMae": true
+            }
+          }
+        },
+        "oof": {
+          "nWindows": 1350,
+          "nDates": 75,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 8e-06,
+                "hybrid": 4.466666666666665e-06
+              },
+              "pairedDateDifferenceMeanMm": 3.533333333333335e-06,
+              "pairedDateBootstrap95Mm": [
+                -2.3407407407407386e-06,
+                1.4259444444444431e-05
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 8.666666666666666e-06,
+                "hybrid": 4.607407407407407e-06
+              },
+              "pairedDateDifferenceMeanMm": 4.059259259259257e-06,
+              "pairedDateBootstrap95Mm": [
+                -1.8518518518518508e-06,
+                1.478518518518518e-05
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 7.518518518518514e-06,
+                "hybrid": 3.3333333333333325e-06
+              },
+              "pairedDateDifferenceMeanMm": 4.185185185185181e-06,
+              "pairedDateBootstrap95Mm": [
+                -1.555555555555556e-06,
+                1.4703703703703693e-05
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 8.81481481481481e-06,
+                "hybrid": 4.666666666666666e-06
+              },
+              "pairedDateDifferenceMeanMm": 4.148148148148144e-06,
+              "pairedDateBootstrap95Mm": [
+                -1.4074074074074073e-06,
+                1.4592592592592583e-05
+              ],
+              "hybridLowerWindowMae": true
+            }
+          }
+        }
+      },
+      "6": {
+        "in-sample": {
+          "nWindows": 975,
+          "nDates": 75,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 6.304615384615384e-05,
+                "hybrid": 6.146666666666667e-05
+              },
+              "pairedDateDifferenceMeanMm": 1.5794871794871888e-06,
+              "pairedDateBootstrap95Mm": [
+                -6.871794871794873e-07,
+                5.456410256410282e-06
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 6.330256410256411e-05,
+                "hybrid": 6.151794871794872e-05
+              },
+              "pairedDateDifferenceMeanMm": 1.7846153846153702e-06,
+              "pairedDateBootstrap95Mm": [
+                -5.128205128205112e-07,
+                5.641538461538371e-06
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 6.210256410256411e-05,
+                "hybrid": 6.0358974358974364e-05
+              },
+              "pairedDateDifferenceMeanMm": 1.7435897435897635e-06,
+              "pairedDateBootstrap95Mm": [
+                -6.153846153846155e-07,
+                5.538461538461598e-06
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 6.276923076923077e-05,
+                "hybrid": 6.153846153846154e-05
+              },
+              "pairedDateDifferenceMeanMm": 1.230769230769233e-06,
+              "pairedDateBootstrap95Mm": [
+                -1.4358974358974363e-06,
+                5.2307692307692376e-06
+              ],
+              "hybridLowerWindowMae": true
+            }
+          }
+        },
+        "oof": {
+          "nWindows": 975,
+          "nDates": 75,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 6.304615384615384e-05,
+                "hybrid": 6.253333333333334e-05
+              },
+              "pairedDateDifferenceMeanMm": 5.128205128205215e-07,
+              "pairedDateBootstrap95Mm": [
+                -4.410256410256409e-06,
+                8.984615384615406e-06
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 6.330256410256411e-05,
+                "hybrid": 6.28923076923077e-05
+              },
+              "pairedDateDifferenceMeanMm": 4.1025641025639795e-07,
+              "pairedDateBootstrap95Mm": [
+                -4.635897435897438e-06,
+                9.08717948717945e-06
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 6.210256410256411e-05,
+                "hybrid": 6.071794871794871e-05
+              },
+              "pairedDateDifferenceMeanMm": 1.384615384615397e-06,
+              "pairedDateBootstrap95Mm": [
+                -3.5897435897435896e-06,
+                9.794871794871832e-06
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 6.276923076923077e-05,
+                "hybrid": 6.020512820512819e-05
+              },
+              "pairedDateDifferenceMeanMm": 2.564102564102563e-06,
+              "pairedDateBootstrap95Mm": [
+                -2.8717948717948717e-06,
+                1.1794871794871791e-05
+              ],
+              "hybridLowerWindowMae": true
+            }
+          }
+        }
+      }
+    },
+    "backtest-2024": {
+      "1": {
+        "in-sample": {
+          "nWindows": 1476,
+          "nDates": 82,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 3.976964769647696e-06,
+                "hybrid": 4.078590785907859e-06
+              },
+              "pairedDateDifferenceMeanMm": -1.0162601626016271e-07,
+              "pairedDateBootstrap95Mm": [
+                -2.77777777777778e-07,
+                2.032520325203258e-08
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 4.092140921409217e-06,
+                "hybrid": 4.092140921409217e-06
+              },
+              "pairedDateDifferenceMeanMm": -3.098901026540123e-22,
+              "pairedDateBootstrap95Mm": [
+                -2.574525745257455e-07,
+                2.303523035230351e-07
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 3.7601626016260177e-06,
+                "hybrid": 3.86178861788618e-06
+              },
+              "pairedDateDifferenceMeanMm": -1.016260162601626e-07,
+              "pairedDateBootstrap95Mm": [
+                -3.3875338753387533e-07,
+                6.775067750677505e-08
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 3.5230352303523027e-06,
+                "hybrid": 3.8617886178861774e-06
+              },
+              "pairedDateDifferenceMeanMm": -3.3875338753387533e-07,
+              "pairedDateBootstrap95Mm": [
+                -1.3550135501355013e-06,
+                3.3875338753387543e-07
+              ],
+              "hybridLowerWindowMae": false
+            }
+          }
+        },
+        "oof": {
+          "nWindows": 1476,
+          "nDates": 82,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 3.976964769647696e-06,
+                "hybrid": 5.37940379403794e-06
+              },
+              "pairedDateDifferenceMeanMm": -1.4024390243902435e-06,
+              "pairedDateBootstrap95Mm": [
+                -4.092140921409213e-06,
+                2.344173441734418e-06
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 4.092140921409217e-06,
+                "hybrid": 5.298102981029809e-06
+              },
+              "pairedDateDifferenceMeanMm": -1.2059620596205923e-06,
+              "pairedDateBootstrap95Mm": [
+                -3.807588075880758e-06,
+                2.4661246612466234e-06
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 3.7601626016260177e-06,
+                "hybrid": 4.640921409214091e-06
+              },
+              "pairedDateDifferenceMeanMm": -8.807588075880736e-07,
+              "pairedDateBootstrap95Mm": [
+                -3.4552845528455287e-06,
+                2.710027100271009e-06
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 3.5230352303523027e-06,
+                "hybrid": 4.132791327913278e-06
+              },
+              "pairedDateDifferenceMeanMm": -6.097560975609752e-07,
+              "pairedDateBootstrap95Mm": [
+                -3.3875338753387534e-06,
+                2.9810298102981055e-06
+              ],
+              "hybridLowerWindowMae": false
+            }
+          }
+        }
+      },
+      "6": {
+        "in-sample": {
+          "nWindows": 1066,
+          "nDates": 82,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 2.906191369606004e-05,
+                "hybrid": 2.968105065666042e-05
+              },
+              "pairedDateDifferenceMeanMm": -6.191369606003736e-07,
+              "pairedDateBootstrap95Mm": [
+                -1.2664165103189499e-06,
+                2.814258911820007e-08
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 2.8611632270168863e-05,
+                "hybrid": 2.9043151969981243e-05
+              },
+              "pairedDateDifferenceMeanMm": -4.315196998123828e-07,
+              "pairedDateBootstrap95Mm": [
+                -1.313320825515949e-06,
+                4.878048780487784e-07
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 2.8283302063789868e-05,
+                "hybrid": 2.8517823639774857e-05
+              },
+              "pairedDateDifferenceMeanMm": -2.3452157598499e-07,
+              "pairedDateBootstrap95Mm": [
+                -7.973733583489688e-07,
+                3.7523452157598425e-07
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 2.74859287054409e-05,
+                "hybrid": 2.7392120075046905e-05
+              },
+              "pairedDateDifferenceMeanMm": 9.3808630393996e-08,
+              "pairedDateBootstrap95Mm": [
+                -7.504690431519706e-07,
+                1.1257035647279548e-06
+              ],
+              "hybridLowerWindowMae": true
+            }
+          }
+        },
+        "oof": {
+          "nWindows": 1066,
+          "nDates": 82,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 2.906191369606004e-05,
+                "hybrid": 3.434333958724203e-05
+              },
+              "pairedDateDifferenceMeanMm": -5.281425891181989e-06,
+              "pairedDateBootstrap95Mm": [
+                -9.54971857410882e-06,
+                -1.2005159474671867e-06
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 2.8611632270168863e-05,
+                "hybrid": 3.448405253283303e-05
+              },
+              "pairedDateDifferenceMeanMm": -5.8724202626641635e-06,
+              "pairedDateBootstrap95Mm": [
+                -1.0150093808630393e-05,
+                -1.5572232645403363e-06
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 2.8283302063789868e-05,
+                "hybrid": 3.4521575984990616e-05
+              },
+              "pairedDateDifferenceMeanMm": -6.238273921200754e-06,
+              "pairedDateBootstrap95Mm": [
+                -1.0928705440900566e-05,
+                -1.782363977485935e-06
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 2.74859287054409e-05,
+                "hybrid": 3.208255159474672e-05
+              },
+              "pairedDateDifferenceMeanMm": -4.596622889305817e-06,
+              "pairedDateBootstrap95Mm": [
+                -9.756097560975611e-06,
+                1.8761726078799258e-07
+              ],
+              "hybridLowerWindowMae": false
+            }
+          }
+        }
+      }
+    },
+    "chronological": {
+      "1": {
+        "in-sample": {
+          "nWindows": 1404,
+          "nDates": 76,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 5.078347578347578e-06,
+                "hybrid": 4.772079772079772e-06
+              },
+              "pairedDateDifferenceMeanMm": 3.143274853801163e-07,
+              "pairedDateBootstrap95Mm": [
+                -2.0486111111111267e-07,
+                8.845029239766076e-07
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 5.740740740740739e-06,
+                "hybrid": 5.783475783475782e-06
+              },
+              "pairedDateDifferenceMeanMm": -4.3859649122807185e-08,
+              "pairedDateBootstrap95Mm": [
+                -7.163742690058476e-07,
+                5.994152046783625e-07
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 4.4871794871794895e-06,
+                "hybrid": 4.2735042735042755e-06
+              },
+              "pairedDateDifferenceMeanMm": 2.1929824561403475e-07,
+              "pairedDateBootstrap95Mm": [
+                -3.6549707602339163e-07,
+                8.406432748538003e-07
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 4.62962962962963e-06,
+                "hybrid": 4.344729344729346e-06
+              },
+              "pairedDateDifferenceMeanMm": 2.923976608187129e-07,
+              "pairedDateBootstrap95Mm": [
+                -5.84795321637427e-07,
+                1.3888888888888898e-06
+              ],
+              "hybridLowerWindowMae": true
+            }
+          }
+        },
+        "oof": {
+          "nWindows": 1404,
+          "nDates": 76,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 5.078347578347578e-06,
+                "hybrid": 7.97008547008547e-06
+              },
+              "pairedDateDifferenceMeanMm": -2.850877192982458e-06,
+              "pairedDateBootstrap95Mm": [
+                -4.064327485380117e-06,
+                -1.692160087719308e-06
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 5.740740740740739e-06,
+                "hybrid": 8.390313390313392e-06
+              },
+              "pairedDateDifferenceMeanMm": -2.616959064327487e-06,
+              "pairedDateBootstrap95Mm": [
+                -3.845029239766083e-06,
+                -1.4473684210526327e-06
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 4.4871794871794895e-06,
+                "hybrid": 6.125356125356126e-06
+              },
+              "pairedDateDifferenceMeanMm": -1.6812865497076021e-06,
+              "pairedDateBootstrap95Mm": [
+                -2.8874269005847965e-06,
+                -4.751461988304097e-07
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 4.62962962962963e-06,
+                "hybrid": 7.336182336182338e-06
+              },
+              "pairedDateDifferenceMeanMm": -2.777777777777778e-06,
+              "pairedDateBootstrap95Mm": [
+                -4.239766081871345e-06,
+                -1.4619883040935671e-06
+              ],
+              "hybridLowerWindowMae": false
+            }
+          }
+        }
+      },
+      "6": {
+        "in-sample": {
+          "nWindows": 1014,
+          "nDates": 76,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 5.747534516765286e-05,
+                "hybrid": 5.490138067061145e-05
+              },
+              "pairedDateDifferenceMeanMm": 2.667004048582994e-06,
+              "pairedDateBootstrap95Mm": [
+                -5.060728744939269e-07,
+                6.391700404858299e-06
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 5.7909270216962525e-05,
+                "hybrid": 5.524654832347141e-05
+              },
+              "pairedDateDifferenceMeanMm": 2.7024291497975725e-06,
+              "pairedDateBootstrap95Mm": [
+                -6.477732793522285e-07,
+                6.568825910931174e-06
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 5.714990138067061e-05,
+                "hybrid": 5.424063116370809e-05
+              },
+              "pairedDateDifferenceMeanMm": 3.0870445344129584e-06,
+              "pairedDateBootstrap95Mm": [
+                -2.024291497975718e-07,
+                6.933198380566805e-06
+              ],
+              "hybridLowerWindowMae": true
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 5.749506903353058e-05,
+                "hybrid": 5.6311637080867854e-05
+              },
+              "pairedDateDifferenceMeanMm": 1.2145748987854289e-06,
+              "pairedDateBootstrap95Mm": [
+                -3.74493927125506e-06,
+                6.477732793522275e-06
+              ],
+              "hybridLowerWindowMae": true
+            }
+          }
+        },
+        "oof": {
+          "nWindows": 1014,
+          "nDates": 76,
+          "byStepMm": {
+            "1e-05": {
+              "windowMaeMm": {
+                "lstm": 5.747534516765286e-05,
+                "hybrid": 7.627218934911244e-05
+              },
+              "pairedDateDifferenceMeanMm": -1.8324898785425096e-05,
+              "pairedDateBootstrap95Mm": [
+                -2.681186740890689e-05,
+                -1.007578441295547e-05
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "2e-05": {
+              "windowMaeMm": {
+                "lstm": 5.7909270216962525e-05,
+                "hybrid": 7.696252465483236e-05
+              },
+              "pairedDateDifferenceMeanMm": -1.858299595141701e-05,
+              "pairedDateBootstrap95Mm": [
+                -2.72165991902834e-05,
+                -1.0353997975708517e-05
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "5e-05": {
+              "windowMaeMm": {
+                "lstm": 5.714990138067061e-05,
+                "hybrid": 7.682445759368837e-05
+              },
+              "pairedDateDifferenceMeanMm": -1.9129554655870443e-05,
+              "pairedDateBootstrap95Mm": [
+                -2.7505060728744934e-05,
+                -1.0905870445344128e-05
+              ],
+              "hybridLowerWindowMae": false
+            },
+            "1e-04": {
+              "windowMaeMm": {
+                "lstm": 5.749506903353058e-05,
+                "hybrid": 8.057199211045366e-05
+              },
+              "pairedDateDifferenceMeanMm": -2.2267206477732795e-05,
+              "pairedDateBootstrap95Mm": [
+                -3.2894736842105256e-05,
+                -1.1689018218623585e-05
+              ],
+              "hybridLowerWindowMae": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

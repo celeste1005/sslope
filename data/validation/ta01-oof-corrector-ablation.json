@@ -1,0 +1,138 @@
+{
+  "method": "Exploratory architecture ablation on the primary date-grouped split. The final LSTM, folds, windows, corrector hidden width (16), training targets, common nondecreasing-displacement floor and seeds are matched; only the residual corrector parameterization is changed. The paired two-stage bootstrap resamples the same date indices across all selected seeds within each of 20,000 draws.",
+  "scope": "One final LSTM initialization per horizon, three matched OOF fold/corrector seed pairs, and synthetic data only. Free mode has no hard monotonic guarantee; ablation does not establish field validity.",
+  "byHorizon": {
+    "1": {
+      "nSeeds": 3,
+      "nWindowsPerSeed": 1350,
+      "nRainfallDatesPerSeed": 75,
+      "metricDefinition": "Window-weighted MAE on raw corrector outputs before the common nondecreasing-displacement floor; positive free-minus-monotonic values favor the monotonic corrector.",
+      "runs": [
+        {
+          "foldSeed": 20261029,
+          "correctorSeed": 20261030,
+          "nWindows": 1350,
+          "nDates": 75,
+          "monotonicMaeMm": 7.07e-06,
+          "freeMaeMm": 1.08e-05,
+          "rawMaeDifferenceFreeMinusMonotonicMm": 3.7295925925925928e-06,
+          "flooredMaeDifferenceFreeMinusMonotonicMm": 4.289977777777776e-06,
+          "freeRainSensitivityViolations": 0,
+          "freeSafetySensitivityViolations": 252
+        },
+        {
+          "foldSeed": 20261031,
+          "correctorSeed": 20261031,
+          "nWindows": 1350,
+          "nDates": 75,
+          "monotonicMaeMm": 9.18e-06,
+          "freeMaeMm": 1.082e-05,
+          "rawMaeDifferenceFreeMinusMonotonicMm": 1.6440296296296257e-06,
+          "flooredMaeDifferenceFreeMinusMonotonicMm": 2.9885185185185e-07,
+          "freeRainSensitivityViolations": 0,
+          "freeSafetySensitivityViolations": 512
+        },
+        {
+          "foldSeed": 20261032,
+          "correctorSeed": 20261032,
+          "nWindows": 1350,
+          "nDates": 75,
+          "monotonicMaeMm": 8.72e-06,
+          "freeMaeMm": 9.02e-06,
+          "rawMaeDifferenceFreeMinusMonotonicMm": 3.0011851851852386e-07,
+          "flooredMaeDifferenceFreeMinusMonotonicMm": 5.212222222222268e-07,
+          "freeRainSensitivityViolations": 1301,
+          "freeSafetySensitivityViolations": 670
+        }
+      ],
+      "meanRawMaeDifferenceFreeMinusMonotonicMm": 1.8912469135802472e-06,
+      "pairedTwoStageRawBootstrap95Mm": [
+        -3.7673111111110967e-07,
+        6.450443333333324e-06
+      ],
+      "meanFlooredMaeDifferenceFreeMinusMonotonicMm": 1.703350617283951e-06,
+      "pairedTwoStageFlooredBootstrap95Mm": [
+        -5.570313580246949e-07,
+        6.567773333333306e-06
+      ],
+      "freeMonotonicityViolationCounts": {
+        "rain": [
+          0,
+          0,
+          1301
+        ],
+        "safety": [
+          252,
+          512,
+          670
+        ]
+      }
+    },
+    "6": {
+      "nSeeds": 3,
+      "nWindowsPerSeed": 975,
+      "nRainfallDatesPerSeed": 75,
+      "metricDefinition": "Window-weighted MAE on raw corrector outputs before the common nondecreasing-displacement floor; positive free-minus-monotonic values favor the monotonic corrector.",
+      "runs": [
+        {
+          "foldSeed": 20261029,
+          "correctorSeed": 20261030,
+          "nWindows": 975,
+          "nDates": 75,
+          "monotonicMaeMm": 6.768e-05,
+          "freeMaeMm": 7.345e-05,
+          "rawMaeDifferenceFreeMinusMonotonicMm": 5.766512820512828e-06,
+          "flooredMaeDifferenceFreeMinusMonotonicMm": 6.650256410256416e-06,
+          "freeRainSensitivityViolations": 975,
+          "freeSafetySensitivityViolations": 958
+        },
+        {
+          "foldSeed": 20261031,
+          "correctorSeed": 20261031,
+          "nWindows": 975,
+          "nDates": 75,
+          "monotonicMaeMm": 7.129e-05,
+          "freeMaeMm": 8.362e-05,
+          "rawMaeDifferenceFreeMinusMonotonicMm": 1.2326923076923079e-05,
+          "flooredMaeDifferenceFreeMinusMonotonicMm": 7.723343589743593e-06,
+          "freeRainSensitivityViolations": 3,
+          "freeSafetySensitivityViolations": 627
+        },
+        {
+          "foldSeed": 20261032,
+          "correctorSeed": 20261032,
+          "nWindows": 975,
+          "nDates": 75,
+          "monotonicMaeMm": 6.771e-05,
+          "freeMaeMm": 7.102e-05,
+          "rawMaeDifferenceFreeMinusMonotonicMm": 3.3104205128205204e-06,
+          "flooredMaeDifferenceFreeMinusMonotonicMm": 3.925384615384621e-06,
+          "freeRainSensitivityViolations": 820,
+          "freeSafetySensitivityViolations": 602
+        }
+      ],
+      "meanRawMaeDifferenceFreeMinusMonotonicMm": 7.13461880341881e-06,
+      "pairedTwoStageRawBootstrap95Mm": [
+        -5.918030769230654e-07,
+        1.9856370170940166e-05
+      ],
+      "meanFlooredMaeDifferenceFreeMinusMonotonicMm": 6.0996615384615434e-06,
+      "pairedTwoStageFlooredBootstrap95Mm": [
+        -2.9190468376068253e-06,
+        1.6816290940170928e-05
+      ],
+      "freeMonotonicityViolationCounts": {
+        "rain": [
+          975,
+          3,
+          820
+        ],
+        "safety": [
+          958,
+          627,
+          602
+        ]
+      }
+    }
+  }
+}

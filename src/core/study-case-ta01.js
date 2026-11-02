@@ -167,15 +167,17 @@ export function generateTa01Dataset(rainfallDataset, input = {}) {
   const seed = Number(input.seed ?? 20260915);
   const meshX = Number(input.meshX ?? 14);
   const meshY = Number(input.meshY ?? 9);
+  const solverTolerance = Number(input.solverTolerance ?? 1e-8);
   if (!Number.isInteger(scenarioCount) || scenarioCount < 1 || scenarioCount > 2000) throw new Error("scenarioCount debe ser un entero entre 1 y 2000");
   if (!Number.isInteger(seed) || seed < 0) throw new Error("seed debe ser un entero no negativo");
+  if (!Number.isFinite(solverTolerance) || solverTolerance <= 0 || solverTolerance >= 1) throw new Error("solverTolerance debe estar entre 0 y 1");
   const dimensions = [...Object.keys(TA01_PARAMETER_RANGES), "rainfall"];
   const samples = latinHypercube(scenarioCount, dimensions, seed);
   const rows = [];
   const scenarios = [];
   for (let index = 0; index < scenarioCount; index++) {
     const design = designScenario(samples[index], index, rainfallDataset, { meshX, meshY, scenarioCount });
-    const result = runFem2D(design.scenario, design.profile);
+    const result = runFem2D(design.scenario, design.profile, { tolerance: solverTolerance });
     const temporalProfile = `RECTANGULAR_${design.concentrationHours}H_ESTIMATED`;
     for (const step of result.timeSeries) {
       rows.push({
@@ -233,6 +235,7 @@ export function generateTa01Dataset(rainfallDataset, input = {}) {
       rowCount: rows.length,
       hoursPerScenario: 24,
       seed,
+      solverRelativeTolerance: solverTolerance,
       samplingMethod: "LATIN_HYPERCUBE",
       parameterRanges: TA01_PARAMETER_RANGES,
       splitRule: "Separar entrenamiento, validación y prueba por fecha de lluvia; ningún scenario_id ni sourceDate puede cruzar particiones.",

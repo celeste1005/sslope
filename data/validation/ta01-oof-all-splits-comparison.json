@@ -1,0 +1,217 @@
+{
+  "method": "Paired bootstrap by test rainfall date, 20,000 draws per comparison, seed 20261031.",
+  "deltaSign": "Positive means the first model has higher MAE than the second model.",
+  "scope": "Exploratory single-seed OOF corrector evaluation across primary and chronological holdouts.",
+  "splits": {
+    "": {
+      "1": {
+        "nWindows": 1350,
+        "nRainfallDates": 75,
+        "maeMm": {
+          "lstm": 8.57685925925926e-06,
+          "oofHybrid": 4.8570444444444485e-06,
+          "inSampleHybrid": 7.979474074074067e-06
+        },
+        "meanDateMaeMm": {
+          "lstm": 8.576859259259264e-06,
+          "oofHybrid": 4.857044444444449e-06,
+          "inSampleHybrid": 7.979474074074069e-06
+        },
+        "pairedDifferencesMm": {
+          "LSTM_minus_OOF_hybrid": {
+            "mean": 3.7198148148148115e-06,
+            "bootstrap95": [
+              -2.10522240740741e-06,
+              1.445366629629629e-05
+            ],
+            "datesWhereFirstModelHasHigherMae": 38,
+            "datesWhereSecondModelHasHigherOrEqualMae": 37
+          },
+          "in_sample_hybrid_minus_OOF_hybrid": {
+            "mean": 3.1224296296296197e-06,
+            "bootstrap95": [
+              -2.2215081481481488e-06,
+              1.287824481481478e-05
+            ],
+            "datesWhereFirstModelHasHigherMae": 30,
+            "datesWhereSecondModelHasHigherOrEqualMae": 45
+          }
+        }
+      },
+      "6": {
+        "nWindows": 975,
+        "nRainfallDates": 75,
+        "maeMm": {
+          "lstm": 6.332481025641026e-05,
+          "oofHybrid": 6.267695384615384e-05,
+          "inSampleHybrid": 6.176289230769232e-05
+        },
+        "meanDateMaeMm": {
+          "lstm": 6.332481025641026e-05,
+          "oofHybrid": 6.267695384615384e-05,
+          "inSampleHybrid": 6.176289230769233e-05
+        },
+        "pairedDifferencesMm": {
+          "LSTM_minus_OOF_hybrid": {
+            "mean": 6.478564102564181e-07,
+            "bootstrap95": [
+              -4.269974102564102e-06,
+              9.212854615384634e-06
+            ],
+            "datesWhereFirstModelHasHigherMae": 11,
+            "datesWhereSecondModelHasHigherOrEqualMae": 64
+          },
+          "in_sample_hybrid_minus_OOF_hybrid": {
+            "mean": -9.140615384615255e-07,
+            "bootstrap95": [
+              -4.303386410256405e-06,
+              4.156994871794905e-06
+            ],
+            "datesWhereFirstModelHasHigherMae": 17,
+            "datesWhereSecondModelHasHigherOrEqualMae": 58
+          }
+        }
+      }
+    },
+    "backtest-2024": {
+      "1": {
+        "nWindows": 1476,
+        "nRainfallDates": 82,
+        "maeMm": {
+          "lstm": 4.349180216802168e-06,
+          "oofHybrid": 5.534647696476966e-06,
+          "inSampleHybrid": 4.402113821138211e-06
+        },
+        "meanDateMaeMm": {
+          "lstm": 4.349180216802169e-06,
+          "oofHybrid": 5.534647696476966e-06,
+          "inSampleHybrid": 4.40211382113821e-06
+        },
+        "pairedDifferencesMm": {
+          "LSTM_minus_OOF_hybrid": {
+            "mean": -1.1854674796747975e-06,
+            "bootstrap95": [
+              -3.838367378048781e-06,
+              2.538726287262868e-06
+            ],
+            "datesWhereFirstModelHasHigherMae": 23,
+            "datesWhereSecondModelHasHigherOrEqualMae": 59
+          },
+          "in_sample_hybrid_minus_OOF_hybrid": {
+            "mean": -1.1325338753387544e-06,
+            "bootstrap95": [
+              -3.7630880758807585e-06,
+              2.5541187330623246e-06
+            ],
+            "datesWhereFirstModelHasHigherMae": 22,
+            "datesWhereSecondModelHasHigherOrEqualMae": 60
+          }
+        }
+      },
+      "6": {
+        "nWindows": 1066,
+        "nRainfallDates": 82,
+        "maeMm": {
+          "lstm": 2.9094709193245775e-05,
+          "oofHybrid": 3.427814258911819e-05,
+          "inSampleHybrid": 2.963567542213884e-05
+        },
+        "meanDateMaeMm": {
+          "lstm": 2.909470919324578e-05,
+          "oofHybrid": 3.427814258911819e-05,
+          "inSampleHybrid": 2.9635675422138842e-05
+        },
+        "pairedDifferencesMm": {
+          "LSTM_minus_OOF_hybrid": {
+            "mean": -5.183433395872422e-06,
+            "bootstrap95": [
+              -9.377467636022516e-06,
+              -1.0387633677298397e-06
+            ],
+            "datesWhereFirstModelHasHigherMae": 24,
+            "datesWhereSecondModelHasHigherOrEqualMae": 58
+          },
+          "in_sample_hybrid_minus_OOF_hybrid": {
+            "mean": -4.642467166979364e-06,
+            "bootstrap95": [
+              -8.970623123827394e-06,
+              -4.2702908067542463e-07
+            ],
+            "datesWhereFirstModelHasHigherMae": 26,
+            "datesWhereSecondModelHasHigherOrEqualMae": 56
+          }
+        }
+      }
+    },
+    "chronological": {
+      "1": {
+        "nWindows": 1404,
+        "nRainfallDates": 76,
+        "maeMm": {
+          "lstm": 5.398504273504273e-06,
+          "oofHybrid": 8.167037037037037e-06,
+          "inSampleHybrid": 5.193354700854701e-06
+        },
+        "meanDateMaeMm": {
+          "lstm": 5.522796052631579e-06,
+          "oofHybrid": 8.264269005847951e-06,
+          "inSampleHybrid": 5.324641812865498e-06
+        },
+        "pairedDifferencesMm": {
+          "LSTM_minus_OOF_hybrid": {
+            "mean": -2.7414729532163737e-06,
+            "bootstrap95": [
+              -3.892744060672514e-06,
+              -1.6529276315789477e-06
+            ],
+            "datesWhereFirstModelHasHigherMae": 19,
+            "datesWhereSecondModelHasHigherOrEqualMae": 57
+          },
+          "in_sample_hybrid_minus_OOF_hybrid": {
+            "mean": -2.9396271929824546e-06,
+            "bootstrap95": [
+              -4.296129203216374e-06,
+              -1.6334928728070181e-06
+            ],
+            "datesWhereFirstModelHasHigherMae": 21,
+            "datesWhereSecondModelHasHigherOrEqualMae": 55
+          }
+        }
+      },
+      "6": {
+        "nWindows": 1014,
+        "nRainfallDates": 76,
+        "maeMm": {
+          "lstm": 5.768706114398422e-05,
+          "oofHybrid": 7.618615384615385e-05,
+          "inSampleHybrid": 5.502379684418146e-05
+        },
+        "meanDateMaeMm": {
+          "lstm": 5.891854757085021e-05,
+          "oofHybrid": 7.69477935222672e-05,
+          "inSampleHybrid": 5.61746052631579e-05
+        },
+        "pairedDifferencesMm": {
+          "LSTM_minus_OOF_hybrid": {
+            "mean": -1.8029245951417e-05,
+            "bootstrap95": [
+              -2.6641445344129542e-05,
+              -9.634534412955483e-06
+            ],
+            "datesWhereFirstModelHasHigherMae": 22,
+            "datesWhereSecondModelHasHigherOrEqualMae": 54
+          },
+          "in_sample_hybrid_minus_OOF_hybrid": {
+            "mean": -2.0773188259109313e-05,
+            "bootstrap95": [
+              -3.0628472165991905e-05,
+              -1.1990311234817817e-05
+            ],
+            "datesWhereFirstModelHasHigherMae": 18,
+            "datesWhereSecondModelHasHigherOrEqualMae": 58
+          }
+        }
+      }
+    }
+  }
+}

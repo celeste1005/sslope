@@ -1,0 +1,288 @@
+{
+  "method": "Exploratory OOF stratification by the stored future target being exactly zero or positive; MAE is window-weighted within each regime. Paired uncertainty resamples rainfall dates (20,000 draws per regime; deterministic seeds by horizon and split). Target values were stored after FEM output quantization.",
+  "interpretation": "A stored zero is not evidence of no physical displacement below the FEM/output resolution. These descriptive strata do not define operational events or a pre-specified hypothesis.",
+  "bySplit": {
+    "primary": {
+      "1": {
+        "nWindows": 1350,
+        "nRainfallDates": 75,
+        "storedTarget": {
+          "zeroCount": 832,
+          "zeroShare": 0.6162962962962963,
+          "positiveCount": 518,
+          "positiveShare": 0.3837037037037037,
+          "quantilesMm": {
+            "0.5": 0.0,
+            "0.9": 0.0003810000000000014,
+            "0.95": 0.000950999999999999,
+            "0.99": 0.009574099999999992,
+            "1.0": 0.02186
+          }
+        },
+        "changeFromCurrent": {
+          "zeroCount": 1083,
+          "positiveCount": 267,
+          "negativeCount": 0
+        },
+        "byStoredTarget": {
+          "zero": {
+            "nWindows": 832,
+            "nDatesWithRegime": 61,
+            "lstmMaeMm": 1.034627403846154e-06,
+            "oofHybridMaeMm": 1.6172836538461538e-06,
+            "dateWeightedLstmMinusHybridMaeMm": -4.566311475409836e-07,
+            "pairedDateBootstrap95Mm": [
+              -1.0848592440801456e-06,
+              1.3138433515482664e-07
+            ]
+          },
+          "positive": {
+            "nWindows": 518,
+            "nDatesWithRegime": 33,
+            "lstmMaeMm": 2.0691023166023172e-05,
+            "oofHybridMaeMm": 1.0060675675675687e-05,
+            "dateWeightedLstmMinusHybridMaeMm": 9.086532800532794e-06,
+            "pairedDateBootstrap95Mm": [
+              -4.0636462791837776e-06,
+              3.3182627077552063e-05
+            ]
+          }
+        }
+      },
+      "6": {
+        "nWindows": 975,
+        "nRainfallDates": 75,
+        "storedTarget": {
+          "zeroCount": 552,
+          "zeroShare": 0.5661538461538461,
+          "positiveCount": 423,
+          "positiveShare": 0.4338461538461538,
+          "quantilesMm": {
+            "0.5": 0.0,
+            "0.9": 0.0005420000000000005,
+            "0.95": 0.001,
+            "0.99": 0.01298659999999999,
+            "1.0": 0.02186
+          }
+        },
+        "changeFromCurrent": {
+          "zeroCount": 650,
+          "positiveCount": 325,
+          "negativeCount": 0
+        },
+        "byStoredTarget": {
+          "zero": {
+            "nWindows": 552,
+            "nDatesWithRegime": 46,
+            "lstmMaeMm": 9.257427536231885e-07,
+            "oofHybridMaeMm": 3.2479528985507244e-06,
+            "dateWeightedLstmMinusHybridMaeMm": -1.9954849498327762e-06,
+            "pairedDateBootstrap95Mm": [
+              -3.2687993311036787e-06,
+              -8.385388795986644e-07
+            ]
+          },
+          "positive": {
+            "nWindows": 423,
+            "nDatesWithRegime": 33,
+            "lstmMaeMm": 0.0001447533806146572,
+            "oofHybridMaeMm": 0.00014022969267139479,
+            "dateWeightedLstmMinusHybridMaeMm": 4.43737179487181e-06,
+            "pairedDateBootstrap95Mm": [
+              -6.342258012820504e-06,
+              2.334202680652684e-05
+            ]
+          }
+        }
+      }
+    },
+    "backtest2024": {
+      "1": {
+        "nWindows": 1476,
+        "nRainfallDates": 82,
+        "storedTarget": {
+          "zeroCount": 863,
+          "zeroShare": 0.5846883468834688,
+          "positiveCount": 613,
+          "positiveShare": 0.4153116531165312,
+          "quantilesMm": {
+            "0.5": 0.0,
+            "0.9": 0.00031,
+            "0.95": 0.00056,
+            "0.99": 0.0030325,
+            "1.0": 0.00788
+          }
+        },
+        "changeFromCurrent": {
+          "zeroCount": 1167,
+          "positiveCount": 309,
+          "negativeCount": 0
+        },
+        "byStoredTarget": {
+          "zero": {
+            "nWindows": 863,
+            "nDatesWithRegime": 66,
+            "lstmMaeMm": 7.368482039397451e-07,
+            "oofHybridMaeMm": 1.6785747392815758e-06,
+            "dateWeightedLstmMinusHybridMaeMm": -6.578232323232322e-07,
+            "pairedDateBootstrap95Mm": [
+              -1.4422175925925923e-06,
+              9.947117003366932e-08
+            ]
+          },
+          "positive": {
+            "nWindows": 613,
+            "nDatesWithRegime": 38,
+            "lstmMaeMm": 9.4347308319739e-06,
+            "oofHybridMaeMm": 1.0963344208809138e-05,
+            "dateWeightedLstmMinusHybridMaeMm": -1.9114571477713903e-06,
+            "pairedDateBootstrap95Mm": [
+              -7.838982335127034e-06,
+              6.035879046881908e-06
+            ]
+          }
+        }
+      },
+      "6": {
+        "nWindows": 1066,
+        "nRainfallDates": 82,
+        "storedTarget": {
+          "zeroCount": 579,
+          "zeroShare": 0.5431519699812383,
+          "positiveCount": 487,
+          "positiveShare": 0.45684803001876173,
+          "quantilesMm": {
+            "0.5": 0.0,
+            "0.9": 0.00042500000000000003,
+            "0.95": 0.000675,
+            "0.99": 0.00438549999999997,
+            "1.0": 0.00788
+          }
+        },
+        "changeFromCurrent": {
+          "zeroCount": 673,
+          "positiveCount": 393,
+          "negativeCount": 0
+        },
+        "byStoredTarget": {
+          "zero": {
+            "nWindows": 579,
+            "nDatesWithRegime": 47,
+            "lstmMaeMm": 7.82027633851468e-06,
+            "oofHybridMaeMm": 1.4984127806563038e-05,
+            "dateWeightedLstmMinusHybridMaeMm": -6.889685761047462e-06,
+            "pairedDateBootstrap95Mm": [
+              -1.111390335515548e-05,
+              -3.09808191489362e-06
+            ]
+          },
+          "positive": {
+            "nWindows": 487,
+            "nDatesWithRegime": 38,
+            "lstmMaeMm": 5.438813141683779e-05,
+            "oofHybridMaeMm": 5.7217022587268994e-05,
+            "dateWeightedLstmMinusHybridMaeMm": -2.7875404858299637e-06,
+            "pairedDateBootstrap95Mm": [
+              -1.0351262145748996e-05,
+              4.722492914979747e-06
+            ]
+          }
+        }
+      }
+    },
+    "chronological2025": {
+      "1": {
+        "nWindows": 1404,
+        "nRainfallDates": 76,
+        "storedTarget": {
+          "zeroCount": 527,
+          "zeroShare": 0.37535612535612534,
+          "positiveCount": 877,
+          "positiveShare": 0.6246438746438746,
+          "quantilesMm": {
+            "0.5": 2e-05,
+            "0.9": 0.00082,
+            "0.95": 0.00129,
+            "0.99": 0.004972800000000006,
+            "1.0": 0.00695
+          }
+        },
+        "changeFromCurrent": {
+          "zeroCount": 971,
+          "positiveCount": 433,
+          "negativeCount": 0
+        },
+        "byStoredTarget": {
+          "zero": {
+            "nWindows": 527,
+            "nDatesWithRegime": 47,
+            "lstmMaeMm": 2.5114800759013284e-06,
+            "oofHybridMaeMm": 6.360265654648956e-06,
+            "dateWeightedLstmMinusHybridMaeMm": -4.6719929078014195e-06,
+            "pairedDateBootstrap95Mm": [
+              -6.072740307328606e-06,
+              -3.3028269060283705e-06
+            ]
+          },
+          "positive": {
+            "nWindows": 877,
+            "nDatesWithRegime": 54,
+            "lstmMaeMm": 7.133352337514251e-06,
+            "oofHybridMaeMm": 9.252748004561001e-06,
+            "dateWeightedLstmMinusHybridMaeMm": -2.125206553039068e-06,
+            "pairedDateBootstrap95Mm": [
+              -3.53776766188075e-06,
+              -8.158651526351314e-07
+            ]
+          }
+        }
+      },
+      "6": {
+        "nWindows": 1014,
+        "nRainfallDates": 76,
+        "storedTarget": {
+          "zeroCount": 325,
+          "zeroShare": 0.32051282051282054,
+          "positiveCount": 689,
+          "positiveShare": 0.6794871794871795,
+          "quantilesMm": {
+            "0.5": 4e-05,
+            "0.9": 0.0009570000000000005,
+            "0.95": 0.00155,
+            "0.99": 0.005697500000000001,
+            "1.0": 0.00695
+          }
+        },
+        "changeFromCurrent": {
+          "zeroCount": 440,
+          "positiveCount": 574,
+          "negativeCount": 0
+        },
+        "byStoredTarget": {
+          "zero": {
+            "nWindows": 325,
+            "nDatesWithRegime": 27,
+            "lstmMaeMm": 1.753418461538462e-05,
+            "oofHybridMaeMm": 3.378532307692308e-05,
+            "dateWeightedLstmMinusHybridMaeMm": -1.9136747388414054e-05,
+            "pairedDateBootstrap95Mm": [
+              -3.320852344491928e-05,
+              -5.697567901234608e-06
+            ]
+          },
+          "positive": {
+            "nWindows": 689,
+            "nDatesWithRegime": 54,
+            "lstmMaeMm": 7.662709724238027e-05,
+            "oofHybridMaeMm": 9.618654571843251e-05,
+            "dateWeightedLstmMinusHybridMaeMm": -1.9661009892371e-05,
+            "pairedDateBootstrap95Mm": [
+              -3.0122275356125363e-05,
+              -9.511283707264986e-06
+            ]
+          }
+        }
+      }
+    }
+  }
+}

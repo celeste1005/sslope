@@ -95,6 +95,35 @@ class PhysicsCorrector:
         }
 
 
+class FreeResidualCorrector:
+    """Same-size residual MLP without hard monotonic parameterization."""
+
+    def __init__(self, input_size: int, hidden_size: int, seed: int):
+        random = np.random.default_rng(seed)
+        scale = math.sqrt(2.0 / (input_size + hidden_size))
+        self.parameters = {
+            "w1": random.normal(0.0, scale, (input_size, hidden_size)),
+            "b1": np.zeros(hidden_size, dtype=np.float64),
+            "w2": np.zeros((hidden_size, 1), dtype=np.float64),
+            "b2": np.zeros(1, dtype=np.float64),
+        }
+
+    def forward(self, x: np.ndarray, keep_cache: bool = False):
+        hidden = np.tanh(x @ self.parameters["w1"] + self.parameters["b1"])
+        correction = (hidden @ self.parameters["w2"] + self.parameters["b2"]).reshape(-1)
+        return (correction, (x, hidden)) if keep_cache else correction
+
+    def backward(self, output_gradient: np.ndarray, cache) -> dict[str, np.ndarray]:
+        x, hidden = cache
+        column_gradient = output_gradient.reshape(-1, 1)
+        hidden_gradient = (column_gradient @ self.parameters["w2"].T) * (1.0 - hidden ** 2)
+        return {
+            "w1": x.T @ hidden_gradient,
+            "b1": hidden_gradient.sum(axis=0),
+            "w2": hidden.T @ column_gradient,
+            "b2": column_gradient.sum(axis=0),
+        }
+
 class Adam:
     def __init__(self, parameters: dict[str, np.ndarray], learning_rate: float):
         self.learning_rate = learning_rate
@@ -215,8 +244,12 @@ def main():
     parser.add_argument("--batch-size", type=int, default=128)
     parser.add_argument("--learning-rate", type=float, default=0.0015)
     parser.add_argument("--seed", type=int, default=20260917)
+    parser.add_argument("--correction-mode", choices=["monotonic", "free"], default="monotonic",
+                        help="Ablación estructural: corrector monótono por construcción o MLP residual sin restricciones monotónicas")
     parser.add_argument("--input-prefix", default="data/generated/ta01-fem-500")
     parser.add_argument("--lstm-model", default=None)
+    parser.add_argument("--oof-train-predictions", default=None,
+                        help="CSV de predicciones LSTM out-of-fold para ajustar el corrector en entrenamiento")
     parser.add_argument("--ridge-predictions", default=None)
     parser.add_argument("--output", default=None)
     parser.add_argument("--predictions", default=None)
@@ -236,6 +269,21 @@ def main():
     target_mean = float(lstm_artifact["model"]["targetDeltaMean"])
     target_std = float(lstm_artifact["model"]["targetDeltaStandardDeviation"])
     base_y = {name: lstm_standardized_delta(lstm_network, dataset, lstm_feature_mean, lstm_feature_std) for name, dataset in datasets.items()}
+    oof_path = None
+    if args.oof_train_predictions:
+        oof_path = (project_dir / args.oof_train_predictions).resolve()
+        oof_rows = lstm_module.read_csv(oof_path)
+        oof_map = {
+            (row["scenario_id"], int(row["origin_hour"]), int(row["target_hour"])): float(row["lstm_delta_standardized"])
+            for row in oof_rows
+        }
+        train_keys = [
+            (item["scenario_id"], int(item["origin_hour"]), int(item["target_hour"]))
+            for item in datasets["train"].metadata
+        ]
+        if len(oof_map) != len(oof_rows) or set(oof_map) != set(train_keys):
+            raise ValueError("Las predicciones OOF deben cubrir exactamente y sin duplicados las ventanas de entrenamiento")
+        base_y["train"] = np.asarray([oof_map[key] for key in train_keys], dtype=np.float64)
     raw_inputs = {name: corrector_inputs(dataset, base_y[name]) for name, dataset in datasets.items()}
     input_mean = raw_inputs["train"].mean(axis=0)
     input_std = raw_inputs["train"].std(axis=0)
@@ -243,11 +291,21 @@ def main():
     normalized_inputs = {name: (values - input_mean) / input_std for name, values in raw_inputs.items()}
     target_y = {name: (dataset.target_delta - target_mean) / target_std for name, dataset in datasets.items()}
 
-    loss_weights = {"data": 1.0, "monotonicity": 0.12, "rainSensitivity": 0.2, "safetySensitivity": 0.2, "dryBoundary": 0.08, "l2": 1e-6}
+    loss_weights = {
+        "data": 1.0,
+        "monotonicity": 0.12,
+        "rainSensitivity": 0.2 if args.correction_mode == "monotonic" else 0.0,
+        "safetySensitivity": 0.2 if args.correction_mode == "monotonic" else 0.0,
+        "dryBoundary": 0.08,
+        "l2": 1e-6,
+    }
     rain_index = CORRECTOR_FEATURES.index("forecast_rainfall_mm")
     safety_index = CORRECTOR_FEATURES.index("mohr_coulomb_safety_index")
     current_rain_index = CORRECTOR_FEATURES.index("current_rainfall_mm_h")
-    model = PhysicsCorrector(len(CORRECTOR_FEATURES), args.hidden, args.seed, rain_index, safety_index)
+    if args.correction_mode == "monotonic":
+        model = PhysicsCorrector(len(CORRECTOR_FEATURES), args.hidden, args.seed, rain_index, safety_index)
+    else:
+        model = FreeResidualCorrector(len(CORRECTOR_FEATURES), args.hidden, args.seed)
     optimizer = Adam(model.parameters, args.learning_rate)
     random = np.random.default_rng(args.seed)
     best_parameters = copy.deepcopy(model.parameters)
@@ -284,31 +342,33 @@ def main():
                 gradient[dry] += 2.0 * loss_weights["dryBoundary"] * residual / size
                 loss += loss_weights["dryBoundary"] * float(np.sum(residual ** 2) / size)
 
-            rain_raw = raw.copy()
-            rain_raw[:, rain_index] += 10.0
-            rain_x = (rain_raw - input_mean) / input_std
-            rain_correction, rain_cache = model.forward(rain_x, keep_cache=True)
-            rain_violation = np.maximum(0.0, correction - rain_correction)
-            rain_base_gradient = 2.0 * loss_weights["rainSensitivity"] * rain_violation / size
-            rain_perturbed_gradient = -rain_base_gradient
-            gradient += rain_base_gradient
-            loss += loss_weights["rainSensitivity"] * float(np.mean(rain_violation ** 2))
+            if args.correction_mode == "monotonic":
+                rain_raw = raw.copy()
+                rain_raw[:, rain_index] += 10.0
+                rain_x = (rain_raw - input_mean) / input_std
+                rain_correction, rain_cache = model.forward(rain_x, keep_cache=True)
+                rain_violation = np.maximum(0.0, correction - rain_correction)
+                rain_base_gradient = 2.0 * loss_weights["rainSensitivity"] * rain_violation / size
+                rain_perturbed_gradient = -rain_base_gradient
+                gradient += rain_base_gradient
+                loss += loss_weights["rainSensitivity"] * float(np.mean(rain_violation ** 2))
 
-            safety_raw = raw.copy()
-            safety_raw[:, safety_index] += 0.1
-            safety_x = (safety_raw - input_mean) / input_std
-            safety_correction, safety_cache = model.forward(safety_x, keep_cache=True)
-            safety_violation = np.maximum(0.0, safety_correction - correction)
-            safety_base_gradient = -2.0 * loss_weights["safetySensitivity"] * safety_violation / size
-            safety_perturbed_gradient = -safety_base_gradient
-            gradient += safety_base_gradient
-            loss += loss_weights["safetySensitivity"] * float(np.mean(safety_violation ** 2))
-
-            gradients = add_gradients(
-                model.backward(gradient, cache),
-                model.backward(rain_perturbed_gradient, rain_cache),
-                model.backward(safety_perturbed_gradient, safety_cache),
-            )
+                safety_raw = raw.copy()
+                safety_raw[:, safety_index] += 0.1
+                safety_x = (safety_raw - input_mean) / input_std
+                safety_correction, safety_cache = model.forward(safety_x, keep_cache=True)
+                safety_violation = np.maximum(0.0, safety_correction - correction)
+                safety_base_gradient = -2.0 * loss_weights["safetySensitivity"] * safety_violation / size
+                safety_perturbed_gradient = -safety_base_gradient
+                gradient += safety_base_gradient
+                loss += loss_weights["safetySensitivity"] * float(np.mean(safety_violation ** 2))
+                gradients = add_gradients(
+                    model.backward(gradient, cache),
+                    model.backward(rain_perturbed_gradient, rain_cache),
+                    model.backward(safety_perturbed_gradient, safety_cache),
+                )
+            else:
+                gradients = model.backward(gradient, cache)
             gradients["w1"] += 2.0 * loss_weights["l2"] * model.parameters["w1"]
             gradients["w2"] += 2.0 * loss_weights["l2"] * model.parameters["w2"]
             optimizer.step(model.parameters, gradients)
@@ -325,7 +385,9 @@ def main():
         validation_safety_correction = model.forward((validation_safety_raw - input_mean) / input_std)
         rain_violation_rate = float(np.mean(validation_rain_correction < validation_base_correction - 1e-12))
         safety_violation_rate = float(np.mean(validation_safety_correction > validation_base_correction + 1e-12))
-        validation_score = validation_mae + target_std * 0.05 * (rain_violation_rate + safety_violation_rate)
+        validation_score = validation_mae
+        if args.correction_mode == "monotonic":
+            validation_score += target_std * 0.05 * (rain_violation_rate + safety_violation_rate)
         history.append({
             "epoch": epoch,
             "trainCompositeLoss": round(float(np.mean(epoch_losses)), 8),
@@ -403,7 +465,7 @@ def main():
             {"id": "LSTM", "label": "LSTM", "components": "LSTM + FEM + hidrología", **evaluations["test"]["lstm"]},
             {"id": "HYBRID_NO_HYDROLOGY", "label": "Híbrido sin hidrología", "components": "LSTM + corrector físico; variables hidrológicas fijadas a la media de entrenamiento", **metric_values(test_dataset.actual, no_hydrology_prediction)},
             {"id": "HYBRID_NO_FEM", "label": "Híbrido sin estado FEM", "components": "LSTM + corrector físico; variables mecánicas fijadas a la media de entrenamiento", **metric_values(test_dataset.actual, no_fem_prediction)},
-            {"id": "HYBRID_FULL", "label": "Híbrido físico completo", "components": "LSTM + FEM + hidrología + restricciones", **evaluations["test"]["pinn"]},
+            {"id": "HYBRID_FULL", "label": "Híbrido físico completo" if args.correction_mode == "monotonic" else "Corrector residual libre", "components": "LSTM + FEM + hidrología + restricciones" if args.correction_mode == "monotonic" else "LSTM + FEM + hidrología; MLP residual sin restricciones monótonas", **evaluations["test"]["pinn"]},
         ],
         "method": "Ablación por sustitución con medias calculadas exclusivamente en entrenamiento",
         "limitation": "Las variables ablacionadas pueden formar combinaciones fuera de la distribución conjunta original; interpretar junto con el análisis de sensibilidad.",
@@ -437,22 +499,23 @@ def main():
     result = {
         "id": f"TA01-PHYSICS-GUIDED-{args.horizon}H-SEED{args.seed}",
         "generatedAt": datetime.now(timezone.utc).isoformat(),
-        "method": "LSTM_RESIDUAL_PHYSICS_GUIDED_MLP_V1",
+        "method": "LSTM_RESIDUAL_PHYSICS_GUIDED_MLP_V1" if args.correction_mode == "monotonic" else "LSTM_RESIDUAL_FREE_MLP_ABLATION_V1",
         "scientificStatus": "RED_NEURONAL_GUIADA_POR_FISICA_AGREGADA_NO_PINN_PDE_NO_OPERACIONAL",
         "scope": "Corrector temporal agregado sobre LSTM. No resuelve el equilibrio espacial ni sustituye una PINN de campo.",
         "dataset": lstm_artifact["dataset"],
         "architecture": {
-            "type": "LSTM + MLP residual monótono guiado por física",
+            "type": "LSTM + MLP residual monótono guiado por física" if args.correction_mode == "monotonic" else "LSTM + MLP residual sin restricciones monótonas",
             "horizonHours": args.horizon,
             "lookbackHours": 6,
             "inputFeatures": CORRECTOR_FEATURES,
             "hiddenUnits": args.hidden,
             "baseModelId": lstm_artifact["id"],
             "output": "corrección del incremento estandarizado de desplazamiento inducido por lluvia",
+            "correctionMode": args.correction_mode,
             "monotonicByConstruction": {
                 "forecast_rainfall_mm": "NON_DECREASING",
                 "mohr_coulomb_safety_index": "NON_INCREASING",
-            },
+            } if args.correction_mode == "monotonic" else {},
         },
         "training": {
             "optimizer": "Adam",
@@ -463,9 +526,11 @@ def main():
             "batchSize": args.batch_size,
             "learningRate": args.learning_rate,
             "seed": args.seed,
+            "baseTrainingPredictions": "OUT_OF_FOLD" if oof_path else "IN_SAMPLE",
+            "oofPredictionFile": str(oof_path.relative_to(project_dir)) if oof_path else None,
             "lossWeights": loss_weights,
-            "lossTerms": ["FEM supervised consistency", "monotonic accumulated displacement", "rainfall sensitivity", "safety-index sensitivity", "dry-boundary residual", "L2"],
-            "selectionMetric": "MAE de validación más penalización por violaciones condicionales de lluvia y seguridad",
+            "lossTerms": ["FEM supervised consistency", "monotonic accumulated displacement", "rainfall sensitivity", "safety-index sensitivity", "dry-boundary residual", "L2"] if args.correction_mode == "monotonic" else ["FEM supervised consistency", "monotonic accumulated displacement", "dry-boundary residual", "L2"],
+            "selectionMetric": "MAE de validación más penalización por violaciones condicionales de lluvia y seguridad" if args.correction_mode == "monotonic" else "MAE de validación",
         },
         "uncertainty": {
             "method": "VALIDATION_ABSOLUTE_ERROR_QUANTILE",

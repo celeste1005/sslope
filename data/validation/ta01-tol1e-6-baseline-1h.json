@@ -1,0 +1,253 @@
+{
+  "id": "TA01-RIDGE-1H-TA01-DATASET-S500-SEED20260915-SPLIT-20260916",
+  "generatedAt": "2026-10-29T11:39:44.739Z",
+  "dataset": {
+    "sourceDatasetId": "TA01-DATASET-S500-SEED20260915",
+    "splitManifest": "data\\validation\\ta01-fem-500-tol1e-6-split-split-manifest.json",
+    "splitMethod": "SOURCE_DATE_GROUP_SPLIT_WITH_EXTREME_EVENT_HOLDOUT",
+    "leakageControl": "Todos los escenarios y horas de una misma fecha de lluvia permanecen en una sola partición. No es una división cronológica por años."
+  },
+  "method": "RIDGE_AUTOREGRESSIVE_MONOTONIC_BASELINE_V1",
+  "scientificStatus": "LINEA_BASE_SEMISINTETICA_NO_OPERACIONAL",
+  "horizonHours": 1,
+  "target": "rainfall_induced_max_displacement_mm",
+  "predictedQuantity": "incremento entre la hora de origen y la hora objetivo",
+  "outputConstraint": "La predicción final no puede ser menor que el desplazamiento inducido acumulado en la hora de origen.",
+  "futureWeatherAssumption": "La lluvia acumulada durante el horizonte se considera conocida, como un pronóstico meteorológico exógeno.",
+  "features": [
+    "current_displacement_mm",
+    "current_rainfall_mm_h",
+    "cumulative_rainfall_mm",
+    "forecast_rainfall_mm",
+    "maximum_pore_pressure_kpa",
+    "mohr_coulomb_safety_index",
+    "simulation_hour",
+    "cohesion_kpa",
+    "friction_angle_deg",
+    "unit_weight_kn_m3",
+    "young_modulus_mpa",
+    "log10_permeability_m_s",
+    "drainage_efficiency",
+    "water_table_m",
+    "storage_coefficient"
+  ],
+  "selectedLambda": 0.0001,
+  "tuning": [
+    {
+      "lambda": 0.0001,
+      "validation": {
+        "sampleCount": 1725,
+        "maeMm": 0.00005721,
+        "rmseMm": 0.00048751,
+        "biasMm": -0.00001774,
+        "r2": 0.996577
+      }
+    },
+    {
+      "lambda": 0.001,
+      "validation": {
+        "sampleCount": 1725,
+        "maeMm": 0.00005723,
+        "rmseMm": 0.0004875,
+        "biasMm": -0.0000177,
+        "r2": 0.996577
+      }
+    },
+    {
+      "lambda": 0.01,
+      "validation": {
+        "sampleCount": 1725,
+        "maeMm": 0.00005723,
+        "rmseMm": 0.0004875,
+        "biasMm": -0.00001769,
+        "r2": 0.996577
+      }
+    },
+    {
+      "lambda": 0.1,
+      "validation": {
+        "sampleCount": 1725,
+        "maeMm": 0.00005723,
+        "rmseMm": 0.00048751,
+        "biasMm": -0.00001769,
+        "r2": 0.996577
+      }
+    },
+    {
+      "lambda": 1,
+      "validation": {
+        "sampleCount": 1725,
+        "maeMm": 0.00005723,
+        "rmseMm": 0.00048754,
+        "biasMm": -0.00001771,
+        "r2": 0.996576
+      }
+    },
+    {
+      "lambda": 10,
+      "validation": {
+        "sampleCount": 1725,
+        "maeMm": 0.00005729,
+        "rmseMm": 0.00048787,
+        "biasMm": -0.00001788,
+        "r2": 0.996572
+      }
+    },
+    {
+      "lambda": 100,
+      "validation": {
+        "sampleCount": 1725,
+        "maeMm": 0.00005782,
+        "rmseMm": 0.00049137,
+        "biasMm": -0.00001945,
+        "r2": 0.996522
+      }
+    }
+  ],
+  "model": {
+    "coefficientsStandardized": {
+      "intercept": 0,
+      "current_displacement_mm": 0.4465922081,
+      "current_rainfall_mm_h": 0.0152541889,
+      "cumulative_rainfall_mm": -0.374269083,
+      "forecast_rainfall_mm": 0.8438813945,
+      "maximum_pore_pressure_kpa": 10.9299250216,
+      "mohr_coulomb_safety_index": -0.0429864703,
+      "simulation_hour": 0.001419347,
+      "cohesion_kpa": 0.0303096546,
+      "friction_angle_deg": 0.0145287571,
+      "unit_weight_kn_m3": 0.0053107911,
+      "young_modulus_mpa": -0.0421774407,
+      "log10_permeability_m_s": 0.0130501545,
+      "drainage_efficiency": -0.0185313348,
+      "water_table_m": -10.924544016,
+      "storage_coefficient": -0.0285249359
+    },
+    "featureMeans": {
+      "current_displacement_mm": 0.00017917267080745327,
+      "current_rainfall_mm_h": 0.031779877515527896,
+      "cumulative_rainfall_mm": 0.3703714285714316,
+      "forecast_rainfall_mm": 0.031779877515527896,
+      "maximum_pore_pressure_kpa": 354.7426630186313,
+      "mohr_coulomb_safety_index": 1.4367903602484329,
+      "simulation_hour": 12,
+      "cohesion_kpa": 149.3388542857162,
+      "friction_angle_deg": 34.918437142857286,
+      "unit_weight_kn_m3": 22.00880285714258,
+      "young_modulus_mpa": 1681.2380228571635,
+      "log10_permeability_m_s": -7.835478302101714,
+      "drainage_efficiency": 0.4136072857142918,
+      "water_table_m": 37.8274457142866,
+      "storage_coefficient": 0.2324524285714303
+    },
+    "featureStandardDeviations": {
+      "current_displacement_mm": 0.0007970802846154614,
+      "current_rainfall_mm_h": 0.137653249108887,
+      "cumulative_rainfall_mm": 1.3293567198112222,
+      "forecast_rainfall_mm": 0.137653249108887,
+      "maximum_pore_pressure_kpa": 158.47247794518384,
+      "mohr_coulomb_safety_index": 0.3345108262760632,
+      "simulation_hour": 6.6332495807108,
+      "cohesion_kpa": 51.79212185870886,
+      "friction_angle_deg": 5.152791484821488,
+      "unit_weight_kn_m3": 2.3331917105710733,
+      "young_modulus_mpa": 739.5837361507029,
+      "log10_permeability_m_s": 1.3035836878071547,
+      "drainage_efficiency": 0.25113134317507696,
+      "water_table_m": 16.154155441908326,
+      "storage_coefficient": 0.06659193030123722
+    },
+    "targetDeltaMean": 0.00001539999999999995,
+    "targetDeltaStandardDeviation": 0.00008021458952503785
+  },
+  "metrics": {
+    "train": {
+      "persistence": {
+        "sampleCount": 8050,
+        "maeMm": 0.0000154,
+        "rmseMm": 0.00008168,
+        "biasMm": -0.0000154,
+        "r2": 0.990492
+      },
+      "ridgeUnconstrained": {
+        "sampleCount": 8050,
+        "maeMm": 0.00001118,
+        "rmseMm": 0.0000349,
+        "biasMm": 0,
+        "r2": 0.998264
+      },
+      "ridge": {
+        "sampleCount": 8050,
+        "maeMm": 0.00000852,
+        "rmseMm": 0.00003375,
+        "biasMm": 0.00000266,
+        "r2": 0.998377
+      },
+      "physicalViolations": {
+        "negativePredictionCountBeforeConstraint": 2867,
+        "decreasingPredictionCountBeforeConstraint": 3504,
+        "correctedPredictionCount": 3504,
+        "violationsAfterConstraint": 0
+      }
+    },
+    "validation": {
+      "persistence": {
+        "sampleCount": 1725,
+        "maeMm": 0.00007772,
+        "rmseMm": 0.00074533,
+        "biasMm": -0.00007772,
+        "r2": 0.991999
+      },
+      "ridgeUnconstrained": {
+        "sampleCount": 1725,
+        "maeMm": 0.00005934,
+        "rmseMm": 0.00048753,
+        "biasMm": -0.00001986,
+        "r2": 0.996577
+      },
+      "ridge": {
+        "sampleCount": 1725,
+        "maeMm": 0.00005721,
+        "rmseMm": 0.00048751,
+        "biasMm": -0.00001774,
+        "r2": 0.996577
+      },
+      "physicalViolations": {
+        "negativePredictionCountBeforeConstraint": 553,
+        "decreasingPredictionCountBeforeConstraint": 660,
+        "correctedPredictionCount": 660,
+        "violationsAfterConstraint": 0
+      }
+    },
+    "test": {
+      "persistence": {
+        "sampleCount": 1725,
+        "maeMm": 0.00001921,
+        "rmseMm": 0.00010902,
+        "biasMm": -0.00001921,
+        "r2": 0.995016
+      },
+      "ridgeUnconstrained": {
+        "sampleCount": 1725,
+        "maeMm": 0.00001633,
+        "rmseMm": 0.00008036,
+        "biasMm": 0.00000835,
+        "r2": 0.997292
+      },
+      "ridge": {
+        "sampleCount": 1725,
+        "maeMm": 0.00001276,
+        "rmseMm": 0.00007981,
+        "biasMm": 0.00001191,
+        "r2": 0.997329
+      },
+      "physicalViolations": {
+        "negativePredictionCountBeforeConstraint": 773,
+        "decreasingPredictionCountBeforeConstraint": 949,
+        "correctedPredictionCount": 949,
+        "violationsAfterConstraint": 0
+      }
+    }
+  },
+  "elapsedSeconds": 0.31
+}

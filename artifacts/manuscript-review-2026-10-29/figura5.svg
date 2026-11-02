@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="922" viewBox="0 0 2048 922">
+<rect width="100%" height="100%" fill="white"/>
+<text x="1024" y="44" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="34" font-weight="bold" fill="#111">Aumento del MAE en 30 perturbaciones pareadas</text>
+<circle cx="430" cy="84" r="10" fill="#2878b5"/><text x="449" y="92" font-family="Times New Roman,Times,serif" font-size="21" fill="#222">LSTM</text>
+<circle cx="690" cy="84" r="10" fill="#d55e00"/><text x="709" y="92" font-family="Times New Roman,Times,serif" font-size="21" fill="#222">Híbrido sin OOF</text>
+<circle cx="1050" cy="84" r="10" fill="#009e73"/><text x="1069" y="92" font-family="Times New Roman,Times,serif" font-size="21" fill="#222">Híbrido OOF</text>
+<circle cx="1320" cy="84" r="10" fill="#7b61a8"/><text x="1339" y="92" font-family="Times New Roman,Times,serif" font-size="21" fill="#222">MLP libre OOF</text>
+<text x="565.0" y="139" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" font-weight="bold" fill="#111">Horizonte 1 h</text>
+<line x1="135" y1="755.0" x2="995" y2="755.0" stroke="#e6e6e6"/>
+<text x="119" y="762.0" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">0</text>
+<line x1="135" y1="686.2" x2="995" y2="686.2" stroke="#e6e6e6"/>
+<text x="119" y="693.2" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">100</text>
+<line x1="135" y1="617.4" x2="995" y2="617.4" stroke="#e6e6e6"/>
+<text x="119" y="624.4" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">200</text>
+<line x1="135" y1="548.5" x2="995" y2="548.5" stroke="#e6e6e6"/>
+<text x="119" y="555.5" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">300</text>
+<line x1="135" y1="479.7" x2="995" y2="479.7" stroke="#e6e6e6"/>
+<text x="119" y="486.7" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">400</text>
+<line x1="135" y1="410.9" x2="995" y2="410.9" stroke="#e6e6e6"/>
+<text x="119" y="417.9" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">500</text>
+<line x1="135" y1="342.1" x2="995" y2="342.1" stroke="#e6e6e6"/>
+<text x="119" y="349.1" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">600</text>
+<line x1="135" y1="273.2" x2="995" y2="273.2" stroke="#e6e6e6"/>
+<text x="119" y="280.2" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">700</text>
+<line x1="135" y1="204.4" x2="995" y2="204.4" stroke="#e6e6e6"/>
+<text x="119" y="211.4" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">800</text>
+<line x1="135" y1="755" x2="995" y2="755" stroke="#222" stroke-width="2"/>
+<text x="58" y="462.5" transform="rotate(-90 58 462.5)" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="22" fill="#222">Aumento medio del MAE (%)</text>
+<line x1="212.5" y1="754.7" x2="212.5" y2="754.7" stroke="#2878b5" stroke-width="4"/>
+<line x1="207.5" y1="754.7" x2="217.5" y2="754.7" stroke="#2878b5" stroke-width="2"/>
+<line x1="207.5" y1="754.7" x2="217.5" y2="754.7" stroke="#2878b5" stroke-width="2"/>
+<circle cx="212.5" cy="754.7" r="7" fill="#2878b5"/>
+<line x1="232.5" y1="719.7" x2="232.5" y2="718.1" stroke="#d55e00" stroke-width="4"/>
+<line x1="227.5" y1="719.7" x2="237.5" y2="719.7" stroke="#d55e00" stroke-width="2"/>
+<line x1="227.5" y1="718.1" x2="237.5" y2="718.1" stroke="#d55e00" stroke-width="2"/>
+<circle cx="232.5" cy="718.8" r="7" fill="#d55e00"/>
+<line x1="252.5" y1="533.6" x2="252.5" y2="528.6" stroke="#009e73" stroke-width="4"/>
+<line x1="247.5" y1="533.6" x2="257.5" y2="533.6" stroke="#009e73" stroke-width="2"/>
+<line x1="247.5" y1="528.6" x2="257.5" y2="528.6" stroke="#009e73" stroke-width="2"/>
+<circle cx="252.5" cy="531.1" r="7" fill="#009e73"/>
+<line x1="272.5" y1="215.6" x2="272.5" y2="206.6" stroke="#7b61a8" stroke-width="4"/>
+<line x1="267.5" y1="215.6" x2="277.5" y2="215.6" stroke="#7b61a8" stroke-width="2"/>
+<line x1="267.5" y1="206.6" x2="277.5" y2="206.6" stroke="#7b61a8" stroke-width="2"/>
+<circle cx="272.5" cy="211.0" r="7" fill="#7b61a8"/>
+<text x="242.5" y="786" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">Ruido 1 %</text>
+<line x1="427.5" y1="751.0" x2="427.5" y2="750.6" stroke="#2878b5" stroke-width="4"/>
+<line x1="422.5" y1="751.0" x2="432.5" y2="751.0" stroke="#2878b5" stroke-width="2"/>
+<line x1="422.5" y1="750.6" x2="432.5" y2="750.6" stroke="#2878b5" stroke-width="2"/>
+<circle cx="427.5" cy="750.8" r="7" fill="#2878b5"/>
+<line x1="447.5" y1="714.5" x2="447.5" y2="712.9" stroke="#d55e00" stroke-width="4"/>
+<line x1="442.5" y1="714.5" x2="452.5" y2="714.5" stroke="#d55e00" stroke-width="2"/>
+<line x1="442.5" y1="712.9" x2="452.5" y2="712.9" stroke="#d55e00" stroke-width="2"/>
+<circle cx="447.5" cy="713.7" r="7" fill="#d55e00"/>
+<line x1="467.5" y1="521.2" x2="467.5" y2="516.5" stroke="#009e73" stroke-width="4"/>
+<line x1="462.5" y1="521.2" x2="472.5" y2="521.2" stroke="#009e73" stroke-width="2"/>
+<line x1="462.5" y1="516.5" x2="472.5" y2="516.5" stroke="#009e73" stroke-width="2"/>
+<circle cx="467.5" cy="518.9" r="7" fill="#009e73"/>
+<line x1="487.5" y1="189.6" x2="487.5" y2="180.1" stroke="#7b61a8" stroke-width="4"/>
+<line x1="482.5" y1="189.6" x2="492.5" y2="189.6" stroke="#7b61a8" stroke-width="2"/>
+<line x1="482.5" y1="180.1" x2="492.5" y2="180.1" stroke="#7b61a8" stroke-width="2"/>
+<circle cx="487.5" cy="184.8" r="7" fill="#7b61a8"/>
+<text x="457.5" y="786" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">Ruido 5 %</text>
+<line x1="642.5" y1="726.3" x2="642.5" y2="723.5" stroke="#2878b5" stroke-width="4"/>
+<line x1="637.5" y1="726.3" x2="647.5" y2="726.3" stroke="#2878b5" stroke-width="2"/>
+<line x1="637.5" y1="723.5" x2="647.5" y2="723.5" stroke="#2878b5" stroke-width="2"/>
+<circle cx="642.5" cy="724.9" r="7" fill="#2878b5"/>
+<line x1="662.5" y1="711.2" x2="662.5" y2="708.2" stroke="#d55e00" stroke-width="4"/>
+<line x1="657.5" y1="711.2" x2="667.5" y2="711.2" stroke="#d55e00" stroke-width="2"/>
+<line x1="657.5" y1="708.2" x2="667.5" y2="708.2" stroke="#d55e00" stroke-width="2"/>
+<circle cx="662.5" cy="709.7" r="7" fill="#d55e00"/>
+<line x1="682.5" y1="620.5" x2="682.5" y2="614.4" stroke="#009e73" stroke-width="4"/>
+<line x1="677.5" y1="620.5" x2="687.5" y2="620.5" stroke="#009e73" stroke-width="2"/>
+<line x1="677.5" y1="614.4" x2="687.5" y2="614.4" stroke="#009e73" stroke-width="2"/>
+<circle cx="682.5" cy="617.5" r="7" fill="#009e73"/>
+<line x1="702.5" y1="508.9" x2="702.5" y2="499.1" stroke="#7b61a8" stroke-width="4"/>
+<line x1="697.5" y1="508.9" x2="707.5" y2="508.9" stroke="#7b61a8" stroke-width="2"/>
+<line x1="697.5" y1="499.1" x2="707.5" y2="499.1" stroke="#7b61a8" stroke-width="2"/>
+<circle cx="702.5" cy="504.1" r="7" fill="#7b61a8"/>
+<text x="672.5" y="786" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">MCAR 10 %</text>
+<line x1="857.5" y1="690.8" x2="857.5" y2="685.6" stroke="#2878b5" stroke-width="4"/>
+<line x1="852.5" y1="690.8" x2="862.5" y2="690.8" stroke="#2878b5" stroke-width="2"/>
+<line x1="852.5" y1="685.6" x2="862.5" y2="685.6" stroke="#2878b5" stroke-width="2"/>
+<circle cx="857.5" cy="688.3" r="7" fill="#2878b5"/>
+<line x1="877.5" y1="666.9" x2="877.5" y2="661.3" stroke="#d55e00" stroke-width="4"/>
+<line x1="872.5" y1="666.9" x2="882.5" y2="666.9" stroke="#d55e00" stroke-width="2"/>
+<line x1="872.5" y1="661.3" x2="882.5" y2="661.3" stroke="#d55e00" stroke-width="2"/>
+<circle cx="877.5" cy="664.1" r="7" fill="#d55e00"/>
+<line x1="897.5" y1="489.9" x2="897.5" y2="481.9" stroke="#009e73" stroke-width="4"/>
+<line x1="892.5" y1="489.9" x2="902.5" y2="489.9" stroke="#009e73" stroke-width="2"/>
+<line x1="892.5" y1="481.9" x2="902.5" y2="481.9" stroke="#009e73" stroke-width="2"/>
+<circle cx="897.5" cy="485.9" r="7" fill="#009e73"/>
+<line x1="917.5" y1="276.8" x2="917.5" y2="266.8" stroke="#7b61a8" stroke-width="4"/>
+<line x1="912.5" y1="276.8" x2="922.5" y2="276.8" stroke="#7b61a8" stroke-width="2"/>
+<line x1="912.5" y1="266.8" x2="922.5" y2="266.8" stroke="#7b61a8" stroke-width="2"/>
+<circle cx="917.5" cy="271.9" r="7" fill="#7b61a8"/>
+<text x="887.5" y="786" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">MCAR 30 %</text>
+<text x="565.0" y="830" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="18" fill="#444">Perturbación de entrada</text>
+<text x="1580.0" y="139" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" font-weight="bold" fill="#111">Horizonte 6 h</text>
+<line x1="1150" y1="755.0" x2="2010" y2="755.0" stroke="#e6e6e6"/>
+<text x="1134" y="762.0" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">0</text>
+<line x1="1150" y1="681.9" x2="2010" y2="681.9" stroke="#e6e6e6"/>
+<text x="1134" y="688.9" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">50</text>
+<line x1="1150" y1="608.8" x2="2010" y2="608.8" stroke="#e6e6e6"/>
+<text x="1134" y="615.8" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">100</text>
+<line x1="1150" y1="535.6" x2="2010" y2="535.6" stroke="#e6e6e6"/>
+<text x="1134" y="542.6" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">150</text>
+<line x1="1150" y1="462.5" x2="2010" y2="462.5" stroke="#e6e6e6"/>
+<text x="1134" y="469.5" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">200</text>
+<line x1="1150" y1="389.4" x2="2010" y2="389.4" stroke="#e6e6e6"/>
+<text x="1134" y="396.4" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">250</text>
+<line x1="1150" y1="316.2" x2="2010" y2="316.2" stroke="#e6e6e6"/>
+<text x="1134" y="323.2" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">300</text>
+<line x1="1150" y1="243.1" x2="2010" y2="243.1" stroke="#e6e6e6"/>
+<text x="1134" y="250.1" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">350</text>
+<line x1="1150" y1="170.0" x2="2010" y2="170.0" stroke="#e6e6e6"/>
+<text x="1134" y="177.0" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">400</text>
+<line x1="1150" y1="755" x2="2010" y2="755" stroke="#222" stroke-width="2"/>
+<text x="1073" y="462.5" transform="rotate(-90 1073 462.5)" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="22" fill="#222">Aumento medio del MAE (%)</text>
+<line x1="1227.5" y1="754.6" x2="1227.5" y2="754.4" stroke="#2878b5" stroke-width="4"/>
+<line x1="1222.5" y1="754.6" x2="1232.5" y2="754.6" stroke="#2878b5" stroke-width="2"/>
+<line x1="1222.5" y1="754.4" x2="1232.5" y2="754.4" stroke="#2878b5" stroke-width="2"/>
+<circle cx="1227.5" cy="754.5" r="7" fill="#2878b5"/>
+<line x1="1247.5" y1="695.6" x2="1247.5" y2="693.0" stroke="#d55e00" stroke-width="4"/>
+<line x1="1242.5" y1="695.6" x2="1252.5" y2="695.6" stroke="#d55e00" stroke-width="2"/>
+<line x1="1242.5" y1="693.0" x2="1252.5" y2="693.0" stroke="#d55e00" stroke-width="2"/>
+<circle cx="1247.5" cy="694.3" r="7" fill="#d55e00"/>
+<line x1="1267.5" y1="712.3" x2="1267.5" y2="711.4" stroke="#009e73" stroke-width="4"/>
+<line x1="1262.5" y1="712.3" x2="1272.5" y2="712.3" stroke="#009e73" stroke-width="2"/>
+<line x1="1262.5" y1="711.4" x2="1272.5" y2="711.4" stroke="#009e73" stroke-width="2"/>
+<circle cx="1267.5" cy="711.8" r="7" fill="#009e73"/>
+<line x1="1287.5" y1="279.8" x2="1287.5" y2="266.9" stroke="#7b61a8" stroke-width="4"/>
+<line x1="1282.5" y1="279.8" x2="1292.5" y2="279.8" stroke="#7b61a8" stroke-width="2"/>
+<line x1="1282.5" y1="266.9" x2="1292.5" y2="266.9" stroke="#7b61a8" stroke-width="2"/>
+<circle cx="1287.5" cy="273.3" r="7" fill="#7b61a8"/>
+<text x="1257.5" y="786" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">Ruido 1 %</text>
+<line x1="1442.5" y1="746.8" x2="1442.5" y2="746.1" stroke="#2878b5" stroke-width="4"/>
+<line x1="1437.5" y1="746.8" x2="1447.5" y2="746.8" stroke="#2878b5" stroke-width="2"/>
+<line x1="1437.5" y1="746.1" x2="1447.5" y2="746.1" stroke="#2878b5" stroke-width="2"/>
+<circle cx="1442.5" cy="746.5" r="7" fill="#2878b5"/>
+<line x1="1462.5" y1="689.3" x2="1462.5" y2="686.7" stroke="#d55e00" stroke-width="4"/>
+<line x1="1457.5" y1="689.3" x2="1467.5" y2="689.3" stroke="#d55e00" stroke-width="2"/>
+<line x1="1457.5" y1="686.7" x2="1467.5" y2="686.7" stroke="#d55e00" stroke-width="2"/>
+<circle cx="1462.5" cy="688.0" r="7" fill="#d55e00"/>
+<line x1="1482.5" y1="710.0" x2="1482.5" y2="708.9" stroke="#009e73" stroke-width="4"/>
+<line x1="1477.5" y1="710.0" x2="1487.5" y2="710.0" stroke="#009e73" stroke-width="2"/>
+<line x1="1477.5" y1="708.9" x2="1487.5" y2="708.9" stroke="#009e73" stroke-width="2"/>
+<circle cx="1482.5" cy="709.5" r="7" fill="#009e73"/>
+<line x1="1502.5" y1="270.1" x2="1502.5" y2="260.2" stroke="#7b61a8" stroke-width="4"/>
+<line x1="1497.5" y1="270.1" x2="1507.5" y2="270.1" stroke="#7b61a8" stroke-width="2"/>
+<line x1="1497.5" y1="260.2" x2="1507.5" y2="260.2" stroke="#7b61a8" stroke-width="2"/>
+<circle cx="1502.5" cy="265.2" r="7" fill="#7b61a8"/>
+<text x="1472.5" y="786" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">Ruido 5 %</text>
+<line x1="1657.5" y1="713.3" x2="1657.5" y2="706.5" stroke="#2878b5" stroke-width="4"/>
+<line x1="1652.5" y1="713.3" x2="1662.5" y2="713.3" stroke="#2878b5" stroke-width="2"/>
+<line x1="1652.5" y1="706.5" x2="1662.5" y2="706.5" stroke="#2878b5" stroke-width="2"/>
+<circle cx="1657.5" cy="710.0" r="7" fill="#2878b5"/>
+<line x1="1677.5" y1="703.5" x2="1677.5" y2="696.7" stroke="#d55e00" stroke-width="4"/>
+<line x1="1672.5" y1="703.5" x2="1682.5" y2="703.5" stroke="#d55e00" stroke-width="2"/>
+<line x1="1672.5" y1="696.7" x2="1682.5" y2="696.7" stroke="#d55e00" stroke-width="2"/>
+<circle cx="1677.5" cy="700.2" r="7" fill="#d55e00"/>
+<line x1="1697.5" y1="706.9" x2="1697.5" y2="699.7" stroke="#009e73" stroke-width="4"/>
+<line x1="1692.5" y1="706.9" x2="1702.5" y2="706.9" stroke="#009e73" stroke-width="2"/>
+<line x1="1692.5" y1="699.7" x2="1702.5" y2="699.7" stroke="#009e73" stroke-width="2"/>
+<circle cx="1697.5" cy="703.4" r="7" fill="#009e73"/>
+<line x1="1717.5" y1="500.0" x2="1717.5" y2="487.0" stroke="#7b61a8" stroke-width="4"/>
+<line x1="1712.5" y1="500.0" x2="1722.5" y2="500.0" stroke="#7b61a8" stroke-width="2"/>
+<line x1="1712.5" y1="487.0" x2="1722.5" y2="487.0" stroke="#7b61a8" stroke-width="2"/>
+<circle cx="1717.5" cy="493.6" r="7" fill="#7b61a8"/>
+<text x="1687.5" y="786" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">MCAR 10 %</text>
+<line x1="1872.5" y1="655.0" x2="1872.5" y2="647.1" stroke="#2878b5" stroke-width="4"/>
+<line x1="1867.5" y1="655.0" x2="1877.5" y2="655.0" stroke="#2878b5" stroke-width="2"/>
+<line x1="1867.5" y1="647.1" x2="1877.5" y2="647.1" stroke="#2878b5" stroke-width="2"/>
+<circle cx="1872.5" cy="651.1" r="7" fill="#2878b5"/>
+<line x1="1892.5" y1="638.3" x2="1892.5" y2="630.0" stroke="#d55e00" stroke-width="4"/>
+<line x1="1887.5" y1="638.3" x2="1897.5" y2="638.3" stroke="#d55e00" stroke-width="2"/>
+<line x1="1887.5" y1="630.0" x2="1897.5" y2="630.0" stroke="#d55e00" stroke-width="2"/>
+<circle cx="1892.5" cy="634.2" r="7" fill="#d55e00"/>
+<line x1="1912.5" y1="640.3" x2="1912.5" y2="632.1" stroke="#009e73" stroke-width="4"/>
+<line x1="1907.5" y1="640.3" x2="1917.5" y2="640.3" stroke="#009e73" stroke-width="2"/>
+<line x1="1907.5" y1="632.1" x2="1917.5" y2="632.1" stroke="#009e73" stroke-width="2"/>
+<circle cx="1912.5" cy="636.2" r="7" fill="#009e73"/>
+<line x1="1932.5" y1="253.9" x2="1932.5" y2="236.9" stroke="#7b61a8" stroke-width="4"/>
+<line x1="1927.5" y1="253.9" x2="1937.5" y2="253.9" stroke="#7b61a8" stroke-width="2"/>
+<line x1="1927.5" y1="236.9" x2="1937.5" y2="236.9" stroke="#7b61a8" stroke-width="2"/>
+<circle cx="1932.5" cy="245.5" r="7" fill="#7b61a8"/>
+<text x="1902.5" y="786" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="18" fill="#333">MCAR 30 %</text>
+<text x="1580.0" y="830" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="18" fill="#444">Perturbación de entrada</text>
+<text x="1024.0" y="904" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="17" fill="#444">Puntos: media de 30 sorteos; barras: IC bootstrap del 95 % sobre sorteos, condicionados a fechas y ajustes fijos.</text>
+</svg>

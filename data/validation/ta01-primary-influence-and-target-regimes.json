@@ -1,0 +1,2340 @@
+{
+  "id": "TA01-PRIMARY-INFLUENCE-AND-TARGET-REGIMES-V1",
+  "generatedAt": "2026-10-30T00:56:44.228599+00:00",
+  "classification": "EXPLORATORY_AUDIT_EXISTING_PRIMARY_ARTIFACTS",
+  "script": "scripts/evaluate-ta01-primary-influence-and-target-regimes.py",
+  "inputRows": "data/generated/ta01-fem-500-test.csv",
+  "predictionFiles": [
+    "data/generated/ta01-physics-guided-1h-test-predictions.csv",
+    "data/generated/ta01-physics-guided-6h-test-predictions.csv"
+  ],
+  "primaryAnalysisUsesAllDates": true,
+  "extremeScenarioExclusionIsSensitivityOnly": true,
+  "bootstrap": {
+    "unit": "source_date",
+    "draws": 20000,
+    "seedBase": 20261050
+  },
+  "results": [
+    {
+      "horizonHours": 1,
+      "windowCount": 1350,
+      "rainfallDateCount": 75,
+      "pairedDateBootstrap": {
+        "estimand": "MAE_LSTM-MAE_in_sample_hybrid; positive favors hybrid",
+        "dateBlockCount": 75,
+        "bootstrapDraws": 20000,
+        "seed": 20261051,
+        "lstmMaeMm": 8.576859259259262e-06,
+        "hybridMaeMm": 7.979474074074069e-06,
+        "observedDifferenceMm": 5.973851851851931e-07,
+        "confidenceInterval95Mm": [
+          1.3388333333333199e-08,
+          1.5752675925926102e-06
+        ]
+      },
+      "targetZeroByObservedDailyRainfall": {
+        "dailyRainfallZero": {
+          "sampleCount": 702,
+          "zeroTargetCount": 702,
+          "zeroTargetShare": 1.0,
+          "lstmMaeMm": 1.0697578347578347e-06,
+          "hybridMaeMm": 6.389031339031339e-07
+        },
+        "dailyRainfallPositive": {
+          "sampleCount": 648,
+          "zeroTargetCount": 130,
+          "zeroTargetShare": 0.2006172839506173,
+          "lstmMaeMm": 1.6709552469135807e-05,
+          "hybridMaeMm": 1.5931759259259248e-05
+        }
+      },
+      "extremeScenarioSensitivity": {
+        "scenarioId": "TA01-S0001",
+        "sourceDate": "2021-01-14",
+        "dailyRainfallMm": 102.88,
+        "windowCount": 18,
+        "lstmAbsoluteErrorShare": 0.7156154890506411,
+        "hybridAbsoluteErrorShare": 0.7146595570672529,
+        "fullSampleMaeMm": {
+          "lstm": 8.576859259259262e-06,
+          "inSampleHybrid": 7.979474074074069e-06
+        },
+        "excludingScenarioMaeMm": {
+          "lstm": 2.472087087087087e-06,
+          "inSampleHybrid": 2.3076351351351346e-06
+        },
+        "interpretation": "Sensitivity only; the full test set remains the primary estimate."
+      },
+      "largestAbsoluteDateContributions": [
+        {
+          "sourceDate": "2021-01-14",
+          "scenarioIds": [
+            "TA01-S0001"
+          ],
+          "observedDailyRainfallMm": [
+            102.88
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.008285940000000002,
+          "hybridAbsoluteErrorSumMm": 0.0076985199999999926,
+          "lstmMinusHybridMaeContributionMm": 3.263444444444497e-05
+        },
+        {
+          "sourceDate": "2023-11-25",
+          "scenarioIds": [
+            "TA01-S0096"
+          ],
+          "observedDailyRainfallMm": [
+            3.45
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.00023185999999999913,
+          "hybridAbsoluteErrorSumMm": 0.00030172999999999984,
+          "lstmMinusHybridMaeContributionMm": -3.881666666666706e-06
+        },
+        {
+          "sourceDate": "2021-04-24",
+          "scenarioIds": [
+            "TA01-S0491"
+          ],
+          "observedDailyRainfallMm": [
+            5.23
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.00014623999999999952,
+          "hybridAbsoluteErrorSumMm": 0.00019033999999999918,
+          "lstmMinusHybridMaeContributionMm": -2.449999999999981e-06
+        },
+        {
+          "sourceDate": "2022-02-21",
+          "scenarioIds": [
+            "TA01-S0024"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.694e-05,
+          "hybridAbsoluteErrorSumMm": 4.96e-06,
+          "lstmMinusHybridMaeContributionMm": 1.7766666666666669e-06
+        },
+        {
+          "sourceDate": "2023-04-23",
+          "scenarioIds": [
+            "TA01-S0110"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.257e-05,
+          "hybridAbsoluteErrorSumMm": 6.4e-07,
+          "lstmMinusHybridMaeContributionMm": 1.7738888888888889e-06
+        },
+        {
+          "sourceDate": "2022-05-18",
+          "scenarioIds": [
+            "TA01-S0083"
+          ],
+          "observedDailyRainfallMm": [
+            0.18
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.00013940000000000003,
+          "hybridAbsoluteErrorSumMm": 0.00010800000000000002,
+          "lstmMinusHybridMaeContributionMm": 1.7444444444444446e-06
+        },
+        {
+          "sourceDate": "2024-07-30",
+          "scenarioIds": [
+            "TA01-S0280"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.9350000000000002e-05,
+          "hybridAbsoluteErrorSumMm": 9.1e-07,
+          "lstmMinusHybridMaeContributionMm": 1.5800000000000001e-06
+        },
+        {
+          "sourceDate": "2022-06-03",
+          "scenarioIds": [
+            "TA01-S0386"
+          ],
+          "observedDailyRainfallMm": [
+            0.03
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 6.739999999999998e-05,
+          "hybridAbsoluteErrorSumMm": 4.157999999999998e-05,
+          "lstmMinusHybridMaeContributionMm": 1.4344444444444448e-06
+        },
+        {
+          "sourceDate": "2022-09-26",
+          "scenarioIds": [
+            "TA01-S0369"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.834e-05,
+          "hybridAbsoluteErrorSumMm": 3.73e-06,
+          "lstmMinusHybridMaeContributionMm": 1.3672222222222222e-06
+        },
+        {
+          "sourceDate": "2021-12-01",
+          "scenarioIds": [
+            "TA01-S0396"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 6.151e-05,
+          "hybridAbsoluteErrorSumMm": 3.74e-05,
+          "lstmMinusHybridMaeContributionMm": 1.3394444444444442e-06
+        }
+      ],
+      "allDateContributions": [
+        {
+          "sourceDate": "2021-01-14",
+          "scenarioIds": [
+            "TA01-S0001"
+          ],
+          "observedDailyRainfallMm": [
+            102.88
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.008285940000000002,
+          "hybridAbsoluteErrorSumMm": 0.0076985199999999926,
+          "lstmMinusHybridMaeContributionMm": 3.263444444444497e-05
+        },
+        {
+          "sourceDate": "2023-11-25",
+          "scenarioIds": [
+            "TA01-S0096"
+          ],
+          "observedDailyRainfallMm": [
+            3.45
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.00023185999999999913,
+          "hybridAbsoluteErrorSumMm": 0.00030172999999999984,
+          "lstmMinusHybridMaeContributionMm": -3.881666666666706e-06
+        },
+        {
+          "sourceDate": "2021-04-24",
+          "scenarioIds": [
+            "TA01-S0491"
+          ],
+          "observedDailyRainfallMm": [
+            5.23
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.00014623999999999952,
+          "hybridAbsoluteErrorSumMm": 0.00019033999999999918,
+          "lstmMinusHybridMaeContributionMm": -2.449999999999981e-06
+        },
+        {
+          "sourceDate": "2022-02-21",
+          "scenarioIds": [
+            "TA01-S0024"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.694e-05,
+          "hybridAbsoluteErrorSumMm": 4.96e-06,
+          "lstmMinusHybridMaeContributionMm": 1.7766666666666669e-06
+        },
+        {
+          "sourceDate": "2023-04-23",
+          "scenarioIds": [
+            "TA01-S0110"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.257e-05,
+          "hybridAbsoluteErrorSumMm": 6.4e-07,
+          "lstmMinusHybridMaeContributionMm": 1.7738888888888889e-06
+        },
+        {
+          "sourceDate": "2022-05-18",
+          "scenarioIds": [
+            "TA01-S0083"
+          ],
+          "observedDailyRainfallMm": [
+            0.18
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.00013940000000000003,
+          "hybridAbsoluteErrorSumMm": 0.00010800000000000002,
+          "lstmMinusHybridMaeContributionMm": 1.7444444444444446e-06
+        },
+        {
+          "sourceDate": "2024-07-30",
+          "scenarioIds": [
+            "TA01-S0280"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.9350000000000002e-05,
+          "hybridAbsoluteErrorSumMm": 9.1e-07,
+          "lstmMinusHybridMaeContributionMm": 1.5800000000000001e-06
+        },
+        {
+          "sourceDate": "2022-06-03",
+          "scenarioIds": [
+            "TA01-S0386"
+          ],
+          "observedDailyRainfallMm": [
+            0.03
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 6.739999999999998e-05,
+          "hybridAbsoluteErrorSumMm": 4.157999999999998e-05,
+          "lstmMinusHybridMaeContributionMm": 1.4344444444444448e-06
+        },
+        {
+          "sourceDate": "2022-09-26",
+          "scenarioIds": [
+            "TA01-S0369"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.834e-05,
+          "hybridAbsoluteErrorSumMm": 3.73e-06,
+          "lstmMinusHybridMaeContributionMm": 1.3672222222222222e-06
+        },
+        {
+          "sourceDate": "2021-12-01",
+          "scenarioIds": [
+            "TA01-S0396"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 6.151e-05,
+          "hybridAbsoluteErrorSumMm": 3.74e-05,
+          "lstmMinusHybridMaeContributionMm": 1.3394444444444442e-06
+        },
+        {
+          "sourceDate": "2024-03-03",
+          "scenarioIds": [
+            "TA01-S0138"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.531e-05,
+          "hybridAbsoluteErrorSumMm": 2.4e-06,
+          "lstmMinusHybridMaeContributionMm": 1.2727777777777777e-06
+        },
+        {
+          "sourceDate": "2024-01-26",
+          "scenarioIds": [
+            "TA01-S0354"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 5.2600000000000005e-05,
+          "hybridAbsoluteErrorSumMm": 2.972e-05,
+          "lstmMinusHybridMaeContributionMm": 1.2711111111111114e-06
+        },
+        {
+          "sourceDate": "2025-10-19",
+          "scenarioIds": [
+            "TA01-S0338"
+          ],
+          "observedDailyRainfallMm": [
+            0.74
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 5.4490000000000124e-05,
+          "hybridAbsoluteErrorSumMm": 3.1710000000000074e-05,
+          "lstmMinusHybridMaeContributionMm": 1.2655555555555584e-06
+        },
+        {
+          "sourceDate": "2025-01-17",
+          "scenarioIds": [
+            "TA01-S0007"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.544e-05,
+          "hybridAbsoluteErrorSumMm": 1.506e-05,
+          "lstmMinusHybridMaeContributionMm": 1.1322222222222221e-06
+        },
+        {
+          "sourceDate": "2023-11-10",
+          "scenarioIds": [
+            "TA01-S0414"
+          ],
+          "observedDailyRainfallMm": [
+            0.26
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 4.633999999999999e-05,
+          "hybridAbsoluteErrorSumMm": 2.8099999999999985e-05,
+          "lstmMinusHybridMaeContributionMm": 1.0133333333333335e-06
+        },
+        {
+          "sourceDate": "2025-08-25",
+          "scenarioIds": [
+            "TA01-S0075"
+          ],
+          "observedDailyRainfallMm": [
+            0.24
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.403999999999998e-05,
+          "hybridAbsoluteErrorSumMm": 1.784999999999997e-05,
+          "lstmMinusHybridMaeContributionMm": 8.99444444444445e-07
+        },
+        {
+          "sourceDate": "2020-12-06",
+          "scenarioIds": [
+            "TA01-S0040"
+          ],
+          "observedDailyRainfallMm": [
+            1.05
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.480000000000004e-05,
+          "hybridAbsoluteErrorSumMm": 5.0890000000000057e-05,
+          "lstmMinusHybridMaeContributionMm": -8.938888888888899e-07
+        },
+        {
+          "sourceDate": "2023-11-19",
+          "scenarioIds": [
+            "TA01-S0332"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.187e-05,
+          "hybridAbsoluteErrorSumMm": 6.43e-06,
+          "lstmMinusHybridMaeContributionMm": 8.577777777777777e-07
+        },
+        {
+          "sourceDate": "2024-12-31",
+          "scenarioIds": [
+            "TA01-S0149"
+          ],
+          "observedDailyRainfallMm": [
+            3.91
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.00022988000000000026,
+          "hybridAbsoluteErrorSumMm": 0.0002440600000000003,
+          "lstmMinusHybridMaeContributionMm": -7.877777777777795e-07
+        },
+        {
+          "sourceDate": "2022-12-24",
+          "scenarioIds": [
+            "TA01-S0493"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.421e-05,
+          "hybridAbsoluteErrorSumMm": 2.8e-07,
+          "lstmMinusHybridMaeContributionMm": 7.738888888888888e-07
+        },
+        {
+          "sourceDate": "2025-05-29",
+          "scenarioIds": [
+            "TA01-S0287"
+          ],
+          "observedDailyRainfallMm": [
+            2.37
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 7.371000000000012e-05,
+          "hybridAbsoluteErrorSumMm": 8.698999999999983e-05,
+          "lstmMinusHybridMaeContributionMm": -7.377777777777617e-07
+        },
+        {
+          "sourceDate": "2024-12-13",
+          "scenarioIds": [
+            "TA01-S0006"
+          ],
+          "observedDailyRainfallMm": [
+            0.17
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 6.368999999999997e-05,
+          "hybridAbsoluteErrorSumMm": 7.673999999999996e-05,
+          "lstmMinusHybridMaeContributionMm": -7.249999999999995e-07
+        },
+        {
+          "sourceDate": "2023-05-20",
+          "scenarioIds": [
+            "TA01-S0025"
+          ],
+          "observedDailyRainfallMm": [
+            0.01
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.886e-05,
+          "hybridAbsoluteErrorSumMm": 4.134e-05,
+          "lstmMinusHybridMaeContributionMm": -6.933333333333333e-07
+        },
+        {
+          "sourceDate": "2022-12-31",
+          "scenarioIds": [
+            "TA01-S0361"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.006e-05,
+          "hybridAbsoluteErrorSumMm": 7.73e-06,
+          "lstmMinusHybridMaeContributionMm": 6.85e-07
+        },
+        {
+          "sourceDate": "2021-12-16",
+          "scenarioIds": [
+            "TA01-S0277"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.82e-05,
+          "hybridAbsoluteErrorSumMm": 3.986e-05,
+          "lstmMinusHybridMaeContributionMm": -6.477777777777778e-07
+        },
+        {
+          "sourceDate": "2020-04-30",
+          "scenarioIds": [
+            "TA01-S0145"
+          ],
+          "observedDailyRainfallMm": [
+            0.03
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.9759999999999994e-05,
+          "hybridAbsoluteErrorSumMm": 3.140999999999999e-05,
+          "lstmMinusHybridMaeContributionMm": -6.472222222222221e-07
+        },
+        {
+          "sourceDate": "2022-06-11",
+          "scenarioIds": [
+            "TA01-S0038"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.137e-05,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 6.316666666666666e-07
+        },
+        {
+          "sourceDate": "2022-08-29",
+          "scenarioIds": [
+            "TA01-S0047"
+          ],
+          "observedDailyRainfallMm": [
+            0.01
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.2839999999999994e-05,
+          "hybridAbsoluteErrorSumMm": 2.420999999999999e-05,
+          "lstmMinusHybridMaeContributionMm": -6.316666666666664e-07
+        },
+        {
+          "sourceDate": "2022-02-08",
+          "scenarioIds": [
+            "TA01-S0356"
+          ],
+          "observedDailyRainfallMm": [
+            0.01
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.1949999999999996e-05,
+          "hybridAbsoluteErrorSumMm": 2.2739999999999992e-05,
+          "lstmMinusHybridMaeContributionMm": -5.994444444444442e-07
+        },
+        {
+          "sourceDate": "2020-03-03",
+          "scenarioIds": [
+            "TA01-S0295"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.071e-05,
+          "hybridAbsoluteErrorSumMm": 7e-07,
+          "lstmMinusHybridMaeContributionMm": 5.561111111111112e-07
+        },
+        {
+          "sourceDate": "2024-05-24",
+          "scenarioIds": [
+            "TA01-S0371"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 9.822e-05,
+          "hybridAbsoluteErrorSumMm": 8.905e-05,
+          "lstmMinusHybridMaeContributionMm": 5.09444444444445e-07
+        },
+        {
+          "sourceDate": "2021-10-26",
+          "scenarioIds": [
+            "TA01-S0296"
+          ],
+          "observedDailyRainfallMm": [
+            0.04
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.943e-05,
+          "hybridAbsoluteErrorSumMm": 1.1490000000000002e-05,
+          "lstmMinusHybridMaeContributionMm": 4.4111111111111094e-07
+        },
+        {
+          "sourceDate": "2024-08-11",
+          "scenarioIds": [
+            "TA01-S0132"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 4.51e-05,
+          "hybridAbsoluteErrorSumMm": 5.292e-05,
+          "lstmMinusHybridMaeContributionMm": -4.3444444444444464e-07
+        },
+        {
+          "sourceDate": "2025-10-01",
+          "scenarioIds": [
+            "TA01-S0374"
+          ],
+          "observedDailyRainfallMm": [
+            0.94
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 4.968000000000009e-05,
+          "hybridAbsoluteErrorSumMm": 4.2550000000000065e-05,
+          "lstmMinusHybridMaeContributionMm": 3.961111111111123e-07
+        },
+        {
+          "sourceDate": "2022-04-16",
+          "scenarioIds": [
+            "TA01-S0071"
+          ],
+          "observedDailyRainfallMm": [
+            0.08
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 5.054999999999999e-05,
+          "hybridAbsoluteErrorSumMm": 4.385999999999999e-05,
+          "lstmMinusHybridMaeContributionMm": 3.7166666666666657e-07
+        },
+        {
+          "sourceDate": "2022-12-08",
+          "scenarioIds": [
+            "TA01-S0220"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 8.78e-06,
+          "hybridAbsoluteErrorSumMm": 2.11e-06,
+          "lstmMinusHybridMaeContributionMm": 3.705555555555556e-07
+        },
+        {
+          "sourceDate": "2021-07-26",
+          "scenarioIds": [
+            "TA01-S0111"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 6.49e-06,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 3.6055555555555553e-07
+        },
+        {
+          "sourceDate": "2020-09-12",
+          "scenarioIds": [
+            "TA01-S0036"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.883e-05,
+          "hybridAbsoluteErrorSumMm": 1.235e-05,
+          "lstmMinusHybridMaeContributionMm": 3.6000000000000005e-07
+        },
+        {
+          "sourceDate": "2024-09-17",
+          "scenarioIds": [
+            "TA01-S0496"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 8.63e-06,
+          "hybridAbsoluteErrorSumMm": 2.42e-06,
+          "lstmMinusHybridMaeContributionMm": 3.45e-07
+        },
+        {
+          "sourceDate": "2023-07-11",
+          "scenarioIds": [
+            "TA01-S0373"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 5.16e-06,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 2.8666666666666664e-07
+        },
+        {
+          "sourceDate": "2025-02-22",
+          "scenarioIds": [
+            "TA01-S0241"
+          ],
+          "observedDailyRainfallMm": [
+            2.16
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 8.609000000000009e-05,
+          "hybridAbsoluteErrorSumMm": 9.070999999999984e-05,
+          "lstmMinusHybridMaeContributionMm": -2.5666666666665274e-07
+        },
+        {
+          "sourceDate": "2022-03-03",
+          "scenarioIds": [
+            "TA01-S0398"
+          ],
+          "observedDailyRainfallMm": [
+            4.29
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.00019604000000000065,
+          "hybridAbsoluteErrorSumMm": 0.00019178000000000012,
+          "lstmMinusHybridMaeContributionMm": 2.366666666666962e-07
+        },
+        {
+          "sourceDate": "2024-02-06",
+          "scenarioIds": [
+            "TA01-S0231"
+          ],
+          "observedDailyRainfallMm": [
+            0.01
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 4.81e-06,
+          "hybridAbsoluteErrorSumMm": 9.04e-06,
+          "lstmMinusHybridMaeContributionMm": -2.35e-07
+        },
+        {
+          "sourceDate": "2025-10-18",
+          "scenarioIds": [
+            "TA01-S0105"
+          ],
+          "observedDailyRainfallMm": [
+            0.03
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.644e-05,
+          "hybridAbsoluteErrorSumMm": 1.2460000000000001e-05,
+          "lstmMinusHybridMaeContributionMm": 2.2111111111111098e-07
+        },
+        {
+          "sourceDate": "2024-01-28",
+          "scenarioIds": [
+            "TA01-S0469"
+          ],
+          "observedDailyRainfallMm": [
+            2.81
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 8.955999999999992e-05,
+          "hybridAbsoluteErrorSumMm": 9.336000000000001e-05,
+          "lstmMinusHybridMaeContributionMm": -2.1111111111111624e-07
+        },
+        {
+          "sourceDate": "2023-10-26",
+          "scenarioIds": [
+            "TA01-S0486"
+          ],
+          "observedDailyRainfallMm": [
+            3.2
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.00010753000000000023,
+          "hybridAbsoluteErrorSumMm": 0.00010408000000000026,
+          "lstmMinusHybridMaeContributionMm": 1.9166666666666456e-07
+        },
+        {
+          "sourceDate": "2025-01-27",
+          "scenarioIds": [
+            "TA01-S0390"
+          ],
+          "observedDailyRainfallMm": [
+            1.6
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 4.500999999999999e-05,
+          "hybridAbsoluteErrorSumMm": 4.1729999999999995e-05,
+          "lstmMinusHybridMaeContributionMm": 1.82222222222222e-07
+        },
+        {
+          "sourceDate": "2023-03-09",
+          "scenarioIds": [
+            "TA01-S0245"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.107e-05,
+          "hybridAbsoluteErrorSumMm": 2.784e-05,
+          "lstmMinusHybridMaeContributionMm": 1.7944444444444433e-07
+        },
+        {
+          "sourceDate": "2023-10-04",
+          "scenarioIds": [
+            "TA01-S0183"
+          ],
+          "observedDailyRainfallMm": [
+            0.3
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.448999999999996e-05,
+          "hybridAbsoluteErrorSumMm": 3.765999999999996e-05,
+          "lstmMinusHybridMaeContributionMm": -1.7611111111111102e-07
+        },
+        {
+          "sourceDate": "2021-11-04",
+          "scenarioIds": [
+            "TA01-S0385"
+          ],
+          "observedDailyRainfallMm": [
+            0.01
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 3.11e-06,
+          "lstmMinusHybridMaeContributionMm": -1.7277777777777776e-07
+        },
+        {
+          "sourceDate": "2023-08-06",
+          "scenarioIds": [
+            "TA01-S0370"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.02e-06,
+          "hybridAbsoluteErrorSumMm": 1e-08,
+          "lstmMinusHybridMaeContributionMm": 1.6722222222222222e-07
+        },
+        {
+          "sourceDate": "2023-01-19",
+          "scenarioIds": [
+            "TA01-S0376"
+          ],
+          "observedDailyRainfallMm": [
+            1.6
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 7.534000000000009e-05,
+          "hybridAbsoluteErrorSumMm": 7.234e-05,
+          "lstmMinusHybridMaeContributionMm": 1.6666666666667147e-07
+        },
+        {
+          "sourceDate": "2021-10-14",
+          "scenarioIds": [
+            "TA01-S0249"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.85e-06,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 1.5833333333333333e-07
+        },
+        {
+          "sourceDate": "2021-11-13",
+          "scenarioIds": [
+            "TA01-S0408"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 5.31e-06,
+          "hybridAbsoluteErrorSumMm": 2.62e-06,
+          "lstmMinusHybridMaeContributionMm": 1.4944444444444445e-07
+        },
+        {
+          "sourceDate": "2021-12-15",
+          "scenarioIds": [
+            "TA01-S0330"
+          ],
+          "observedDailyRainfallMm": [
+            2.12
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.00019885000000000004,
+          "hybridAbsoluteErrorSumMm": 0.00020124,
+          "lstmMinusHybridMaeContributionMm": -1.3277777777777528e-07
+        },
+        {
+          "sourceDate": "2020-08-15",
+          "scenarioIds": [
+            "TA01-S0011"
+          ],
+          "observedDailyRainfallMm": [
+            3.16
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.0001126,
+          "hybridAbsoluteErrorSumMm": 0.00011495000000000003,
+          "lstmMinusHybridMaeContributionMm": -1.3055555555555723e-07
+        },
+        {
+          "sourceDate": "2025-10-23",
+          "scenarioIds": [
+            "TA01-S0081"
+          ],
+          "observedDailyRainfallMm": [
+            0.11
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.00011548000000000003,
+          "hybridAbsoluteErrorSumMm": 0.00011329,
+          "lstmMinusHybridMaeContributionMm": 1.2166666666666843e-07
+        },
+        {
+          "sourceDate": "2024-06-08",
+          "scenarioIds": [
+            "TA01-S0039"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 7.979000000000001e-05,
+          "hybridAbsoluteErrorSumMm": 8.197e-05,
+          "lstmMinusHybridMaeContributionMm": -1.2111111111111088e-07
+        },
+        {
+          "sourceDate": "2021-05-10",
+          "scenarioIds": [
+            "TA01-S0027"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.932e-05,
+          "hybridAbsoluteErrorSumMm": 1.717e-05,
+          "lstmMinusHybridMaeContributionMm": 1.1944444444444453e-07
+        },
+        {
+          "sourceDate": "2022-01-07",
+          "scenarioIds": [
+            "TA01-S0221"
+          ],
+          "observedDailyRainfallMm": [
+            0.04
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.2039999999999995e-05,
+          "hybridAbsoluteErrorSumMm": 1e-05,
+          "lstmMinusHybridMaeContributionMm": 1.13333333333333e-07
+        },
+        {
+          "sourceDate": "2022-08-30",
+          "scenarioIds": [
+            "TA01-S0318"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.86e-06,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 1.0333333333333333e-07
+        },
+        {
+          "sourceDate": "2020-03-15",
+          "scenarioIds": [
+            "TA01-S0352"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 4.04e-06,
+          "hybridAbsoluteErrorSumMm": 5.87e-06,
+          "lstmMinusHybridMaeContributionMm": -1.0166666666666664e-07
+        },
+        {
+          "sourceDate": "2023-07-19",
+          "scenarioIds": [
+            "TA01-S0165"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.3e-07,
+          "hybridAbsoluteErrorSumMm": 1.92e-06,
+          "lstmMinusHybridMaeContributionMm": -8.833333333333332e-08
+        },
+        {
+          "sourceDate": "2022-03-06",
+          "scenarioIds": [
+            "TA01-S0457"
+          ],
+          "observedDailyRainfallMm": [
+            0.71
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 9.618999999999993e-05,
+          "hybridAbsoluteErrorSumMm": 9.753999999999999e-05,
+          "lstmMinusHybridMaeContributionMm": -7.500000000000333e-08
+        },
+        {
+          "sourceDate": "2021-10-01",
+          "scenarioIds": [
+            "TA01-S0423"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1.26e-06,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 7e-08
+        },
+        {
+          "sourceDate": "2025-05-15",
+          "scenarioIds": [
+            "TA01-S0037"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.05e-06,
+          "hybridAbsoluteErrorSumMm": 2.44e-06,
+          "lstmMinusHybridMaeContributionMm": -2.1666666666666672e-08
+        },
+        {
+          "sourceDate": "2022-08-22",
+          "scenarioIds": [
+            "TA01-S0364"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 3.7999999999999996e-07,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 2.111111111111111e-08
+        },
+        {
+          "sourceDate": "2025-11-07",
+          "scenarioIds": [
+            "TA01-S0087"
+          ],
+          "observedDailyRainfallMm": [
+            0.12
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 2.6459999999999997e-05,
+          "hybridAbsoluteErrorSumMm": 2.637999999999999e-05,
+          "lstmMinusHybridMaeContributionMm": 4.4444444444447784e-09
+        },
+        {
+          "sourceDate": "2020-02-12",
+          "scenarioIds": [
+            "TA01-S0477"
+          ],
+          "observedDailyRainfallMm": [
+            0.06
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 1e-05,
+          "hybridAbsoluteErrorSumMm": 1e-05,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2021-04-19",
+          "scenarioIds": [
+            "TA01-S0062"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2021-07-01",
+          "scenarioIds": [
+            "TA01-S0265"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2021-08-09",
+          "scenarioIds": [
+            "TA01-S0114"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2022-05-05",
+          "scenarioIds": [
+            "TA01-S0016"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2024-05-21",
+          "scenarioIds": [
+            "TA01-S0003"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2024-07-20",
+          "scenarioIds": [
+            "TA01-S0139"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 18,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        }
+      ]
+    },
+    {
+      "horizonHours": 6,
+      "windowCount": 975,
+      "rainfallDateCount": 75,
+      "pairedDateBootstrap": {
+        "estimand": "MAE_LSTM-MAE_in_sample_hybrid; positive favors hybrid",
+        "dateBlockCount": 75,
+        "bootstrapDraws": 20000,
+        "seed": 20261056,
+        "lstmMaeMm": 6.332481025641027e-05,
+        "hybridMaeMm": 6.17628923076923e-05,
+        "observedDifferenceMm": 1.5619179487179677e-06,
+        "confidenceInterval95Mm": [
+          -6.72842820512819e-07,
+          5.35867307692311e-06
+        ]
+      },
+      "targetZeroByObservedDailyRainfall": {
+        "dailyRainfallZero": {
+          "sampleCount": 507,
+          "zeroTargetCount": 507,
+          "zeroTargetShare": 1.0,
+          "lstmMaeMm": 9.93353057199211e-07,
+          "hybridMaeMm": 1.7588560157790927e-06
+        },
+        "dailyRainfallPositive": {
+          "sampleCount": 468,
+          "zeroTargetCount": 45,
+          "zeroTargetShare": 0.09615384615384616,
+          "lstmMaeMm": 0.00013085055555555556,
+          "hybridMaeMm": 0.00012676726495726496
+        }
+      },
+      "extremeScenarioSensitivity": {
+        "scenarioId": "TA01-S0001",
+        "sourceDate": "2021-01-14",
+        "dailyRainfallMm": 102.88,
+        "windowCount": 13,
+        "lstmAbsoluteErrorShare": 0.753901456212164,
+        "hybridAbsoluteErrorShare": 0.7453007216016522,
+        "fullSampleMaeMm": {
+          "lstm": 6.332481025641027e-05,
+          "inSampleHybrid": 6.17628923076923e-05
+        },
+        "excludingScenarioMaeMm": {
+          "lstm": 1.5794740124740126e-05,
+          "inSampleHybrid": 1.5943544698544698e-05
+        },
+        "interpretation": "Sensitivity only; the full test set remains the primary estimate."
+      },
+      "largestAbsoluteDateContributions": [
+        {
+          "sourceDate": "2021-01-14",
+          "scenarioIds": [
+            "TA01-S0001"
+          ],
+          "observedDailyRainfallMm": [
+            102.88
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.04654715,
+          "hybridAbsoluteErrorSumMm": 0.044881130000000005,
+          "lstmMinusHybridMaeContributionMm": 0.0001281553846153844
+        },
+        {
+          "sourceDate": "2022-03-03",
+          "scenarioIds": [
+            "TA01-S0398"
+          ],
+          "observedDailyRainfallMm": [
+            4.29
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00572616,
+          "hybridAbsoluteErrorSumMm": 0.005534850000000001,
+          "lstmMinusHybridMaeContributionMm": 1.4716153846153786e-05
+        },
+        {
+          "sourceDate": "2021-12-15",
+          "scenarioIds": [
+            "TA01-S0330"
+          ],
+          "observedDailyRainfallMm": [
+            2.12
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0015045999999999996,
+          "hybridAbsoluteErrorSumMm": 0.0016507499999999999,
+          "lstmMinusHybridMaeContributionMm": -1.1242307692307714e-05
+        },
+        {
+          "sourceDate": "2021-04-24",
+          "scenarioIds": [
+            "TA01-S0491"
+          ],
+          "observedDailyRainfallMm": [
+            5.23
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0008808500000000005,
+          "hybridAbsoluteErrorSumMm": 0.0007763400000000005,
+          "lstmMinusHybridMaeContributionMm": 8.039230769230772e-06
+        },
+        {
+          "sourceDate": "2022-06-03",
+          "scenarioIds": [
+            "TA01-S0386"
+          ],
+          "observedDailyRainfallMm": [
+            0.03
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 4.049e-05,
+          "hybridAbsoluteErrorSumMm": 0.00012195999999999998,
+          "lstmMinusHybridMaeContributionMm": -6.266923076923075e-06
+        },
+        {
+          "sourceDate": "2025-05-29",
+          "scenarioIds": [
+            "TA01-S0287"
+          ],
+          "observedDailyRainfallMm": [
+            2.37
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00020345999999999938,
+          "hybridAbsoluteErrorSumMm": 0.00012224000000000002,
+          "lstmMinusHybridMaeContributionMm": 6.2476923076922585e-06
+        },
+        {
+          "sourceDate": "2023-07-19",
+          "scenarioIds": [
+            "TA01-S0165"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 6.657e-05,
+          "lstmMinusHybridMaeContributionMm": -5.12076923076923e-06
+        },
+        {
+          "sourceDate": "2021-08-09",
+          "scenarioIds": [
+            "TA01-S0114"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 5.585e-05,
+          "hybridAbsoluteErrorSumMm": 0.00011754,
+          "lstmMinusHybridMaeContributionMm": -4.745384615384616e-06
+        },
+        {
+          "sourceDate": "2023-10-26",
+          "scenarioIds": [
+            "TA01-S0486"
+          ],
+          "observedDailyRainfallMm": [
+            3.2
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00033580000000000003,
+          "hybridAbsoluteErrorSumMm": 0.00027498999999999997,
+          "lstmMinusHybridMaeContributionMm": 4.6776923076923125e-06
+        },
+        {
+          "sourceDate": "2023-11-25",
+          "scenarioIds": [
+            "TA01-S0096"
+          ],
+          "observedDailyRainfallMm": [
+            3.45
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00144725,
+          "hybridAbsoluteErrorSumMm": 0.00150453,
+          "lstmMinusHybridMaeContributionMm": -4.40615384615385e-06
+        }
+      ],
+      "allDateContributions": [
+        {
+          "sourceDate": "2021-01-14",
+          "scenarioIds": [
+            "TA01-S0001"
+          ],
+          "observedDailyRainfallMm": [
+            102.88
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.04654715,
+          "hybridAbsoluteErrorSumMm": 0.044881130000000005,
+          "lstmMinusHybridMaeContributionMm": 0.0001281553846153844
+        },
+        {
+          "sourceDate": "2022-03-03",
+          "scenarioIds": [
+            "TA01-S0398"
+          ],
+          "observedDailyRainfallMm": [
+            4.29
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00572616,
+          "hybridAbsoluteErrorSumMm": 0.005534850000000001,
+          "lstmMinusHybridMaeContributionMm": 1.4716153846153786e-05
+        },
+        {
+          "sourceDate": "2021-12-15",
+          "scenarioIds": [
+            "TA01-S0330"
+          ],
+          "observedDailyRainfallMm": [
+            2.12
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0015045999999999996,
+          "hybridAbsoluteErrorSumMm": 0.0016507499999999999,
+          "lstmMinusHybridMaeContributionMm": -1.1242307692307714e-05
+        },
+        {
+          "sourceDate": "2021-04-24",
+          "scenarioIds": [
+            "TA01-S0491"
+          ],
+          "observedDailyRainfallMm": [
+            5.23
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0008808500000000005,
+          "hybridAbsoluteErrorSumMm": 0.0007763400000000005,
+          "lstmMinusHybridMaeContributionMm": 8.039230769230772e-06
+        },
+        {
+          "sourceDate": "2022-06-03",
+          "scenarioIds": [
+            "TA01-S0386"
+          ],
+          "observedDailyRainfallMm": [
+            0.03
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 4.049e-05,
+          "hybridAbsoluteErrorSumMm": 0.00012195999999999998,
+          "lstmMinusHybridMaeContributionMm": -6.266923076923075e-06
+        },
+        {
+          "sourceDate": "2025-05-29",
+          "scenarioIds": [
+            "TA01-S0287"
+          ],
+          "observedDailyRainfallMm": [
+            2.37
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00020345999999999938,
+          "hybridAbsoluteErrorSumMm": 0.00012224000000000002,
+          "lstmMinusHybridMaeContributionMm": 6.2476923076922585e-06
+        },
+        {
+          "sourceDate": "2023-07-19",
+          "scenarioIds": [
+            "TA01-S0165"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 6.657e-05,
+          "lstmMinusHybridMaeContributionMm": -5.12076923076923e-06
+        },
+        {
+          "sourceDate": "2021-08-09",
+          "scenarioIds": [
+            "TA01-S0114"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 5.585e-05,
+          "hybridAbsoluteErrorSumMm": 0.00011754,
+          "lstmMinusHybridMaeContributionMm": -4.745384615384616e-06
+        },
+        {
+          "sourceDate": "2023-10-26",
+          "scenarioIds": [
+            "TA01-S0486"
+          ],
+          "observedDailyRainfallMm": [
+            3.2
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00033580000000000003,
+          "hybridAbsoluteErrorSumMm": 0.00027498999999999997,
+          "lstmMinusHybridMaeContributionMm": 4.6776923076923125e-06
+        },
+        {
+          "sourceDate": "2023-11-25",
+          "scenarioIds": [
+            "TA01-S0096"
+          ],
+          "observedDailyRainfallMm": [
+            3.45
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00144725,
+          "hybridAbsoluteErrorSumMm": 0.00150453,
+          "lstmMinusHybridMaeContributionMm": -4.40615384615385e-06
+        },
+        {
+          "sourceDate": "2025-01-27",
+          "scenarioIds": [
+            "TA01-S0390"
+          ],
+          "observedDailyRainfallMm": [
+            1.6
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00017866000000000003,
+          "hybridAbsoluteErrorSumMm": 0.00012221000000000004,
+          "lstmMinusHybridMaeContributionMm": 4.342307692307692e-06
+        },
+        {
+          "sourceDate": "2025-11-07",
+          "scenarioIds": [
+            "TA01-S0087"
+          ],
+          "observedDailyRainfallMm": [
+            0.12
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 3.3100000000000005e-05,
+          "hybridAbsoluteErrorSumMm": 8.936999999999998e-05,
+          "lstmMinusHybridMaeContributionMm": -4.3284615384615366e-06
+        },
+        {
+          "sourceDate": "2025-10-23",
+          "scenarioIds": [
+            "TA01-S0081"
+          ],
+          "observedDailyRainfallMm": [
+            0.11
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00058631,
+          "hybridAbsoluteErrorSumMm": 0.00053523,
+          "lstmMinusHybridMaeContributionMm": 3.92923076923077e-06
+        },
+        {
+          "sourceDate": "2022-12-24",
+          "scenarioIds": [
+            "TA01-S0493"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00014357,
+          "hybridAbsoluteErrorSumMm": 0.00019304,
+          "lstmMinusHybridMaeContributionMm": -3.8053846153846154e-06
+        },
+        {
+          "sourceDate": "2021-12-16",
+          "scenarioIds": [
+            "TA01-S0277"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 4.261e-05,
+          "lstmMinusHybridMaeContributionMm": -3.2776923076923077e-06
+        },
+        {
+          "sourceDate": "2020-12-06",
+          "scenarioIds": [
+            "TA01-S0040"
+          ],
+          "observedDailyRainfallMm": [
+            1.05
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 9.174000000000005e-05,
+          "hybridAbsoluteErrorSumMm": 5.155000000000002e-05,
+          "lstmMinusHybridMaeContributionMm": 3.091538461538464e-06
+        },
+        {
+          "sourceDate": "2022-12-08",
+          "scenarioIds": [
+            "TA01-S0220"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00012942,
+          "hybridAbsoluteErrorSumMm": 0.00016757,
+          "lstmMinusHybridMaeContributionMm": -2.9346153846153853e-06
+        },
+        {
+          "sourceDate": "2025-05-15",
+          "scenarioIds": [
+            "TA01-S0037"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 4.965e-05,
+          "hybridAbsoluteErrorSumMm": 8.091e-05,
+          "lstmMinusHybridMaeContributionMm": -2.4046153846153844e-06
+        },
+        {
+          "sourceDate": "2025-08-25",
+          "scenarioIds": [
+            "TA01-S0075"
+          ],
+          "observedDailyRainfallMm": [
+            0.24
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00016653000000000002,
+          "hybridAbsoluteErrorSumMm": 0.00013915000000000002,
+          "lstmMinusHybridMaeContributionMm": 2.106153846153846e-06
+        },
+        {
+          "sourceDate": "2023-08-06",
+          "scenarioIds": [
+            "TA01-S0370"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 5.51e-06,
+          "hybridAbsoluteErrorSumMm": 3.1219999999999996e-05,
+          "lstmMinusHybridMaeContributionMm": -1.9776923076923074e-06
+        },
+        {
+          "sourceDate": "2023-01-19",
+          "scenarioIds": [
+            "TA01-S0376"
+          ],
+          "observedDailyRainfallMm": [
+            1.6
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 5.0340000000000064e-05,
+          "hybridAbsoluteErrorSumMm": 7.430999999999996e-05,
+          "lstmMinusHybridMaeContributionMm": -1.8438461538461457e-06
+        },
+        {
+          "sourceDate": "2024-12-31",
+          "scenarioIds": [
+            "TA01-S0149"
+          ],
+          "observedDailyRainfallMm": [
+            3.91
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0006562599999999999,
+          "hybridAbsoluteErrorSumMm": 0.00067903,
+          "lstmMinusHybridMaeContributionMm": -1.751538461538468e-06
+        },
+        {
+          "sourceDate": "2025-10-01",
+          "scenarioIds": [
+            "TA01-S0374"
+          ],
+          "observedDailyRainfallMm": [
+            0.94
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00013395999999999992,
+          "hybridAbsoluteErrorSumMm": 0.0001133399999999999,
+          "lstmMinusHybridMaeContributionMm": 1.5861538461538475e-06
+        },
+        {
+          "sourceDate": "2025-02-22",
+          "scenarioIds": [
+            "TA01-S0241"
+          ],
+          "observedDailyRainfallMm": [
+            2.16
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00019355999999999996,
+          "hybridAbsoluteErrorSumMm": 0.0002133599999999999,
+          "lstmMinusHybridMaeContributionMm": -1.5230769230769183e-06
+        },
+        {
+          "sourceDate": "2024-01-28",
+          "scenarioIds": [
+            "TA01-S0469"
+          ],
+          "observedDailyRainfallMm": [
+            2.81
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 4.782999999999974e-05,
+          "hybridAbsoluteErrorSumMm": 6.557999999999998e-05,
+          "lstmMinusHybridMaeContributionMm": -1.365384615384634e-06
+        },
+        {
+          "sourceDate": "2024-12-13",
+          "scenarioIds": [
+            "TA01-S0006"
+          ],
+          "observedDailyRainfallMm": [
+            0.17
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 6.593999999999998e-05,
+          "hybridAbsoluteErrorSumMm": 4.862999999999997e-05,
+          "lstmMinusHybridMaeContributionMm": 1.3315384615384622e-06
+        },
+        {
+          "sourceDate": "2020-04-30",
+          "scenarioIds": [
+            "TA01-S0145"
+          ],
+          "observedDailyRainfallMm": [
+            0.03
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 5.999000000000001e-05,
+          "hybridAbsoluteErrorSumMm": 4.2699999999999994e-05,
+          "lstmMinusHybridMaeContributionMm": 1.330000000000001e-06
+        },
+        {
+          "sourceDate": "2024-06-08",
+          "scenarioIds": [
+            "TA01-S0039"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 6.300000000000001e-06,
+          "hybridAbsoluteErrorSumMm": 2.261e-05,
+          "lstmMinusHybridMaeContributionMm": -1.2546153846153844e-06
+        },
+        {
+          "sourceDate": "2021-05-10",
+          "scenarioIds": [
+            "TA01-S0027"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 1.487e-05,
+          "lstmMinusHybridMaeContributionMm": -1.143846153846154e-06
+        },
+        {
+          "sourceDate": "2020-02-12",
+          "scenarioIds": [
+            "TA01-S0477"
+          ],
+          "observedDailyRainfallMm": [
+            0.06
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00122875,
+          "hybridAbsoluteErrorSumMm": 0.0012435599999999999,
+          "lstmMinusHybridMaeContributionMm": -1.139230769230759e-06
+        },
+        {
+          "sourceDate": "2023-07-11",
+          "scenarioIds": [
+            "TA01-S0373"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 1.537e-05,
+          "hybridAbsoluteErrorSumMm": 9.6e-07,
+          "lstmMinusHybridMaeContributionMm": 1.1084615384615386e-06
+        },
+        {
+          "sourceDate": "2022-09-26",
+          "scenarioIds": [
+            "TA01-S0369"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 1.2839999999999999e-05,
+          "lstmMinusHybridMaeContributionMm": -9.876923076923076e-07
+        },
+        {
+          "sourceDate": "2020-03-15",
+          "scenarioIds": [
+            "TA01-S0352"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 1.225e-05,
+          "lstmMinusHybridMaeContributionMm": -9.423076923076923e-07
+        },
+        {
+          "sourceDate": "2022-02-21",
+          "scenarioIds": [
+            "TA01-S0024"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 5.98e-06,
+          "hybridAbsoluteErrorSumMm": 1.595e-05,
+          "lstmMinusHybridMaeContributionMm": -7.66923076923077e-07
+        },
+        {
+          "sourceDate": "2025-10-18",
+          "scenarioIds": [
+            "TA01-S0105"
+          ],
+          "observedDailyRainfallMm": [
+            0.03
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 4.1800000000000006e-05,
+          "hybridAbsoluteErrorSumMm": 3.193e-05,
+          "lstmMinusHybridMaeContributionMm": 7.592307692307697e-07
+        },
+        {
+          "sourceDate": "2021-10-26",
+          "scenarioIds": [
+            "TA01-S0296"
+          ],
+          "observedDailyRainfallMm": [
+            0.04
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 3.735e-05,
+          "hybridAbsoluteErrorSumMm": 4.6909999999999996e-05,
+          "lstmMinusHybridMaeContributionMm": -7.353846153846151e-07
+        },
+        {
+          "sourceDate": "2022-05-05",
+          "scenarioIds": [
+            "TA01-S0016"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 1.2090000000000001e-05,
+          "hybridAbsoluteErrorSumMm": 2.122e-05,
+          "lstmMinusHybridMaeContributionMm": -7.023076923076922e-07
+        },
+        {
+          "sourceDate": "2023-11-10",
+          "scenarioIds": [
+            "TA01-S0414"
+          ],
+          "observedDailyRainfallMm": [
+            0.26
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 4.726000000000001e-05,
+          "hybridAbsoluteErrorSumMm": 3.8490000000000006e-05,
+          "lstmMinusHybridMaeContributionMm": 6.746153846153851e-07
+        },
+        {
+          "sourceDate": "2024-07-30",
+          "scenarioIds": [
+            "TA01-S0280"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 7.24e-06,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 5.569230769230769e-07
+        },
+        {
+          "sourceDate": "2022-04-16",
+          "scenarioIds": [
+            "TA01-S0071"
+          ],
+          "observedDailyRainfallMm": [
+            0.08
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 6.173000000000001e-05,
+          "hybridAbsoluteErrorSumMm": 5.51e-05,
+          "lstmMinusHybridMaeContributionMm": 5.100000000000007e-07
+        },
+        {
+          "sourceDate": "2023-03-09",
+          "scenarioIds": [
+            "TA01-S0245"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 1.048e-05,
+          "hybridAbsoluteErrorSumMm": 1.699e-05,
+          "lstmMinusHybridMaeContributionMm": -5.00769230769231e-07
+        },
+        {
+          "sourceDate": "2025-10-19",
+          "scenarioIds": [
+            "TA01-S0338"
+          ],
+          "observedDailyRainfallMm": [
+            0.74
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00017951000000000013,
+          "hybridAbsoluteErrorSumMm": 0.00018599000000000014,
+          "lstmMinusHybridMaeContributionMm": -4.984615384615389e-07
+        },
+        {
+          "sourceDate": "2022-08-30",
+          "scenarioIds": [
+            "TA01-S0318"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 5.95e-06,
+          "lstmMinusHybridMaeContributionMm": -4.576923076923077e-07
+        },
+        {
+          "sourceDate": "2022-03-06",
+          "scenarioIds": [
+            "TA01-S0457"
+          ],
+          "observedDailyRainfallMm": [
+            0.71
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00022726000000000002,
+          "hybridAbsoluteErrorSumMm": 0.0002218000000000001,
+          "lstmMinusHybridMaeContributionMm": 4.199999999999931e-07
+        },
+        {
+          "sourceDate": "2022-08-29",
+          "scenarioIds": [
+            "TA01-S0047"
+          ],
+          "observedDailyRainfallMm": [
+            0.01
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 6.000000000000001e-05,
+          "hybridAbsoluteErrorSumMm": 5.4770000000000006e-05,
+          "lstmMinusHybridMaeContributionMm": 4.023076923076925e-07
+        },
+        {
+          "sourceDate": "2021-10-01",
+          "scenarioIds": [
+            "TA01-S0423"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 2.0340000000000002e-05,
+          "hybridAbsoluteErrorSumMm": 2.501e-05,
+          "lstmMinusHybridMaeContributionMm": -3.5923076923076905e-07
+        },
+        {
+          "sourceDate": "2023-10-04",
+          "scenarioIds": [
+            "TA01-S0183"
+          ],
+          "observedDailyRainfallMm": [
+            0.3
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 6.298e-05,
+          "hybridAbsoluteErrorSumMm": 6.636e-05,
+          "lstmMinusHybridMaeContributionMm": -2.5999999999999984e-07
+        },
+        {
+          "sourceDate": "2020-08-15",
+          "scenarioIds": [
+            "TA01-S0011"
+          ],
+          "observedDailyRainfallMm": [
+            3.16
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.00014597000000000018,
+          "hybridAbsoluteErrorSumMm": 0.00014752999999999996,
+          "lstmMinusHybridMaeContributionMm": -1.1999999999998374e-07
+        },
+        {
+          "sourceDate": "2024-07-20",
+          "scenarioIds": [
+            "TA01-S0139"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 4.183e-05,
+          "hybridAbsoluteErrorSumMm": 4.338e-05,
+          "lstmMinusHybridMaeContributionMm": -1.1923076923076952e-07
+        },
+        {
+          "sourceDate": "2022-05-18",
+          "scenarioIds": [
+            "TA01-S0083"
+          ],
+          "observedDailyRainfallMm": [
+            0.18
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 8.793000000000003e-05,
+          "hybridAbsoluteErrorSumMm": 8.682999999999998e-05,
+          "lstmMinusHybridMaeContributionMm": 8.461538461538876e-08
+        },
+        {
+          "sourceDate": "2022-01-07",
+          "scenarioIds": [
+            "TA01-S0221"
+          ],
+          "observedDailyRainfallMm": [
+            0.04
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 4.754e-05,
+          "hybridAbsoluteErrorSumMm": 4.656e-05,
+          "lstmMinusHybridMaeContributionMm": 7.538461538461544e-08
+        },
+        {
+          "sourceDate": "2024-03-03",
+          "scenarioIds": [
+            "TA01-S0138"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 1.5e-07,
+          "lstmMinusHybridMaeContributionMm": -1.1538461538461538e-08
+        },
+        {
+          "sourceDate": "2022-12-31",
+          "scenarioIds": [
+            "TA01-S0361"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 1e-07,
+          "lstmMinusHybridMaeContributionMm": -7.692307692307693e-09
+        },
+        {
+          "sourceDate": "2020-03-03",
+          "scenarioIds": [
+            "TA01-S0295"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2020-09-12",
+          "scenarioIds": [
+            "TA01-S0036"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2021-04-19",
+          "scenarioIds": [
+            "TA01-S0062"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2021-07-01",
+          "scenarioIds": [
+            "TA01-S0265"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2021-07-26",
+          "scenarioIds": [
+            "TA01-S0111"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2021-10-14",
+          "scenarioIds": [
+            "TA01-S0249"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2021-11-04",
+          "scenarioIds": [
+            "TA01-S0385"
+          ],
+          "observedDailyRainfallMm": [
+            0.01
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2021-11-13",
+          "scenarioIds": [
+            "TA01-S0408"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2021-12-01",
+          "scenarioIds": [
+            "TA01-S0396"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2022-02-08",
+          "scenarioIds": [
+            "TA01-S0356"
+          ],
+          "observedDailyRainfallMm": [
+            0.01
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 6.000000000000001e-05,
+          "hybridAbsoluteErrorSumMm": 6.000000000000001e-05,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2022-06-11",
+          "scenarioIds": [
+            "TA01-S0038"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2022-08-22",
+          "scenarioIds": [
+            "TA01-S0364"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2023-04-23",
+          "scenarioIds": [
+            "TA01-S0110"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2023-05-20",
+          "scenarioIds": [
+            "TA01-S0025"
+          ],
+          "observedDailyRainfallMm": [
+            0.01
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2023-11-19",
+          "scenarioIds": [
+            "TA01-S0332"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2024-01-26",
+          "scenarioIds": [
+            "TA01-S0354"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2024-02-06",
+          "scenarioIds": [
+            "TA01-S0231"
+          ],
+          "observedDailyRainfallMm": [
+            0.01
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2024-05-21",
+          "scenarioIds": [
+            "TA01-S0003"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2024-05-24",
+          "scenarioIds": [
+            "TA01-S0371"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2024-08-11",
+          "scenarioIds": [
+            "TA01-S0132"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2024-09-17",
+          "scenarioIds": [
+            "TA01-S0496"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        },
+        {
+          "sourceDate": "2025-01-17",
+          "scenarioIds": [
+            "TA01-S0007"
+          ],
+          "observedDailyRainfallMm": [
+            0.0
+          ],
+          "windowCount": 13,
+          "lstmAbsoluteErrorSumMm": 0.0,
+          "hybridAbsoluteErrorSumMm": 0.0,
+          "lstmMinusHybridMaeContributionMm": 0.0
+        }
+      ]
+    }
+  ]
+}

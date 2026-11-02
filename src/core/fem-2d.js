@@ -463,7 +463,11 @@ function riskFromSafetyIndex(index) {
   return "NORMAL";
 }
 
-export function runFem2D(input = {}, rainfallProfileMmH = [0]) {
+export function runFem2D(input = {}, rainfallProfileMmH = [0], solverOptions = {}) {
+  const solverTolerance = Number(solverOptions.tolerance ?? 1e-8);
+  if (!Number.isFinite(solverTolerance) || solverTolerance <= 0 || solverTolerance >= 1) {
+    throw new Error("La tolerancia relativa del solver debe estar entre 0 y 1");
+  }
   const mesh = createTa01Mesh(input);
   const scenario = mesh.scenario;
   if (!Array.isArray(rainfallProfileMmH) || !rainfallProfileMmH.length || rainfallProfileMmH.length > 168) throw new Error("El perfil de lluvia FEM debe contener entre 1 y 168 horas");
@@ -471,7 +475,7 @@ export function runFem2D(input = {}, rainfallProfileMmH = [0]) {
   if (rainfall.some((value) => !Number.isFinite(value) || value < 0 || value > 300)) throw new Error("Cada valor de lluvia FEM debe estar entre 0 y 300 mm/h");
   const prepared = prepareSystem(mesh);
   const baselineLoad = buildLoad(prepared, 0, scenario);
-  const baselineSolution = solvePcg(prepared.rows, baselineLoad);
+  const baselineSolution = solvePcg(prepared.rows, baselineLoad, solverTolerance);
   if (!baselineSolution.converged) throw new Error(`El estado gravitacional inicial no convergió; residuo ${baselineSolution.relativeResidual}`);
   const baselineDisplacement = fullDisplacement(prepared, baselineSolution.solution);
   const timeSeries = [];
@@ -482,7 +486,7 @@ export function runFem2D(input = {}, rainfallProfileMmH = [0]) {
   for (let hour = 1; hour <= rainfall.length; hour++) {
     cumulativeRainfallMm += rainfall[hour - 1];
     const load = buildLoad(prepared, cumulativeRainfallMm, scenario);
-    const solution = solvePcg(prepared.rows, load);
+    const solution = solvePcg(prepared.rows, load, solverTolerance);
     if (!solution.converged) throw new Error(`El solver FEM no convergió en la hora ${hour}; residuo ${solution.relativeResidual}`);
     const displacement = fullDisplacement(prepared, solution.solution);
     const summary = summarizeStep(mesh, prepared, displacement, baselineDisplacement, cumulativeRainfallMm);
@@ -529,6 +533,7 @@ export function runFem2D(input = {}, rainfallProfileMmH = [0]) {
       converged: true,
       baselineSolverIterations: baselineSolution.iterations,
       baselineSolverResidual: Number(baselineSolution.relativeResidual.toExponential(6)),
+      solverRelativeTolerance: solverTolerance,
       averageSolverIterations: Number((totalIterations / rainfall.length).toFixed(2)),
       maximumSolverResidual: Number(maximumResidual.toExponential(6))
     }

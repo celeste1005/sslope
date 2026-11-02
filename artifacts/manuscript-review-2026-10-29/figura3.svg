@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="922" viewBox="0 0 2048 922">
+<rect width="100%" height="100%" fill="white"/>
+<text x="1024" y="44" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="34" font-weight="bold" fill="#111">Error relativo al comparador proporcional de lluvia acumulada</text>
+<circle cx="540" cy="94" r="10" fill="#1f77b4"/>
+<text x="560" y="102" font-family="Times New Roman,Times,serif" font-size="24" fill="#222">LSTM</text>
+<circle cx="1010" cy="94" r="10" fill="#d55e00"/>
+<text x="1030" y="102" font-family="Times New Roman,Times,serif" font-size="24" fill="#222">Híbrido sin OOF</text>
+<circle cx="1480" cy="94" r="10" fill="#009e73"/>
+<text x="1500" y="102" font-family="Times New Roman,Times,serif" font-size="24" fill="#222">Híbrido OOF</text>
+<line x1="600.0" y1="150" x2="600.0" y2="812" stroke="#e5e5e5" stroke-width="1"/>
+<text x="600.0" y="843" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">-20</text>
+<line x1="755.0" y1="150" x2="755.0" y2="812" stroke="#e5e5e5" stroke-width="1"/>
+<text x="755.0" y="843" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">10</text>
+<line x1="910.0" y1="150" x2="910.0" y2="812" stroke="#e5e5e5" stroke-width="1"/>
+<text x="910.0" y="843" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">40</text>
+<line x1="1065.0" y1="150" x2="1065.0" y2="812" stroke="#e5e5e5" stroke-width="1"/>
+<text x="1065.0" y="843" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">70</text>
+<line x1="1220.0" y1="150" x2="1220.0" y2="812" stroke="#e5e5e5" stroke-width="1"/>
+<text x="1220.0" y="843" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">100</text>
+<line x1="1375.0" y1="150" x2="1375.0" y2="812" stroke="#e5e5e5" stroke-width="1"/>
+<text x="1375.0" y="843" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">130</text>
+<line x1="1530.0" y1="150" x2="1530.0" y2="812" stroke="#e5e5e5" stroke-width="1"/>
+<text x="1530.0" y="843" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">160</text>
+<line x1="1685.0" y1="150" x2="1685.0" y2="812" stroke="#e5e5e5" stroke-width="1"/>
+<text x="1685.0" y="843" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">190</text>
+<line x1="1840.0" y1="150" x2="1840.0" y2="812" stroke="#e5e5e5" stroke-width="1"/>
+<text x="1840.0" y="843" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">220</text>
+<line x1="1995.0" y1="150" x2="1995.0" y2="812" stroke="#e5e5e5" stroke-width="1"/>
+<text x="1995.0" y="843" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">250</text>
+<line x1="703.3" y1="150" x2="703.3" y2="812" stroke="#555" stroke-width="3" stroke-dasharray="9 8"/>
+<line x1="600" y1="812" x2="1995" y2="812" stroke="#222" stroke-width="2"/>
+<text x="30" y="213.2" font-family="Times New Roman,Times,serif" font-size="20" font-weight="bold" fill="#222">Partición principal · 1 h</text>
+<text x="515" y="175.4" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">LSTM</text>
+<line x1="745.0" y1="168.4" x2="1875.9" y2="168.4" stroke="#1f77b4" stroke-width="6" stroke-linecap="round"/>
+<line x1="745.0" y1="159.4" x2="745.0" y2="177.4" stroke="#1f77b4" stroke-width="2.5"/>
+<line x1="1875.9" y1="159.4" x2="1875.9" y2="177.4" stroke="#1f77b4" stroke-width="2.5"/>
+<circle cx="1128.0" cy="168.4" r="9" fill="#1f77b4"/>
+<text x="515" y="212.2" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido sin OOF</text>
+<line x1="735.1" y1="205.2" x2="1788.4" y2="205.2" stroke="#d55e00" stroke-width="6" stroke-linecap="round"/>
+<line x1="735.1" y1="196.2" x2="735.1" y2="214.2" stroke="#d55e00" stroke-width="2.5"/>
+<line x1="1788.4" y1="196.2" x2="1788.4" y2="214.2" stroke="#d55e00" stroke-width="2.5"/>
+<circle cx="1092.0" cy="205.2" r="9" fill="#d55e00"/>
+<text x="515" y="248.9" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido OOF</text>
+<line x1="800.6" y1="241.9" x2="1059.7" y2="241.9" stroke="#009e73" stroke-width="6" stroke-linecap="round"/>
+<line x1="800.6" y1="232.9" x2="800.6" y2="250.9" stroke="#009e73" stroke-width="2.5"/>
+<line x1="1059.7" y1="232.9" x2="1059.7" y2="250.9" stroke="#009e73" stroke-width="2.5"/>
+<circle cx="903.9" cy="241.9" r="9" fill="#009e73"/>
+<line x1="20" y1="260.3" x2="2010" y2="260.3" stroke="#c8c8c8" stroke-width="1.5"/>
+<text x="30" y="323.5" font-family="Times New Roman,Times,serif" font-size="20" font-weight="bold" fill="#222">Partición principal · 6 h</text>
+<text x="515" y="285.7" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">LSTM</text>
+<line x1="643.5" y1="278.7" x2="1934.6" y2="278.7" stroke="#1f77b4" stroke-width="6" stroke-linecap="round"/>
+<line x1="643.5" y1="269.7" x2="643.5" y2="287.7" stroke="#1f77b4" stroke-width="2.5"/>
+<line x1="1934.6" y1="269.7" x2="1934.6" y2="287.7" stroke="#1f77b4" stroke-width="2.5"/>
+<circle cx="1098.2" cy="278.7" r="9" fill="#1f77b4"/>
+<text x="515" y="322.5" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido sin OOF</text>
+<line x1="647.0" y1="315.5" x2="1891.2" y2="315.5" stroke="#d55e00" stroke-width="6" stroke-linecap="round"/>
+<line x1="647.0" y1="306.5" x2="647.0" y2="324.5" stroke="#d55e00" stroke-width="2.5"/>
+<line x1="1891.2" y1="306.5" x2="1891.2" y2="324.5" stroke="#d55e00" stroke-width="2.5"/>
+<circle cx="1085.5" cy="315.5" r="9" fill="#d55e00"/>
+<text x="515" y="359.3" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido OOF</text>
+<line x1="669.7" y1="352.3" x2="1869.8" y2="352.3" stroke="#009e73" stroke-width="6" stroke-linecap="round"/>
+<line x1="669.7" y1="343.3" x2="669.7" y2="361.3" stroke="#009e73" stroke-width="2.5"/>
+<line x1="1869.8" y1="343.3" x2="1869.8" y2="361.3" stroke="#009e73" stroke-width="2.5"/>
+<circle cx="1092.9" cy="352.3" r="9" fill="#009e73"/>
+<line x1="20" y1="370.7" x2="2010" y2="370.7" stroke="#c8c8c8" stroke-width="1.5"/>
+<text x="30" y="433.8" font-family="Times New Roman,Times,serif" font-size="20" font-weight="bold" fill="#222">Prueba cronológica 2024 · 1 h</text>
+<text x="515" y="396.1" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">LSTM</text>
+<line x1="784.1" y1="389.1" x2="1503.1" y2="389.1" stroke="#1f77b4" stroke-width="6" stroke-linecap="round"/>
+<line x1="784.1" y1="380.1" x2="784.1" y2="398.1" stroke="#1f77b4" stroke-width="2.5"/>
+<line x1="1503.1" y1="380.1" x2="1503.1" y2="398.1" stroke="#1f77b4" stroke-width="2.5"/>
+<circle cx="1048.7" cy="389.1" r="9" fill="#1f77b4"/>
+<text x="515" y="432.8" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido sin OOF</text>
+<line x1="793.2" y1="425.8" x2="1505.2" y2="425.8" stroke="#d55e00" stroke-width="6" stroke-linecap="round"/>
+<line x1="793.2" y1="416.8" x2="793.2" y2="434.8" stroke="#d55e00" stroke-width="2.5"/>
+<line x1="1505.2" y1="416.8" x2="1505.2" y2="434.8" stroke="#d55e00" stroke-width="2.5"/>
+<circle cx="1055.0" cy="425.8" r="9" fill="#d55e00"/>
+<text x="515" y="469.6" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido OOF</text>
+<line x1="1015.1" y1="462.6" x2="1392.7" y2="462.6" stroke="#009e73" stroke-width="6" stroke-linecap="round"/>
+<line x1="1015.1" y1="453.6" x2="1015.1" y2="471.6" stroke="#009e73" stroke-width="2.5"/>
+<line x1="1392.7" y1="453.6" x2="1392.7" y2="471.6" stroke="#009e73" stroke-width="2.5"/>
+<circle cx="1189.5" cy="462.6" r="9" fill="#009e73"/>
+<line x1="20" y1="481.0" x2="2010" y2="481.0" stroke="#c8c8c8" stroke-width="1.5"/>
+<text x="30" y="544.2" font-family="Times New Roman,Times,serif" font-size="20" font-weight="bold" fill="#222">Prueba cronológica 2024 · 6 h</text>
+<text x="515" y="506.4" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">LSTM</text>
+<line x1="738.0" y1="499.4" x2="1216.2" y2="499.4" stroke="#1f77b4" stroke-width="6" stroke-linecap="round"/>
+<line x1="738.0" y1="490.4" x2="738.0" y2="508.4" stroke="#1f77b4" stroke-width="2.5"/>
+<line x1="1216.2" y1="490.4" x2="1216.2" y2="508.4" stroke="#1f77b4" stroke-width="2.5"/>
+<circle cx="947.9" cy="499.4" r="9" fill="#1f77b4"/>
+<text x="515" y="543.2" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido sin OOF</text>
+<line x1="747.2" y1="536.2" x2="1226.5" y2="536.2" stroke="#d55e00" stroke-width="6" stroke-linecap="round"/>
+<line x1="747.2" y1="527.2" x2="747.2" y2="545.2" stroke="#d55e00" stroke-width="2.5"/>
+<line x1="1226.5" y1="527.2" x2="1226.5" y2="545.2" stroke="#d55e00" stroke-width="2.5"/>
+<circle cx="957.5" cy="536.2" r="9" fill="#d55e00"/>
+<text x="515" y="579.9" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido OOF</text>
+<line x1="820.9" y1="572.9" x2="1304.2" y2="572.9" stroke="#009e73" stroke-width="6" stroke-linecap="round"/>
+<line x1="820.9" y1="563.9" x2="820.9" y2="581.9" stroke="#009e73" stroke-width="2.5"/>
+<line x1="1304.2" y1="563.9" x2="1304.2" y2="581.9" stroke="#009e73" stroke-width="2.5"/>
+<circle cx="1040.0" cy="572.9" r="9" fill="#009e73"/>
+<line x1="20" y1="591.3" x2="2010" y2="591.3" stroke="#c8c8c8" stroke-width="1.5"/>
+<text x="30" y="654.5" font-family="Times New Roman,Times,serif" font-size="20" font-weight="bold" fill="#222">Prueba cronológica 2025 · 1 h</text>
+<text x="515" y="616.7" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">LSTM</text>
+<line x1="828.2" y1="609.7" x2="1078.9" y2="609.7" stroke="#1f77b4" stroke-width="6" stroke-linecap="round"/>
+<line x1="828.2" y1="600.7" x2="828.2" y2="618.7" stroke="#1f77b4" stroke-width="2.5"/>
+<line x1="1078.9" y1="600.7" x2="1078.9" y2="618.7" stroke="#1f77b4" stroke-width="2.5"/>
+<circle cx="943.4" cy="609.7" r="9" fill="#1f77b4"/>
+<text x="515" y="653.5" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido sin OOF</text>
+<line x1="806.4" y1="646.5" x2="1065.6" y2="646.5" stroke="#d55e00" stroke-width="6" stroke-linecap="round"/>
+<line x1="806.4" y1="637.5" x2="806.4" y2="655.5" stroke="#d55e00" stroke-width="2.5"/>
+<line x1="1065.6" y1="637.5" x2="1065.6" y2="655.5" stroke="#d55e00" stroke-width="2.5"/>
+<circle cx="923.8" cy="646.5" r="9" fill="#d55e00"/>
+<text x="515" y="690.3" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido OOF</text>
+<line x1="1057.6" y1="683.3" x2="1371.6" y2="683.3" stroke="#009e73" stroke-width="6" stroke-linecap="round"/>
+<line x1="1057.6" y1="674.3" x2="1057.6" y2="692.3" stroke="#009e73" stroke-width="2.5"/>
+<line x1="1371.6" y1="674.3" x2="1371.6" y2="692.3" stroke="#009e73" stroke-width="2.5"/>
+<circle cx="1208.4" cy="683.3" r="9" fill="#009e73"/>
+<line x1="20" y1="701.7" x2="2010" y2="701.7" stroke="#c8c8c8" stroke-width="1.5"/>
+<text x="30" y="764.8" font-family="Times New Roman,Times,serif" font-size="20" font-weight="bold" fill="#222">Prueba cronológica 2025 · 6 h</text>
+<text x="515" y="727.1" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">LSTM</text>
+<line x1="817.2" y1="720.1" x2="1142.3" y2="720.1" stroke="#1f77b4" stroke-width="6" stroke-linecap="round"/>
+<line x1="817.2" y1="711.1" x2="817.2" y2="729.1" stroke="#1f77b4" stroke-width="2.5"/>
+<line x1="1142.3" y1="711.1" x2="1142.3" y2="729.1" stroke="#1f77b4" stroke-width="2.5"/>
+<circle cx="961.2" cy="720.1" r="9" fill="#1f77b4"/>
+<text x="515" y="763.8" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido sin OOF</text>
+<line x1="805.4" y1="756.8" x2="1099.2" y2="756.8" stroke="#d55e00" stroke-width="6" stroke-linecap="round"/>
+<line x1="805.4" y1="747.8" x2="805.4" y2="765.8" stroke="#d55e00" stroke-width="2.5"/>
+<line x1="1099.2" y1="747.8" x2="1099.2" y2="765.8" stroke="#d55e00" stroke-width="2.5"/>
+<circle cx="937.4" cy="756.8" r="9" fill="#d55e00"/>
+<text x="515" y="800.6" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#222">Híbrido OOF</text>
+<line x1="960.2" y1="793.6" x2="1329.8" y2="793.6" stroke="#009e73" stroke-width="6" stroke-linecap="round"/>
+<line x1="960.2" y1="784.6" x2="960.2" y2="802.6" stroke="#009e73" stroke-width="2.5"/>
+<line x1="1329.8" y1="784.6" x2="1329.8" y2="802.6" stroke="#009e73" stroke-width="2.5"/>
+<circle cx="1126.9" cy="793.6" r="9" fill="#009e73"/>
+<text x="1297.5" y="899" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="22" fill="#222">Diferencia del MAE frente al comparador (% del MAE de la LSTM); valores positivos favorecen al comparador</text>
+</svg>

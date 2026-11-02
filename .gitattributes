@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+# Preserve source bytes for hash-verified vector figures.
+*.svg -text
+
+# Preserve the original NASA POWER CSV bytes used by the replication manifest.
+data/rainfall/pasco-nasa-power-2020-2025.csv -text

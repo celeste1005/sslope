@@ -1,0 +1,220 @@
+{
+  "method": "Five-fold OOF predictions by source date; paired two-stage bootstrap resampling seeds and the same test-date indices across selected seeds, 20,000 draws.",
+  "scope": "Three seeds on the primary split and two seeds on each chronological split; final LSTM fixed per split and horizon.",
+  "seedRuns": {
+    "primary": [
+      {
+        "oofFoldSeed": 20261029,
+        "correctorSeed": 20261030
+      },
+      {
+        "oofFoldSeed": 20261031,
+        "correctorSeed": 20261031
+      },
+      {
+        "oofFoldSeed": 20261032,
+        "correctorSeed": 20261032
+      }
+    ],
+    "backtest-2024": [
+      {
+        "oofFoldSeed": 20261029,
+        "correctorSeed": 20261030
+      },
+      {
+        "oofFoldSeed": 20261031,
+        "correctorSeed": 20261031
+      }
+    ],
+    "chronological": [
+      {
+        "oofFoldSeed": 20261029,
+        "correctorSeed": 20261030
+      },
+      {
+        "oofFoldSeed": 20261031,
+        "correctorSeed": 20261031
+      }
+    ]
+  },
+  "splits": {
+    "primary": {
+      "1": {
+        "nWindows": 1350,
+        "nRainfallDates": 75,
+        "maeMmBySeed": {
+          "lstm": [
+            8.57685925925926e-06,
+            8.57685925925926e-06,
+            8.57685925925926e-06
+          ],
+          "oofHybrid": [
+            4.8570444444444485e-06,
+            8.453274074074075e-06,
+            8.136725925925926e-06
+          ]
+        },
+        "meanMaeMmAcrossSeeds": {
+          "lstm": 8.57685925925926e-06,
+          "oofHybrid": 7.149014814814816e-06
+        },
+        "sampleSdMaeMmAcrossSeeds": {
+          "lstm": 0.0,
+          "oofHybrid": 1.9912048655313614e-06
+        },
+        "pairedLstmMinusHybridMeanByDateMm": 1.4278444444444452e-06,
+        "sharedDateTwoStageBootstrap95Mm": [
+          -1.2066778395061725e-06,
+          9.001230123456778e-06
+        ],
+        "seedsWhereHybridHasLowerWindowMae": 3
+      },
+      "6": {
+        "nWindows": 975,
+        "nRainfallDates": 75,
+        "maeMmBySeed": {
+          "lstm": [
+            6.332481025641026e-05,
+            6.332481025641026e-05,
+            6.332481025641026e-05
+          ],
+          "oofHybrid": [
+            6.267695384615384e-05,
+            6.115844102564103e-05,
+            6.187306666666668e-05
+          ]
+        },
+        "meanMaeMmAcrossSeeds": {
+          "lstm": 6.332481025641026e-05,
+          "oofHybrid": 6.19028205128205e-05
+        },
+        "sampleSdMaeMmAcrossSeeds": {
+          "lstm": 0.0,
+          "oofHybrid": 7.596935336279729e-07
+        },
+        "pairedLstmMinusHybridMeanByDateMm": 1.4219897435897465e-06,
+        "sharedDateTwoStageBootstrap95Mm": [
+          -3.5361609401709417e-06,
+          9.967700085470067e-06
+        ],
+        "seedsWhereHybridHasLowerWindowMae": 3
+      }
+    },
+    "backtest-2024": {
+      "1": {
+        "nWindows": 1476,
+        "nRainfallDates": 82,
+        "maeMmBySeed": {
+          "lstm": [
+            4.349180216802168e-06,
+            4.349180216802168e-06
+          ],
+          "oofHybrid": [
+            5.534647696476966e-06,
+            5.44590108401084e-06
+          ]
+        },
+        "meanMaeMmAcrossSeeds": {
+          "lstm": 4.349180216802168e-06,
+          "oofHybrid": 5.4902743902439025e-06
+        },
+        "sampleSdMaeMmAcrossSeeds": {
+          "lstm": 0.0,
+          "oofHybrid": 6.275333148213186e-08
+        },
+        "pairedLstmMinusHybridMeanByDateMm": -1.1410941734417352e-06,
+        "sharedDateTwoStageBootstrap95Mm": [
+          -3.130552168021682e-06,
+          1.4107445799457967e-06
+        ],
+        "seedsWhereHybridHasLowerWindowMae": 0
+      },
+      "6": {
+        "nWindows": 1066,
+        "nRainfallDates": 82,
+        "maeMmBySeed": {
+          "lstm": [
+            2.9094709193245775e-05,
+            2.9094709193245775e-05
+          ],
+          "oofHybrid": [
+            3.427814258911819e-05,
+            3.257170731707317e-05
+          ]
+        },
+        "meanMaeMmAcrossSeeds": {
+          "lstm": 2.9094709193245775e-05,
+          "oofHybrid": 3.342492495309568e-05
+        },
+        "sampleSdMaeMmAcrossSeeds": {
+          "lstm": 0.0,
+          "oofHybrid": 1.2066319525189477e-06
+        },
+        "pairedLstmMinusHybridMeanByDateMm": -4.3302157598499075e-06,
+        "sharedDateTwoStageBootstrap95Mm": [
+          -8.214539985928708e-06,
+          -8.218574108818052e-07
+        ],
+        "seedsWhereHybridHasLowerWindowMae": 0
+      }
+    },
+    "chronological": {
+      "1": {
+        "nWindows": 1404,
+        "nRainfallDates": 76,
+        "maeMmBySeed": {
+          "lstm": [
+            5.398504273504273e-06,
+            5.398504273504273e-06
+          ],
+          "oofHybrid": [
+            8.167037037037037e-06,
+            1.2402435897435898e-05
+          ]
+        },
+        "meanMaeMmAcrossSeeds": {
+          "lstm": 5.398504273504273e-06,
+          "oofHybrid": 1.0284736467236467e-05
+        },
+        "sampleSdMaeMmAcrossSeeds": {
+          "lstm": 0.0,
+          "oofHybrid": 2.99487925521781e-06
+        },
+        "pairedLstmMinusHybridMeanByDateMm": -4.9201352339181294e-06,
+        "sharedDateTwoStageBootstrap95Mm": [
+          -8.714897203947374e-06,
+          -2.0127650767543866e-06
+        ],
+        "seedsWhereHybridHasLowerWindowMae": 0
+      },
+      "6": {
+        "nWindows": 1014,
+        "nRainfallDates": 76,
+        "maeMmBySeed": {
+          "lstm": [
+            5.768706114398422e-05,
+            5.768706114398422e-05
+          ],
+          "oofHybrid": [
+            7.618615384615385e-05,
+            8.452188362919133e-05
+          ]
+        },
+        "meanMaeMmAcrossSeeds": {
+          "lstm": 5.768706114398422e-05,
+          "oofHybrid": 8.035401873767258e-05
+        },
+        "sampleSdMaeMmAcrossSeeds": {
+          "lstm": 0.0,
+          "oofHybrid": 5.894251055724468e-06
+        },
+        "pairedLstmMinusHybridMeanByDateMm": -2.2717016700404863e-05,
+        "sharedDateTwoStageBootstrap95Mm": [
+          -3.551849329453443e-05,
+          -1.1974402834008109e-05
+        ],
+        "seedsWhereHybridHasLowerWindowMae": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "method": "DATE_GROUPED_K_FOLD_OUT_OF_FOLD_LSTM_PREDICTIONS",
+  "horizonHours": 6,
+  "lookbackHours": 6,
+  "folds": 5,
+  "foldAssignmentSeed": 20261031,
+  "baseLstmModel": "data\\models\\ta01-chronological-lstm-6h.json",
+  "trainingInputPrefix": "data/generated/ta01-fem-500-chronological",
+  "validationSplitUsedOnlyForFoldEarlyStopping": true,
+  "dateGroupLeakageControl": "All scenarios with the same source_date stay in one held-out fold.",
+  "trainingWindows": 4420,
+  "uniqueTrainingDates": 337,
+  "foldSummaries": [
+    {
+      "fold": 1,
+      "heldSourceDateCount": 68,
+      "heldScenarioCount": 70,
+      "heldWindowCount": 910,
+      "trainingScenarioCount": 270,
+      "selectedEpoch": 163,
+      "validationMaeMm": 3.0246095628552926e-05,
+      "seed": 20261032
+    },
+    {
+      "fold": 2,
+      "heldSourceDateCount": 68,
+      "heldScenarioCount": 69,
+      "heldWindowCount": 897,
+      "trainingScenarioCount": 271,
+      "selectedEpoch": 210,
+      "validationMaeMm": 3.929490334511093e-05,
+      "seed": 20261033
+    },
+    {
+      "fold": 3,
+      "heldSourceDateCount": 67,
+      "heldScenarioCount": 67,
+      "heldWindowCount": 871,
+      "trainingScenarioCount": 273,
+      "selectedEpoch": 134,
+      "validationMaeMm": 6.494886297027425e-05,
+      "seed": 20261034
+    },
+    {
+      "fold": 4,
+      "heldSourceDateCount": 67,
+      "heldScenarioCount": 67,
+      "heldWindowCount": 871,
+      "trainingScenarioCount": 273,
+      "selectedEpoch": 317,
+      "validationMaeMm": 3.729168105199424e-05,
+      "seed": 20261035
+    },
+    {
+      "fold": 5,
+      "heldSourceDateCount": 67,
+      "heldScenarioCount": 67,
+      "heldWindowCount": 871,
+      "trainingScenarioCount": 273,
+      "selectedEpoch": 307,
+      "validationMaeMm": 4.0421969558730344e-05,
+      "seed": 20261036
+    }
+  ],
+  "predictionFile": "data\\validation\\ta01-chronological-lstm-6h-oof-s20261031-train-predictions.csv",
+  "correctorPredictionScale": "Standardized physical displacement increment using the final LSTM artifact's training target mean and standard deviation.",
+  "limitations": [
+    "The original validation split selects early stopping for each fold; it is not used to fit the corrector.",
+    "This is cross-fitting for the primary date-grouped split, not a multi-seed reliability analysis."
+  ]
+}

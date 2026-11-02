@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="922" viewBox="0 0 2048 922">
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#555"/></marker></defs>
+<rect x="55" y="175" width="535" height="190" fill="white" stroke="#555" stroke-width="4"/>
+<text x="322.5" y="247" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="36" font-weight="bold" fill="#111">Lluvia externa</text>
+<text x="322.5" y="300" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" fill="#111">NASA POWER diaria</text>
+<rect x="755" y="175" width="535" height="190" fill="white" stroke="#555" stroke-width="4"/>
+<text x="1022.5" y="247" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="36" font-weight="bold" fill="#111">Escenarios supuestos</text>
+<text x="1022.5" y="300" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" fill="#111">Geometría y propiedades</text>
+<text x="1022.5" y="342" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" fill="#111">mediante LHS</text>
+<rect x="1455" y="175" width="535" height="190" fill="white" stroke="#555" stroke-width="4"/>
+<text x="1722.5" y="247" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="36" font-weight="bold" fill="#111">MEF 2D</text>
+<text x="1722.5" y="300" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" fill="#111">24 estados cuasiestáticos</text>
+<rect x="1455" y="525" width="535" height="190" fill="white" stroke="#555" stroke-width="4"/>
+<text x="1722.5" y="597" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="36" font-weight="bold" fill="#111">Ventanas temporales</text>
+<text x="1722.5" y="650" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" fill="#111">Historial de 6 h</text>
+<text x="1722.5" y="692" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" fill="#111">Horizontes de 1 h y 6 h</text>
+<rect x="755" y="525" width="535" height="190" fill="white" stroke="#555" stroke-width="4"/>
+<text x="1022.5" y="597" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="36" font-weight="bold" fill="#111">LSTM y corrección</text>
+<text x="1022.5" y="650" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" fill="#111">Corrección residual</text>
+<text x="1022.5" y="692" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" fill="#111">monótona</text>
+<rect x="55" y="525" width="535" height="190" fill="white" stroke="#555" stroke-width="4"/>
+<text x="322.5" y="597" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="36" font-weight="bold" fill="#111">Evaluación</text>
+<text x="322.5" y="650" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" fill="#111">Fechas disjuntas</text>
+<text x="322.5" y="692" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" fill="#111">2024 / 2025</text>
+<line x1="590" y1="270" x2="755" y2="270" stroke="#555" stroke-width="7" marker-end="url(#arrow)"/>
+<line x1="1290" y1="270" x2="1455" y2="270" stroke="#555" stroke-width="7" marker-end="url(#arrow)"/>
+<line x1="1722" y1="365" x2="1722" y2="525" stroke="#555" stroke-width="7" marker-end="url(#arrow)"/>
+<line x1="1455" y1="620" x2="1290" y2="620" stroke="#555" stroke-width="7" marker-end="url(#arrow)"/>
+<line x1="755" y1="620" x2="590" y2="620" stroke="#555" stroke-width="7" marker-end="url(#arrow)"/>
+<text x="1024" y="850" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" fill="#333">Flujo semisintético TA-01; no representa monitoreo de campo.</text>
+</svg>

@@ -1,0 +1,92 @@
+{
+  "method": "Repeated five-fold OOF LSTM predictions grouped by rainfall date; paired two-stage bootstrap over seed and shared resampled test dates.",
+  "scope": "Exploratory primary-split sensitivity using three OOF seeds and one fixed final LSTM per horizon.",
+  "replicates": [
+    {
+      "oofFoldSeed": 20261029,
+      "correctorSeed": 20261030
+    },
+    {
+      "oofFoldSeed": 20261031,
+      "correctorSeed": 20261031
+    },
+    {
+      "oofFoldSeed": 20261032,
+      "correctorSeed": 20261032
+    }
+  ],
+  "byHorizon": {
+    "1": {
+      "seeds": [
+        20261029,
+        20261031,
+        20261032
+      ],
+      "nRainfallDates": 75,
+      "nWindows": 1350,
+      "maeMmBySeed": {
+        "lstm": [
+          8.576859259259264e-06,
+          8.576859259259264e-06,
+          8.576859259259264e-06
+        ],
+        "oofHybrid": [
+          4.857044444444449e-06,
+          8.453274074074073e-06,
+          8.136725925925923e-06
+        ]
+      },
+      "meanMaeMmAcrossSeeds": {
+        "lstm": 8.576859259259264e-06,
+        "oofHybrid": 7.1490148148148154e-06
+      },
+      "sampleSdMaeMmAcrossSeeds": {
+        "lstm": 0.0,
+        "oofHybrid": 1.9912048655313593e-06
+      },
+      "pairedLstmMinusHybridMeanMm": 1.4278444444444447e-06,
+      "twoStageBootstrap95Mm": [
+        -1.2187435185185188e-06,
+        8.248227777777742e-06
+      ],
+      "seedsWhereHybridHasLowerMae": 3,
+      "bootstrap": "20,000 resamples; seeds and dates resampled in two stages, seed 20261101."
+    },
+    "6": {
+      "seeds": [
+        20261029,
+        20261031,
+        20261032
+      ],
+      "nRainfallDates": 75,
+      "nWindows": 975,
+      "maeMmBySeed": {
+        "lstm": [
+          6.332481025641026e-05,
+          6.332481025641026e-05,
+          6.332481025641026e-05
+        ],
+        "oofHybrid": [
+          6.267695384615384e-05,
+          6.115844102564101e-05,
+          6.187306666666666e-05
+        ]
+      },
+      "meanMaeMmAcrossSeeds": {
+        "lstm": 6.332481025641026e-05,
+        "oofHybrid": 6.19028205128205e-05
+      },
+      "sampleSdMaeMmAcrossSeeds": {
+        "lstm": 0.0,
+        "oofHybrid": 7.596935336279799e-07
+      },
+      "pairedLstmMinusHybridMeanMm": 1.4219897435897468e-06,
+      "twoStageBootstrap95Mm": [
+        -3.548350769230766e-06,
+        9.934664871794874e-06
+      ],
+      "seedsWhereHybridHasLowerMae": 3,
+      "bootstrap": "20,000 resamples; seeds and dates resampled in two stages, seed 20261101."
+    }
+  }
+}

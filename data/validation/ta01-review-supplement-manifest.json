@@ -1,0 +1,622 @@
+{
+  "manifestVersion": 1,
+  "scope": "Supplementary TA-01 OOF, target-regime, rounding, solver-tolerance, proportional-rainfall baseline, influence, repeated-perturbation robustness, reproducibility analyses, R4/R5 manuscripts, and figure assets. The historical ta01-replication-manifest.json is preserved and is not replaced by this inventory.",
+  "files": [
+    {
+      "path": "Articulo_G25_revision_integrada_DeepSeek_Claude_R4.docx",
+      "sha256": "e1fec91e11e625adea412ff11e9859ec36dd862a5b8d865a690f3bbc7ad2ab5a"
+    },
+    {
+      "path": "Articulo_G25_revision_integrada_DeepSeek_Claude_R5_TNR.docx",
+      "sha256": "805b04aa11c2f0c55464d08e9c515618b65cbc02f05ecc35ca0ff856e1f377c3"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura1.jpg",
+      "sha256": "ea4e729d78102349d5347bbb24faa7178c0907db5282a2df170d4eaf6309bd70"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura1.svg",
+      "sha256": "e4606a49b141cac90804ca483751d7aec2bcddf3e0dfa105a607fdda4b9badd2"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura2.jpg",
+      "sha256": "359f78617ba2b151950079c691684e05e2f3b62a45f859bb7da62cf297ce0532"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura2.svg",
+      "sha256": "42ec351e1d8bdbe4347f8e657ea5e2fd804edc8d5c698da35d6be20a1b894ed5"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura3.jpg",
+      "sha256": "fe17576ee948b81df1bb7c3e24a0710a2a0ef9ca7d6764daf04de52ae9712291"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura3.svg",
+      "sha256": "26af64b901459db6b67d54560b6ea0465ab59d015bf5be65e8102b8ddf345858"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura4.jpg",
+      "sha256": "cb6354d2a2ec7b80875a8dc3cab1c7a2e861d83c4325a4d27e2d0b54f44b24c9"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura4.svg",
+      "sha256": "c7b51d700e9becee92647a0054245ecd68a5142cbad3d68a8c4f37f2a58d54aa"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura5.jpg",
+      "sha256": "24070dd10c64e8b323a5125f581406f94360726f92f25a0a6b8ec9bd3f5ead91"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura5.svg",
+      "sha256": "37dfd25237dff272b83ea4c40befca0c9357c6d57e4c91014363376039ad15f7"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura6.jpg",
+      "sha256": "211a8bb4798d697d9470758f9ceafeb9203bd234d77aff5991806eba1ae98833"
+    },
+    {
+      "path": "artifacts/manuscript-review-2026-10-29/figura6.svg",
+      "sha256": "757acc77bf4ee658248532b66ad5bc64c76d03ca4f7c46f61fb35ce14ec770c0"
+    },
+    {
+      "path": "data/generated/ta01-backtest-2024-physics-guided-1h-oof-s20261031-test-predictions.csv",
+      "sha256": "a1acefc91a629a08447b65d0477936d5dbf51101f02e19ebad28bebab925961a"
+    },
+    {
+      "path": "data/generated/ta01-backtest-2024-physics-guided-1h-oof-test-predictions.csv",
+      "sha256": "c3274c38a00cc68a38749147e3835bea5b9f9977e7259e8417513b4cb6ce9af2"
+    },
+    {
+      "path": "data/generated/ta01-backtest-2024-physics-guided-6h-oof-s20261031-test-predictions.csv",
+      "sha256": "ed10b6c0aa81a9d4c3cc0d65a3a22807aa002a3837c47d1bb4d225c7849b2718"
+    },
+    {
+      "path": "data/generated/ta01-backtest-2024-physics-guided-6h-oof-test-predictions.csv",
+      "sha256": "7db8da2104358556f8dcef4928ba42abef947903961f23af637483bfd8640131"
+    },
+    {
+      "path": "data/generated/ta01-chronological-physics-guided-1h-oof-s20261031-test-predictions.csv",
+      "sha256": "80b341c5d96b2a85881961633b8c0824d5190b12fb58f614b195b9a6596cd28c"
+    },
+    {
+      "path": "data/generated/ta01-chronological-physics-guided-1h-oof-test-predictions.csv",
+      "sha256": "4ac2c38a5e328cc3f7910322e16719783601315b53c3930b8233865cb0296dea"
+    },
+    {
+      "path": "data/generated/ta01-chronological-physics-guided-6h-oof-s20261031-test-predictions.csv",
+      "sha256": "6525347ad4d45e241ec7dc4e3a011ccc3ec23b71143ca3b3e7bcca219c6bfe97"
+    },
+    {
+      "path": "data/generated/ta01-chronological-physics-guided-6h-oof-test-predictions.csv",
+      "sha256": "759d612dc86de63fbeebe703057a2bef88442e3d9510dc01be642eb480354912"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-backtest-2024-split-manifest.json",
+      "sha256": "621f6f8c9ad899f7d6e798791f8bd4534e44f0bc07d856528baa4e1fd3f9c636"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-backtest-2024-test.csv",
+      "sha256": "2a0bd08afce1d1b41b1346227094f7b4e3dd846e70abf8c4f3afb634ceec4747"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-backtest-2024-train.csv",
+      "sha256": "ff24b54604ea56dd9b6b9b2a85dcb10c90fe5ae1a22135093b04119c989fa85f"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-backtest-2024-validation.csv",
+      "sha256": "c6ba4aadbf3fbf3988a17ad9be2539f5a21c2b28da83351e70f47b90810c3996"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-chronological-split-manifest.json",
+      "sha256": "cb80c3e8627872fa5597452a434cac72bec27f280898938469a097cb1ae065d6"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-chronological-test.csv",
+      "sha256": "1eaf564586850838fc6c9756607ca3538607827060915bee6a71103ba007e1f5"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-chronological-train.csv",
+      "sha256": "26eb247014a3af6195cec322bbebf9ccd94a15464a1517cbc4cb9ca9881045ef"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-chronological-validation.csv",
+      "sha256": "2a0bd08afce1d1b41b1346227094f7b4e3dd846e70abf8c4f3afb634ceec4747"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-manifest.json",
+      "sha256": "d1035296bf2e476ecbb91d8ec8202a169d7e9993c82559e4e5214206ad9b874e"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-split-manifest.json",
+      "sha256": "629239d6a22aa7f5193d752d004fe44fe64fac1d1d404ad79b3abfd8f338db0a"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-test.csv",
+      "sha256": "a5977389cfce11984b4aae046fa0651d24984ca1ef4bd9e2bb0d5db65677e711"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-train.csv",
+      "sha256": "6015faf78fac4329503e8d1524b7b0b0ca286fe76fd71cb8cf9d95f1ed15811f"
+    },
+    {
+      "path": "data/generated/ta01-fem-500-validation.csv",
+      "sha256": "0110d260106ed3c12c77f20866b1c0b7ed3ca755883c92e9753dd8964d8e5447"
+    },
+    {
+      "path": "data/generated/ta01-physics-guided-1h-oof-test-predictions.csv",
+      "sha256": "543303e85fcfb96ac722edca6911bb26c0e91ab0b7c3f3605512ad9784ce3e18"
+    },
+    {
+      "path": "data/generated/ta01-physics-guided-6h-oof-test-predictions.csv",
+      "sha256": "005aa733697023a6ca0cf6a8879a3ecfe6790305b5f6454813459fae69645b4b"
+    },
+    {
+      "path": "data/models/ta01-backtest-2024-physics-guided-1h-oof-s20261031.json",
+      "sha256": "759eb435b2e0a52f61eeaa779b02eeecdddfcadf482596a5c9290d02b424f59c"
+    },
+    {
+      "path": "data/models/ta01-backtest-2024-physics-guided-1h-oof.json",
+      "sha256": "7bdc5214df4e7c004732c9e9ae91783166c76c29a528111a67509e9c4af864ac"
+    },
+    {
+      "path": "data/models/ta01-backtest-2024-physics-guided-6h-oof-s20261031.json",
+      "sha256": "bff0a1af07410d5ff8f9a7b51fdcc38653b51810017d924d69150ac9246a6a64"
+    },
+    {
+      "path": "data/models/ta01-backtest-2024-physics-guided-6h-oof.json",
+      "sha256": "92c9537a419211aca67b6f26ffbd86dc72618e5c25da6ff38bf0453d6ca16151"
+    },
+    {
+      "path": "data/models/ta01-chronological-physics-guided-1h-oof-s20261031.json",
+      "sha256": "fb8114106f986f1e031a378f41c3cad3f2d63b73bdf0a5c23546b35d728e4c81"
+    },
+    {
+      "path": "data/models/ta01-chronological-physics-guided-1h-oof.json",
+      "sha256": "5e97ebd53ff7262f129412e847986ea317b27d46005ef19bae2ae1b66cb01867"
+    },
+    {
+      "path": "data/models/ta01-chronological-physics-guided-6h-oof-s20261031.json",
+      "sha256": "eb46c205286f636ddb28f03772786bf78ffd03252ba5eddec34cc522373e2c8e"
+    },
+    {
+      "path": "data/models/ta01-chronological-physics-guided-6h-oof.json",
+      "sha256": "dc9c438ebe18abe28b40b178aa56c36133237a757bd60b3a2e4d764dfebfc2ec"
+    },
+    {
+      "path": "data/models/ta01-free-corrector-1h-s20261029.json",
+      "sha256": "f8a0ba88d28790c903b575dcbed00976da60f28e8f08de77c16bdeb6a8ff3c34"
+    },
+    {
+      "path": "data/models/ta01-free-corrector-1h-s20261031.json",
+      "sha256": "80837c5e2cce8e864fb4d8058408de172b9c5b1a7e306a9f115949a3bdb55456"
+    },
+    {
+      "path": "data/models/ta01-free-corrector-1h-s20261032.json",
+      "sha256": "78c6149efd1dca889a1e1a58aa2a2b41e6c6ccc413ed0e0818dd369bc559a304"
+    },
+    {
+      "path": "data/models/ta01-free-corrector-6h-s20261029.json",
+      "sha256": "dc483fb0c02154030f4625113a74b08b09317e129bedae92e0c775dc53318e5c"
+    },
+    {
+      "path": "data/models/ta01-free-corrector-6h-s20261031.json",
+      "sha256": "8cd744cbaeec3ed9845d9708357d2fb7c704fb53d8cd79ecd09a275972ee3355"
+    },
+    {
+      "path": "data/models/ta01-free-corrector-6h-s20261032.json",
+      "sha256": "1a8e0440603093996ff9cda40ecdc2549fc81e51070b7e3f07ecf010759c80d5"
+    },
+    {
+      "path": "data/models/ta01-physics-guided-1h-oof.json",
+      "sha256": "3ec72d0816cb8f45d0908047cc7df23ec65b4a408d65165f2d7e52038cb06890"
+    },
+    {
+      "path": "data/models/ta01-physics-guided-6h-oof.json",
+      "sha256": "2ce5e1ece6edd11a3661e8edc13fe87c2189cbb7a2254403dffbd1c24707313a"
+    },
+    {
+      "path": "data/models/ta01-primary-physics-guided-1h-oof-s20261031.json",
+      "sha256": "a1d369ae5dc5449484a9468ed9563f8eb6003460209ad67d5606fe57f3fa9d02"
+    },
+    {
+      "path": "data/models/ta01-primary-physics-guided-1h-oof-s20261032.json",
+      "sha256": "2ad250b47a866bbae73847772e8a6cb44839008e186b7ad16723475ac0c3fab7"
+    },
+    {
+      "path": "data/models/ta01-primary-physics-guided-6h-oof-s20261031.json",
+      "sha256": "e222cd86ee5eaea9ecee51443d529b4adde06f02cc2a5d6ff7d28ef6a8538563"
+    },
+    {
+      "path": "data/models/ta01-primary-physics-guided-6h-oof-s20261032.json",
+      "sha256": "f77676c9df540786551466d24378c13703314c589413d519c7c2d4571c566ee9"
+    },
+    {
+      "path": "data/validation/ta01-backtest-2024-lstm-1h-oof-manifest.json",
+      "sha256": "49fa4730045da3e34a65327f816cdcfbe71a732bd4afd0dc061315fc2dbd5745"
+    },
+    {
+      "path": "data/validation/ta01-backtest-2024-lstm-1h-oof-s20261031-manifest.json",
+      "sha256": "d6e42db80dbf0a6230e5ce796ece5db2b2fb971a7712a7b939df733977aaab54"
+    },
+    {
+      "path": "data/validation/ta01-backtest-2024-lstm-1h-oof-s20261031-train-predictions.csv",
+      "sha256": "725206f66536d2c9d43bc448033c346fb8d4b26686d744b9641ab9836ace53dd"
+    },
+    {
+      "path": "data/validation/ta01-backtest-2024-lstm-1h-oof-train-predictions.csv",
+      "sha256": "592c134933739bd220472de5dcfe20be4d875f4c7b8f0d68a2ee9dc8e3e93fe5"
+    },
+    {
+      "path": "data/validation/ta01-backtest-2024-lstm-6h-oof-manifest.json",
+      "sha256": "f41db78ad765dfad983e7d24052c09e5bc6dcd78726b5855ff437a666fb9a081"
+    },
+    {
+      "path": "data/validation/ta01-backtest-2024-lstm-6h-oof-s20261031-manifest.json",
+      "sha256": "2928e5cd7574e11dd95f75a2fc4bb321ba1b4ec8090f880819a35a12e3ea9481"
+    },
+    {
+      "path": "data/validation/ta01-backtest-2024-lstm-6h-oof-s20261031-train-predictions.csv",
+      "sha256": "d03db0bc76c5495a9791b2267fb03ba3209668be573c4afa4b46c8875936d394"
+    },
+    {
+      "path": "data/validation/ta01-backtest-2024-lstm-6h-oof-train-predictions.csv",
+      "sha256": "bc96b99637b4169e5e0cd313fafa8003f90da89a82466873cd61277fdb59b236"
+    },
+    {
+      "path": "data/validation/ta01-chronological-lstm-1h-oof-manifest.json",
+      "sha256": "7dc4f04e1ec7eeb41e826aef60ce91e3d7d96d19847db9564e2b47aa32c6ddf5"
+    },
+    {
+      "path": "data/validation/ta01-chronological-lstm-1h-oof-s20261031-manifest.json",
+      "sha256": "1dddad7662f581147d2b840bc9f345e06948d9792469b1ef21bfb6ea45a832db"
+    },
+    {
+      "path": "data/validation/ta01-chronological-lstm-1h-oof-s20261031-train-predictions.csv",
+      "sha256": "14ed455191ebd6331e59cd8d05c6b6458576a2e63577dd5c9b7081ff11561e42"
+    },
+    {
+      "path": "data/validation/ta01-chronological-lstm-1h-oof-train-predictions.csv",
+      "sha256": "93a82c8e649be4f39cbe665937b41a2c5b1f18279da765daab3a8c951372d1ef"
+    },
+    {
+      "path": "data/validation/ta01-chronological-lstm-6h-oof-manifest.json",
+      "sha256": "15198021a26c0d1fcfce8f4a012f5f2b8cc1044806db3c6cd666c83d771f23dd"
+    },
+    {
+      "path": "data/validation/ta01-chronological-lstm-6h-oof-s20261031-manifest.json",
+      "sha256": "3c7fda70000aa3cbbda834b9d0119943c2cfd1cc0528c221755fdf86367d326f"
+    },
+    {
+      "path": "data/validation/ta01-chronological-lstm-6h-oof-s20261031-train-predictions.csv",
+      "sha256": "df7a90b2a6e4a1d1c8b35ef410b4318ce06978c87644ccded9b1e143b51379b0"
+    },
+    {
+      "path": "data/validation/ta01-chronological-lstm-6h-oof-train-predictions.csv",
+      "sha256": "cb010e4a87c999c36b4af577ad6b262fa1a60039d5045c0197231d09d07c222b"
+    },
+    {
+      "path": "data/validation/ta01-free-corrector-1h-s20261029-predictions.csv",
+      "sha256": "b5f9bfc9f4addbb8eb464e936f382992a1db5ae6890f4abe0704914dc93755c2"
+    },
+    {
+      "path": "data/validation/ta01-free-corrector-1h-s20261031-predictions.csv",
+      "sha256": "a20feced73e59a98da51cd2e606cda07837c3007605112d809cfedd01ad2cb70"
+    },
+    {
+      "path": "data/validation/ta01-free-corrector-1h-s20261032-predictions.csv",
+      "sha256": "326f75080643a39d0ec0e644b890084f5a83487dd9940a2f01a2ddf0df1f84d9"
+    },
+    {
+      "path": "data/validation/ta01-free-corrector-6h-s20261029-predictions.csv",
+      "sha256": "3d4c69e4ddfe7ef4dcd9da52a883f4787f73603cf156813ab16c1d6746e8f0d4"
+    },
+    {
+      "path": "data/validation/ta01-free-corrector-6h-s20261031-predictions.csv",
+      "sha256": "7415192f07cea1754cddd827d2fc19f3bfc8096e41cbede0c817e32a24491879"
+    },
+    {
+      "path": "data/validation/ta01-free-corrector-6h-s20261032-predictions.csv",
+      "sha256": "2c8f3ce2b4711925791b66feec6fa432b67f2aaf60647e84b40b9ed7734f9107"
+    },
+    {
+      "path": "data/validation/ta01-lstm-1h-oof-manifest.json",
+      "sha256": "3e2b40483fafb2c856ce94b5f4e8d9ef129fb7ea7eaa384cb8e0a4af465c6bdb"
+    },
+    {
+      "path": "data/validation/ta01-lstm-1h-oof-train-predictions.csv",
+      "sha256": "b08b12a3a3c0bb8ee69db631d546271f953abf4c36c855e3ac8c8033dbee071b"
+    },
+    {
+      "path": "data/validation/ta01-lstm-6h-oof-manifest.json",
+      "sha256": "f7bcf0211cc5b2ffe7067ab01a0930e14d01c10b300fdbb9a2bf8bdb80cfdc6d"
+    },
+    {
+      "path": "data/validation/ta01-lstm-6h-oof-train-predictions.csv",
+      "sha256": "1642314ac880ac382c49fe8907d854e0347f94687b645cd5b35003d3a4bc2659"
+    },
+    {
+      "path": "data/validation/ta01-oof-all-splits-comparison.json",
+      "sha256": "9307f4fafcabbbd2c6b08bfacf34b6db3f591f9bc063f02d847f25e1ff73182b"
+    },
+    {
+      "path": "data/validation/ta01-oof-comparison-bootstrap.json",
+      "sha256": "a74b91511bf6e3a2596bf2a9342da11e9000a89e5a5defa6d94240044e94a11e"
+    },
+    {
+      "path": "data/validation/ta01-oof-corrector-ablation.json",
+      "sha256": "874548548cf4b4389cb599cd88cb89f254bb4dd792555be6f4ddf639914d883e"
+    },
+    {
+      "path": "data/validation/ta01-oof-seed-sensitivity-all-splits.json",
+      "sha256": "64c95d1d0a5a3fa205c7283c37ddaa0f5095462a53eab39953d566b67f121833"
+    },
+    {
+      "path": "data/validation/ta01-oof-seed-sensitivity.json",
+      "sha256": "314a62dc0461bce5d9befc55f9c5f25fa3f4e9d79dcfb65b0be3a6b777d87335"
+    },
+    {
+      "path": "data/validation/ta01-oof-target-regime-summary.json",
+      "sha256": "6621b9ee69b2ac4c8bed5fd0adbd26744d30cbe6a00161b509b0925f6fef956c"
+    },
+    {
+      "path": "data/validation/ta01-primary-influence-and-target-regimes.json",
+      "sha256": "54a69cc204015be93ae36687ddc800f1592cfd881708b4cf8fd872cffd761674"
+    },
+    {
+      "path": "data/validation/ta01-primary-lstm-1h-oof-s20261031-manifest.json",
+      "sha256": "90ae829465875790daf57f26c52357a066855565d0cde00c618fa6e48ca68efd"
+    },
+    {
+      "path": "data/validation/ta01-primary-lstm-1h-oof-s20261031-train-predictions.csv",
+      "sha256": "827e101a5106d72c172d0a7b98d9bd3612e207d8fff5032d41cc1686ca90b9cc"
+    },
+    {
+      "path": "data/validation/ta01-primary-lstm-1h-oof-s20261032-manifest.json",
+      "sha256": "d0d9e53580e8fa5c251aed47cc052426991c6044305c264ff0db7ec5a7625a31"
+    },
+    {
+      "path": "data/validation/ta01-primary-lstm-1h-oof-s20261032-train-predictions.csv",
+      "sha256": "7356db17d906b0ae5f95128f7f4200a8a47c0a0868e6c4472557fc1642a19201"
+    },
+    {
+      "path": "data/validation/ta01-primary-lstm-6h-oof-s20261031-manifest.json",
+      "sha256": "206985d2862219951680b2b703c2ee9161f85306b21676031bc75175519f381b"
+    },
+    {
+      "path": "data/validation/ta01-primary-lstm-6h-oof-s20261031-train-predictions.csv",
+      "sha256": "d9a85524d6d0ff5aa3fadb527a1f4eb9545e247e6f7318cbf775082b87e27552"
+    },
+    {
+      "path": "data/validation/ta01-primary-lstm-6h-oof-s20261032-manifest.json",
+      "sha256": "dd677f7ea990d99e77091385873caecb1846232dc5617e5feb605b04c20666b9"
+    },
+    {
+      "path": "data/validation/ta01-primary-lstm-6h-oof-s20261032-train-predictions.csv",
+      "sha256": "07e1c4b180313c1a886af3efe595b3d4d52c8ff4d9d7a7b13889993d952ef9fb"
+    },
+    {
+      "path": "data/validation/ta01-proportional-rainfall-baseline-predictions.csv",
+      "sha256": "c5509acec5a5c80227355742c730406c7e7676bcdf2029800e763112d4d0e1b6"
+    },
+    {
+      "path": "data/validation/ta01-proportional-rainfall-baseline.json",
+      "sha256": "1ba909fe17823185be21582a3f2e014ffe4f5ae25869bff774d2913359ffc03d"
+    },
+    {
+      "path": "data/validation/ta01-robustness-repeated-draws.csv",
+      "sha256": "f5121c71b5be844d80f9bf2488a94ba5888dbc6667b673de7ebb6e27afd47c95"
+    },
+    {
+      "path": "data/validation/ta01-robustness-repeated.json",
+      "sha256": "1c7795f9f70ac3b13c96450a0650e19951b92bba9d2b87930ba5ec86ca664f57"
+    },
+    {
+      "path": "data/validation/ta01-rounding-sensitivity.json",
+      "sha256": "d0cddc5c8d53033167f1fcb42db8720313aaa0da7e0a1cb7073236643e0aeeb1"
+    },
+    {
+      "path": "data/validation/ta01-solver-tolerance-retrained-comparison.json",
+      "sha256": "8af000043be3b5afa277a3c3eb888ec2195becefb2f091920573ce5bafb8f388"
+    },
+    {
+      "path": "data/validation/ta01-solver-tolerance-sensitivity.json",
+      "sha256": "868dfc96403c2dca2e471a814780cf3a4197eb0064e37f313828be5ce8d8f6c2"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-baseline-1h-test-predictions.csv",
+      "sha256": "f01cd2589125b96d9468c347363e61961d4eb839a3058d7ca60f14d057c48732"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-baseline-1h.json",
+      "sha256": "b7149409395ccd1f32613118f118a8f5ebac0de50eb9a4ed8ca0242c11b1f29e"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-baseline-6h-test-predictions.csv",
+      "sha256": "85e63336218794a00a4de26f9b4b7d969f95d0827ae55d8ca3326150968b85d6"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-baseline-6h.json",
+      "sha256": "ede1a9f21865936f8757b4f85d3855ab39a678d579331f2b24b663698bdcc3c8"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-hybrid-1h-predictions.csv",
+      "sha256": "eb2d59b066198f049f3f73f9a0fd1c6faa8b6dd577ab5f5d20f0cc706dca8569"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-hybrid-1h-s20261031-predictions.csv",
+      "sha256": "74b1e7d63efe6a0dd0e029ea68b17e50a4d6227153c689362628ade10eaf1a2f"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-hybrid-1h-s20261032-predictions.csv",
+      "sha256": "360412a28f6bc4e932aa69f4733cbff0a7c06ce72a0d07118bd2a74b2f3086c5"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-hybrid-6h-predictions.csv",
+      "sha256": "689f6922821373975ccc75285f715964cc0175daa8e345cd3c77a161018cd1fc"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-hybrid-6h-s20261031-predictions.csv",
+      "sha256": "e57957f8077e7e01882596b72a98904a5b019a0d200b7a85c7ea9069e30d9061"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-hybrid-6h-s20261032-predictions.csv",
+      "sha256": "764b513ee9e2d500db031ddc31827a879227c2cd33060fa8223fa99ae553bb2f"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-1h-oof-manifest.json",
+      "sha256": "d3913902c616aec4dd82436d0b5f5cc7bbfb3b831d55e626e2da76e959303dfa"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-1h-oof-s20261031-manifest.json",
+      "sha256": "38174a162134e4b2b06704c28dd7a29d24b805787ba21612fab3f6cc228e2afc"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-1h-oof-s20261031-train.csv",
+      "sha256": "dc3b93d8f77e0bcc002ac50f71552c754c4b5048673c1934cff5d3e88d2f3ddb"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-1h-oof-s20261032-manifest.json",
+      "sha256": "5fdecf57689326b5254d7dae00a10a640d2bcf1540f14e7c1e6e77448851a243"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-1h-oof-s20261032-train.csv",
+      "sha256": "5650583695a8337c29fd7c574363b63058810c45c8ee2bc85f42414a9a916b6c"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-1h-oof-train.csv",
+      "sha256": "146bcf0401807732c313fd7d1e24967f104ac3792981ca7f8a05094edb75e20e"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-1h-predictions.csv",
+      "sha256": "60d8ea98a4e634fb29623d485d5744b1e0a60a0d228a82f95d59b56e85856233"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-6h-oof-manifest.json",
+      "sha256": "c76f622ca7abe68dddac463f14623699f56108e3f6b5cffb81e98a4eaf4f2a89"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-6h-oof-s20261031-manifest.json",
+      "sha256": "b21df10594fca7f32ffceefcdc4fe9954d92f2f6284bc83bc8e9a5d8d806f4e3"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-6h-oof-s20261031-train.csv",
+      "sha256": "9e55fc3533382d32020a50f11c4db199ed8196835ef4bb4f3b9be3969ad15000"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-6h-oof-s20261032-manifest.json",
+      "sha256": "379648cee3ecd6b5100bf10f940e70dafb53835b76da1fcc41ec869503ab1949"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-6h-oof-s20261032-train.csv",
+      "sha256": "5ad8ac6a4d64d30975133d0f2dd3a8b2ffb51dfb0ea7010aa076944317835d01"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-6h-oof-train.csv",
+      "sha256": "4aa713ecd910ec840414303c1a07cce091884f698eced46067dd862460cd5bd7"
+    },
+    {
+      "path": "data/validation/ta01-tol1e-6-lstm-6h-predictions.csv",
+      "sha256": "5d1a2c766f32ca8d148680e05cf61cb2123b6ec7ac12ba63040d919d862cee5f"
+    },
+    {
+      "path": "scripts/create-ta01-supplement-manifest.py",
+      "sha256": "726269dee932112e82a043012127d51272c0c8a976e4368212c97853ecadf1a2"
+    },
+    {
+      "path": "scripts/evaluate-ta01-oof-all-splits.py",
+      "sha256": "62ff1d70baef223da57288dcf9f7b3e5a37d9c2375435ed2de78af9988c9d589"
+    },
+    {
+      "path": "scripts/evaluate-ta01-oof-comparison.py",
+      "sha256": "d31b4d7e7247c5daee8afe12ec58096f5479e56990ba6d6a8dec60ef545e0610"
+    },
+    {
+      "path": "scripts/evaluate-ta01-oof-corrector-ablation.py",
+      "sha256": "7b194301cced87e30dabe3d2e96de7dc635055eefa01e2dad673225ced0cb9ce"
+    },
+    {
+      "path": "scripts/evaluate-ta01-oof-seed-sensitivity-all-splits.py",
+      "sha256": "08e6b64c69332fd7f064404c669e08f331e6e9cf172792ad582e0ff0da75f281"
+    },
+    {
+      "path": "scripts/evaluate-ta01-oof-seed-sensitivity.py",
+      "sha256": "104778a05ca0e363f00edd56846f0f016e4d7c4372fae9084a4dbb8b9a5c3c36"
+    },
+    {
+      "path": "scripts/evaluate-ta01-oof-target-regimes.py",
+      "sha256": "b6dcd3c91df0bd5906f6a98862d4f6aa7e52be4c789744fb305658773a1ed5f8"
+    },
+    {
+      "path": "scripts/evaluate-ta01-primary-influence-and-target-regimes.py",
+      "sha256": "08415babda2bdb604126e7a36e7b6f962a31b28d08388dc790d81f657a49f5fc"
+    },
+    {
+      "path": "scripts/evaluate-ta01-proportional-rainfall-baseline.py",
+      "sha256": "4285f9d098d17ec8f4ea2e95cd542a208e8a96ccf812e1be53665a9c9c0c5faf"
+    },
+    {
+      "path": "scripts/evaluate-ta01-robustness-repeated.py",
+      "sha256": "0973e65068184d6915b66626a14aaac607909b91d1edeaa3b06bc93e38e48927"
+    },
+    {
+      "path": "scripts/evaluate-ta01-rounding-sensitivity.py",
+      "sha256": "96cf97e80082971369d57177628292c8526902bbe878e2eb7f12cad224e3dfce"
+    },
+    {
+      "path": "scripts/evaluate-ta01-solver-tolerance-retrained.py",
+      "sha256": "8463a5110ed7de98784c2bf9657fe6d0732c0f92baedcb95fdf7541d2ed45c18"
+    },
+    {
+      "path": "scripts/evaluate-ta01-solver-tolerance-sensitivity.py",
+      "sha256": "f3d552d65944616a6742865e4f59ad58d4c87f51d279b7714641f53cdb60badf"
+    },
+    {
+      "path": "scripts/generate-fem-dataset.js",
+      "sha256": "81b6fcb9b63da0ae9c358990c374193c2fc3165efaeabb7cf59f8fda137d3b50"
+    },
+    {
+      "path": "scripts/generate-lstm-oof-predictions.py",
+      "sha256": "a66d19741ccba0904bf1a83dd8a1ac0e3b445e11ee2dd35cb4ba8a47d6b12976"
+    },
+    {
+      "path": "scripts/generate-ta01-review-figures.py",
+      "sha256": "d779ba10ce73dd43722db6db28aca399743fa7bc7e703cd17c16952e82b4f16d"
+    },
+    {
+      "path": "scripts/normalize-ta01-fonts-r5.py",
+      "sha256": "6857fdf6de769c3f4f20b430892c799852620207730a12beb3fbd3735c48ccb3"
+    },
+    {
+      "path": "scripts/render-ta01-review-figures.js",
+      "sha256": "96eabe512a795a84b2a802a29e28a7e2a52a975c7277706186b2720790b8a27b"
+    },
+    {
+      "path": "scripts/revise-ta01-manuscript-r3.py",
+      "sha256": "76531933943224f1788b1a91e3bceae883988d233047f9b17702cca0d5d07a85"
+    },
+    {
+      "path": "scripts/revise-ta01-manuscript-r4.py",
+      "sha256": "d860fc5e38bc62a8538e6a386a96573f55f262a2281435975856bce76f9c11f8"
+    },
+    {
+      "path": "scripts/train-lstm.py",
+      "sha256": "17ca3ad0a6764550b9dac3946f051494341749fa7179ba9f56acafd5b89af35d"
+    },
+    {
+      "path": "scripts/train-physics-guided.py",
+      "sha256": "ce81075869a554cf55b2961872c9e264ec8833c0ecbf42c85c8db8981866c8ea"
+    },
+    {
+      "path": "scripts/verify-ta01-supplement-manifest.py",
+      "sha256": "25231f04ceab944054af854ce839ce5788067108b54f19b61574431ea38e4325"
+    },
+    {
+      "path": "src/core/fem-2d.js",
+      "sha256": "b9e8c543582104c601cef9eb09905a10b5798b82bb0e134943df358ba115a73a"
+    },
+    {
+      "path": "src/core/study-case-ta01.js",
+      "sha256": "8e5e1f86d646507f4975127d7611bbe6da8b00a8fb6050480cc7dd1d51d11859"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="922" viewBox="0 0 2048 922">
+<rect width="100%" height="100%" fill="white"/>
+<text x="1024" y="44" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="34" font-weight="bold" fill="#111">Cobertura empírica de los intervalos en pruebas cronológicas</text>
+<rect x="680" y="77" width="20" height="20" fill="#2878b5"/><text x="710" y="96" font-family="Times New Roman,Times,serif" font-size="24" fill="#222">Todas las fechas</text>
+<rect x="990" y="77" width="20" height="20" fill="#e07a22"/><text x="1020" y="96" font-family="Times New Roman,Times,serif" font-size="24" fill="#222">Lluvia ≥5 mm/día</text>
+<line x1="190" y1="755.0" x2="1990" y2="755.0" stroke="#e4e4e4"/>
+<text x="175" y="762.0" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="21" fill="#333">0</text>
+<line x1="190" y1="645.9" x2="1990" y2="645.9" stroke="#e4e4e4"/>
+<text x="175" y="652.9" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="21" fill="#333">20</text>
+<line x1="190" y1="536.8" x2="1990" y2="536.8" stroke="#e4e4e4"/>
+<text x="175" y="543.8" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="21" fill="#333">40</text>
+<line x1="190" y1="427.7" x2="1990" y2="427.7" stroke="#e4e4e4"/>
+<text x="175" y="434.7" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="21" fill="#333">60</text>
+<line x1="190" y1="318.6" x2="1990" y2="318.6" stroke="#e4e4e4"/>
+<text x="175" y="325.6" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="21" fill="#333">80</text>
+<line x1="190" y1="209.5" x2="1990" y2="209.5" stroke="#e4e4e4"/>
+<text x="175" y="216.5" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="21" fill="#333">100</text>
+<line x1="190" y1="236.8" x2="1990" y2="236.8" stroke="#555" stroke-width="3" stroke-dasharray="9 7"/>
+<text x="1986" y="224.8" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="19" fill="#555">Nivel nominal 95 %</text>
+<line x1="190" y1="755" x2="1990" y2="755" stroke="#222" stroke-width="2"/>
+<text x="47" y="455.0" transform="rotate(-90 47 455.0)" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="27" fill="#222">Cobertura empírica (%)</text>
+<rect x="299.0" y="220.3" width="74" height="534.7" rx="3" fill="#2878b5"/>
+<text x="336" y="207.3" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="21" font-weight="bold" fill="#222">98.0%</text>
+<text x="336" y="784" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="17" fill="#444">82 f. / 1476 v.</text>
+<rect x="467.0" y="573.2" width="74" height="181.8" rx="3" fill="#e07a22"/>
+<text x="504" y="560.2" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="21" font-weight="bold" fill="#222">33.3%</text>
+<text x="504" y="784" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="17" fill="#444">2 f. / 36 v.</text>
+<text x="420" y="827" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="24" font-weight="bold" fill="#222">2024 · 1 h</text>
+<rect x="759.0" y="214.2" width="74" height="540.8" rx="3" fill="#2878b5"/>
+<text x="796" y="201.2" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="21" font-weight="bold" fill="#222">99.2%</text>
+<text x="796" y="784" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="17" fill="#444">82 f. / 1066 v.</text>
+<rect x="927.0" y="335.4" width="74" height="419.6" rx="3" fill="#e07a22"/>
+<text x="964" y="322.4" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="21" font-weight="bold" fill="#222">76.9%</text>
+<text x="964" y="784" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="17" fill="#444">2 f. / 26 v.</text>
+<text x="880" y="827" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="24" font-weight="bold" fill="#222">2024 · 6 h</text>
+<rect x="1209.0" y="242.2" width="74" height="512.8" rx="3" fill="#2878b5"/>
+<text x="1246" y="229.2" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="21" font-weight="bold" fill="#222">94.0%</text>
+<text x="1246" y="784" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="17" fill="#444">76 f. / 1404 v.</text>
+<rect x="1377.0" y="431.8" width="74" height="323.2" rx="3" fill="#e07a22"/>
+<text x="1414" y="418.8" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="21" font-weight="bold" fill="#222">59.3%</text>
+<text x="1414" y="784" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="17" fill="#444">3 f. / 54 v.</text>
+<text x="1330" y="827" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="24" font-weight="bold" fill="#222">2025 · 1 h</text>
+<rect x="1649.0" y="252.6" width="74" height="502.4" rx="3" fill="#2878b5"/>
+<text x="1686" y="239.6" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="21" font-weight="bold" fill="#222">92.1%</text>
+<text x="1686" y="784" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="17" fill="#444">76 f. / 1014 v.</text>
+<rect x="1817.0" y="517.2" width="74" height="237.8" rx="3" fill="#e07a22"/>
+<text x="1854" y="504.2" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="21" font-weight="bold" fill="#222">43.6%</text>
+<text x="1854" y="784" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="17" fill="#444">3 f. / 39 v.</text>
+<text x="1770" y="827" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="24" font-weight="bold" fill="#222">2025 · 6 h</text>
+<text x="1090.0" y="900" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#444">f. = fechas; v. = ventanas de pronóstico. La lluvia intensa comprende pocas fechas.</text>
+</svg>

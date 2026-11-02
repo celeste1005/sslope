@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="922" viewBox="0 0 2048 922">
+<rect width="100%" height="100%" fill="white"/>
+<line x1="130" y1="700.0" x2="970" y2="700.0" stroke="#e6e6e6"/>
+<text x="112" y="707.0" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">0</text>
+<line x1="130" y1="611.7" x2="970" y2="611.7" stroke="#e6e6e6"/>
+<text x="112" y="618.7" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">0.01</text>
+<line x1="130" y1="523.3" x2="970" y2="523.3" stroke="#e6e6e6"/>
+<text x="112" y="530.3" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">0.02</text>
+<line x1="130" y1="435.0" x2="970" y2="435.0" stroke="#e6e6e6"/>
+<text x="112" y="442.0" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">0.03</text>
+<line x1="130" y1="346.7" x2="970" y2="346.7" stroke="#e6e6e6"/>
+<text x="112" y="353.7" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">0.04</text>
+<line x1="130" y1="258.3" x2="970" y2="258.3" stroke="#e6e6e6"/>
+<text x="112" y="265.3" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">0.05</text>
+<line x1="130" y1="170.0" x2="970" y2="170.0" stroke="#e6e6e6"/>
+<text x="112" y="177.0" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">0.06</text>
+<line x1="130.0" y1="170" x2="130.0" y2="700" stroke="#f0f0f0"/>
+<text x="130.0" y="730" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">0</text>
+<line x1="306.8" y1="170" x2="306.8" y2="700" stroke="#f0f0f0"/>
+<text x="306.8" y="730" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">200</text>
+<line x1="483.7" y1="170" x2="483.7" y2="700" stroke="#f0f0f0"/>
+<text x="483.7" y="730" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">400</text>
+<line x1="660.5" y1="170" x2="660.5" y2="700" stroke="#f0f0f0"/>
+<text x="660.5" y="730" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">600</text>
+<line x1="837.4" y1="170" x2="837.4" y2="700" stroke="#f0f0f0"/>
+<text x="837.4" y="730" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">800</text>
+<text x="550.0" y="110" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" font-weight="bold" fill="#111">a) Magnitud calculada</text>
+<line x1="130" y1="700" x2="970" y2="700" stroke="#222" stroke-width="2"/>
+<polyline fill="none" stroke="#2878b5" stroke-width="5" points="166.3,228.5 194.5,346.9 260.0,349.3 348.4,387.5 453.6,444.5 590.7,416.7 746.3,419.5 923.1,438.9"/>
+<circle cx="166.3" cy="228.5" r="11" fill="#2878b5"/>
+<circle cx="194.5" cy="346.9" r="11" fill="#2878b5"/>
+<circle cx="260.0" cy="349.3" r="11" fill="#2878b5"/>
+<circle cx="348.4" cy="387.5" r="11" fill="#2878b5"/>
+<circle cx="453.6" cy="444.5" r="11" fill="#2878b5"/>
+<circle cx="590.7" cy="416.7" r="11" fill="#2878b5"/>
+<circle cx="746.3" cy="419.5" r="11" fill="#2878b5"/>
+<circle cx="923.1" cy="438.9" r="11" fill="#2878b5"/>
+<text x="550.0" y="767" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="22" fill="#222">Nodos de malla</text>
+<text x="45" y="435.0" transform="rotate(-90 45 435.0)" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="22" fill="#222">Desplazamiento máximo inducido por lluvia (mm)</text>
+<line x1="1090" y1="700.0" x2="1930" y2="700.0" stroke="#e6e6e6"/>
+<text x="1072" y="707.0" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">0</text>
+<line x1="1090" y1="611.7" x2="1930" y2="611.7" stroke="#e6e6e6"/>
+<text x="1072" y="618.7" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">15</text>
+<line x1="1090" y1="523.3" x2="1930" y2="523.3" stroke="#e6e6e6"/>
+<text x="1072" y="530.3" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">30</text>
+<line x1="1090" y1="435.0" x2="1930" y2="435.0" stroke="#e6e6e6"/>
+<text x="1072" y="442.0" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">45</text>
+<line x1="1090" y1="346.7" x2="1930" y2="346.7" stroke="#e6e6e6"/>
+<text x="1072" y="353.7" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">60</text>
+<line x1="1090" y1="258.3" x2="1930" y2="258.3" stroke="#e6e6e6"/>
+<text x="1072" y="265.3" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">75</text>
+<line x1="1090" y1="170.0" x2="1930" y2="170.0" stroke="#e6e6e6"/>
+<text x="1072" y="177.0" text-anchor="end" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">90</text>
+<line x1="1090.0" y1="170" x2="1090.0" y2="700" stroke="#f0f0f0"/>
+<text x="1090.0" y="730" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">0</text>
+<line x1="1266.8" y1="170" x2="1266.8" y2="700" stroke="#f0f0f0"/>
+<text x="1266.8" y="730" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">200</text>
+<line x1="1443.7" y1="170" x2="1443.7" y2="700" stroke="#f0f0f0"/>
+<text x="1443.7" y="730" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">400</text>
+<line x1="1620.5" y1="170" x2="1620.5" y2="700" stroke="#f0f0f0"/>
+<text x="1620.5" y="730" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">600</text>
+<line x1="1797.4" y1="170" x2="1797.4" y2="700" stroke="#f0f0f0"/>
+<text x="1797.4" y="730" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="20" fill="#333">800</text>
+<text x="1510.0" y="110" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="30" font-weight="bold" fill="#111">b) Referencia interna</text>
+<line x1="1090" y1="700" x2="1930" y2="700" stroke="#222" stroke-width="2"/>
+<polyline fill="none" stroke="#2878b5" stroke-width="5" points="1126.3,225.5 1154.5,492.6 1220.0,498.0 1308.4,584.1 1413.6,687.5 1550.7,650.0 1706.3,656.4 1883.1,700.0"/>
+<circle cx="1126.3" cy="225.5" r="11" fill="#2878b5"/>
+<circle cx="1154.5" cy="492.6" r="11" fill="#2878b5"/>
+<circle cx="1220.0" cy="498.0" r="11" fill="#2878b5"/>
+<circle cx="1308.4" cy="584.1" r="11" fill="#2878b5"/>
+<circle cx="1413.6" cy="687.5" r="11" fill="#2878b5"/>
+<circle cx="1550.7" cy="650.0" r="11" fill="#2878b5"/>
+<circle cx="1706.3" cy="656.4" r="11" fill="#2878b5"/>
+<circle cx="1883.1" cy="700.0" r="11" fill="#2878b5"/>
+<text x="1510.0" y="767" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="22" fill="#222">Nodos de malla</text>
+<text x="1005" y="435.0" transform="rotate(-90 1005 435.0)" text-anchor="middle" font-family="Times New Roman,Times,serif" font-size="22" fill="#222">Diferencia frente a malla 48 × 32 (%)</text>
+</svg>

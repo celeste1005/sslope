@@ -1,0 +1,337 @@
+{
+  "method": "Regenerate the identical 500 LHS scenarios (seed 20260915, mesh 30x20) while changing only the PCG relative tolerance; compare saved 24-hour FEM outputs by scenario and hour.",
+  "base": "data/generated/ta01-fem-500.csv, default PCG relative tolerance 1e-8.",
+  "variants": {
+    "1e-6": {
+      "nRows": 12000,
+      "baseTolerance": 1e-08,
+      "variantTolerance": 1e-06,
+      "fields": {
+        "rainfall_induced_max_displacement_mm": {
+          "maxAbsoluteDifference": 1.0000000000003062e-05,
+          "meanAbsoluteDifference": 3.7500000000000064e-08,
+          "changedRows": 45,
+          "maxRelativeDifference": 1e+25
+        },
+        "gravity_total_max_displacement_mm": {
+          "maxAbsoluteDifference": 2.0000000006348273e-05,
+          "meanAbsoluteDifference": 2.3841666666147473e-06,
+          "changedRows": 2824,
+          "maxRelativeDifference": 6.948406000658308e-07
+        },
+        "crest_displacement_mm": {
+          "maxAbsoluteDifference": 2.0000000006348273e-05,
+          "meanAbsoluteDifference": 2.3841666666147473e-06,
+          "changedRows": 2824,
+          "maxRelativeDifference": 6.948406000658308e-07
+        },
+        "toe_displacement_mm": {
+          "maxAbsoluteDifference": 1.9999999999242846e-05,
+          "meanAbsoluteDifference": 1.8458333333255898e-06,
+          "changedRows": 2191,
+          "maxRelativeDifference": 2.612255133751515e-06
+        },
+        "maximum_pore_pressure_kpa": {
+          "maxAbsoluteDifference": 0.0,
+          "meanAbsoluteDifference": 0.0,
+          "changedRows": 0,
+          "maxRelativeDifference": 0.0
+        },
+        "mean_effective_stress_kpa": {
+          "maxAbsoluteDifference": 0.00010000000008858478,
+          "meanAbsoluteDifference": 6.024999999771315e-06,
+          "changedRows": 723,
+          "maxRelativeDifference": 3.5336300867010755e-07
+        },
+        "mohr_coulomb_safety_index": {
+          "maxAbsoluteDifference": 0.00010000000000021103,
+          "meanAbsoluteDifference": 5.41666666666718e-07,
+          "changedRows": 65,
+          "maxRelativeDifference": 0.00010213461342047695
+        }
+      },
+      "solverResidual": {
+        "baseMaximum": 9.999502e-09,
+        "variantMaximum": 9.999471e-07,
+        "baseMean": 8.964840282749999e-09,
+        "variantMean": 9.18208550275e-07
+      },
+      "testPredictionSensitivity": {
+        "primary": {
+          "1": {
+            "lstm": {
+              "baseMaeMm": 8.576859259259262e-06,
+              "variantTargetMaeMm": 8.589200000000002e-06,
+              "maeChangeMm": 1.2340740740740319e-08
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 7.979474074074067e-06,
+              "variantTargetMaeMm": 7.997829629629623e-06,
+              "maeChangeMm": 1.835555555555571e-08
+            },
+            "oofHybrid": {
+              "baseMaeMm": 4.8570444444444485e-06,
+              "variantTargetMaeMm": 4.866688888888893e-06,
+              "maeChangeMm": 9.644444444444698e-09
+            }
+          },
+          "6": {
+            "lstm": {
+              "baseMaeMm": 6.332481025641027e-05,
+              "variantTargetMaeMm": 6.332481025641027e-05,
+              "maeChangeMm": 0.0
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 6.176289230769232e-05,
+              "variantTargetMaeMm": 6.176289230769232e-05,
+              "maeChangeMm": 0.0
+            },
+            "oofHybrid": {
+              "baseMaeMm": 6.267695384615384e-05,
+              "variantTargetMaeMm": 6.267695384615384e-05,
+              "maeChangeMm": 0.0
+            }
+          }
+        },
+        "backtest-2024": {
+          "1": {
+            "lstm": {
+              "baseMaeMm": 4.349180216802168e-06,
+              "variantTargetMaeMm": 4.407730352303523e-06,
+              "maeChangeMm": 5.855013550135522e-08
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 4.402113821138212e-06,
+              "variantTargetMaeMm": 4.461029810298103e-06,
+              "maeChangeMm": 5.891598915989087e-08
+            },
+            "oofHybrid": {
+              "baseMaeMm": 5.534647696476966e-06,
+              "variantTargetMaeMm": 5.589661246612468e-06,
+              "maeChangeMm": 5.501355013550211e-08
+            }
+          },
+          "6": {
+            "lstm": {
+              "baseMaeMm": 2.909470919324578e-05,
+              "variantTargetMaeMm": 2.9131744840525327e-05,
+              "maeChangeMm": 3.7035647279548035e-08
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 2.9635675422138832e-05,
+              "variantTargetMaeMm": 2.9701716697936203e-05,
+              "maeChangeMm": 6.604127579737119e-08
+            },
+            "oofHybrid": {
+              "baseMaeMm": 3.427814258911819e-05,
+              "variantTargetMaeMm": 3.433442776735459e-05,
+              "maeChangeMm": 5.6285178236400134e-08
+            }
+          }
+        },
+        "chronological": {
+          "1": {
+            "lstm": {
+              "baseMaeMm": 5.398504273504273e-06,
+              "variantTargetMaeMm": 5.417037037037037e-06,
+              "maeChangeMm": 1.853276353276367e-08
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 5.193354700854702e-06,
+              "variantTargetMaeMm": 5.210149572649574e-06,
+              "maeChangeMm": 1.6794871794871938e-08
+            },
+            "oofHybrid": {
+              "baseMaeMm": 8.167037037037037e-06,
+              "variantTargetMaeMm": 8.178660968660969e-06,
+              "maeChangeMm": 1.1623931623931788e-08
+            }
+          },
+          "6": {
+            "lstm": {
+              "baseMaeMm": 5.768706114398422e-05,
+              "variantTargetMaeMm": 5.768706114398422e-05,
+              "maeChangeMm": 0.0
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 5.502379684418146e-05,
+              "variantTargetMaeMm": 5.502379684418146e-05,
+              "maeChangeMm": 0.0
+            },
+            "oofHybrid": {
+              "baseMaeMm": 7.618615384615385e-05,
+              "variantTargetMaeMm": 7.616642998027613e-05,
+              "maeChangeMm": -1.972386587772144e-08
+            }
+          }
+        }
+      }
+    },
+    "1e-10": {
+      "nRows": 12000,
+      "baseTolerance": 1e-08,
+      "variantTolerance": 1e-10,
+      "fields": {
+        "rainfall_induced_max_displacement_mm": {
+          "maxAbsoluteDifference": 0.0,
+          "meanAbsoluteDifference": 0.0,
+          "changedRows": 0,
+          "maxRelativeDifference": 0.0
+        },
+        "gravity_total_max_displacement_mm": {
+          "maxAbsoluteDifference": 1.0000000003174137e-05,
+          "meanAbsoluteDifference": 2.3333333333042107e-08,
+          "changedRows": 28,
+          "maxRelativeDifference": 3.7877927015376253e-07
+        },
+        "crest_displacement_mm": {
+          "maxAbsoluteDifference": 1.0000000003174137e-05,
+          "meanAbsoluteDifference": 2.3333333333042107e-08,
+          "changedRows": 28,
+          "maxRelativeDifference": 3.7877927015376253e-07
+        },
+        "toe_displacement_mm": {
+          "maxAbsoluteDifference": 1.000000000139778e-05,
+          "meanAbsoluteDifference": 4.166666666730971e-09,
+          "changedRows": 5,
+          "maxRelativeDifference": 1.2940343722069371e-06
+        },
+        "maximum_pore_pressure_kpa": {
+          "maxAbsoluteDifference": 0.0,
+          "meanAbsoluteDifference": 0.0,
+          "changedRows": 0,
+          "maxRelativeDifference": 0.0
+        },
+        "mean_effective_stress_kpa": {
+          "maxAbsoluteDifference": 0.0,
+          "meanAbsoluteDifference": 0.0,
+          "changedRows": 0,
+          "maxRelativeDifference": 0.0
+        },
+        "mohr_coulomb_safety_index": {
+          "maxAbsoluteDifference": 0.0,
+          "meanAbsoluteDifference": 0.0,
+          "changedRows": 0,
+          "maxRelativeDifference": 0.0
+        }
+      },
+      "solverResidual": {
+        "baseMaximum": 9.999502e-09,
+        "variantMaximum": 9.999984e-11,
+        "baseMean": 8.964840282749999e-09,
+        "variantMean": 8.692341032333333e-11
+      },
+      "testPredictionSensitivity": {
+        "primary": {
+          "1": {
+            "lstm": {
+              "baseMaeMm": 8.576859259259262e-06,
+              "variantTargetMaeMm": 8.576859259259262e-06,
+              "maeChangeMm": 0.0
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 7.979474074074067e-06,
+              "variantTargetMaeMm": 7.979474074074067e-06,
+              "maeChangeMm": 0.0
+            },
+            "oofHybrid": {
+              "baseMaeMm": 4.8570444444444485e-06,
+              "variantTargetMaeMm": 4.8570444444444485e-06,
+              "maeChangeMm": 0.0
+            }
+          },
+          "6": {
+            "lstm": {
+              "baseMaeMm": 6.332481025641027e-05,
+              "variantTargetMaeMm": 6.332481025641027e-05,
+              "maeChangeMm": 0.0
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 6.176289230769232e-05,
+              "variantTargetMaeMm": 6.176289230769232e-05,
+              "maeChangeMm": 0.0
+            },
+            "oofHybrid": {
+              "baseMaeMm": 6.267695384615384e-05,
+              "variantTargetMaeMm": 6.267695384615384e-05,
+              "maeChangeMm": 0.0
+            }
+          }
+        },
+        "backtest-2024": {
+          "1": {
+            "lstm": {
+              "baseMaeMm": 4.349180216802168e-06,
+              "variantTargetMaeMm": 4.349180216802168e-06,
+              "maeChangeMm": 0.0
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 4.402113821138212e-06,
+              "variantTargetMaeMm": 4.402113821138212e-06,
+              "maeChangeMm": 0.0
+            },
+            "oofHybrid": {
+              "baseMaeMm": 5.534647696476966e-06,
+              "variantTargetMaeMm": 5.534647696476966e-06,
+              "maeChangeMm": 0.0
+            }
+          },
+          "6": {
+            "lstm": {
+              "baseMaeMm": 2.909470919324578e-05,
+              "variantTargetMaeMm": 2.909470919324578e-05,
+              "maeChangeMm": 0.0
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 2.9635675422138832e-05,
+              "variantTargetMaeMm": 2.9635675422138832e-05,
+              "maeChangeMm": 0.0
+            },
+            "oofHybrid": {
+              "baseMaeMm": 3.427814258911819e-05,
+              "variantTargetMaeMm": 3.427814258911819e-05,
+              "maeChangeMm": 0.0
+            }
+          }
+        },
+        "chronological": {
+          "1": {
+            "lstm": {
+              "baseMaeMm": 5.398504273504273e-06,
+              "variantTargetMaeMm": 5.398504273504273e-06,
+              "maeChangeMm": 0.0
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 5.193354700854702e-06,
+              "variantTargetMaeMm": 5.193354700854702e-06,
+              "maeChangeMm": 0.0
+            },
+            "oofHybrid": {
+              "baseMaeMm": 8.167037037037037e-06,
+              "variantTargetMaeMm": 8.167037037037037e-06,
+              "maeChangeMm": 0.0
+            }
+          },
+          "6": {
+            "lstm": {
+              "baseMaeMm": 5.768706114398422e-05,
+              "variantTargetMaeMm": 5.768706114398422e-05,
+              "maeChangeMm": 0.0
+            },
+            "inSampleHybrid": {
+              "baseMaeMm": 5.502379684418146e-05,
+              "variantTargetMaeMm": 5.502379684418146e-05,
+              "maeChangeMm": 0.0
+            },
+            "oofHybrid": {
+              "baseMaeMm": 7.618615384615385e-05,
+              "variantTargetMaeMm": 7.618615384615385e-05,
+              "maeChangeMm": 0.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "limitations": "This checks numerical sensitivity of regenerated FEM outputs, not retrained predictive-model performance, field measurement accuracy, or mesh/model-form uncertainty."
+}

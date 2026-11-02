@@ -1,0 +1,65 @@
+{
+  "method": "Paired bootstrap by test rainfall date, 20,000 draws per horizon, seed 20261030.",
+  "deltaSign": "Positive differences mean the first model has higher MAE than the second model.",
+  "scope": "Exploratory single-seed sensitivity analysis for the primary date-grouped split.",
+  "byHorizon": {
+    "1": {
+      "nWindows": 1350,
+      "nRainfallDates": 75,
+      "maeMm": {
+        "lstm": 8.576859259259264e-06,
+        "inSampleHybrid": 7.979474074074069e-06,
+        "oofHybrid": 4.857044444444449e-06
+      },
+      "pairedDifferencesMm": {
+        "LSTM_minus_OOF_hybrid": {
+          "mean": 3.7198148148148115e-06,
+          "bootstrap95": [
+            -2.0797690740740737e-06,
+            1.4485354259259237e-05
+          ],
+          "datesWhereFirstModelHasHigherMae": 38,
+          "datesWhereSecondModelHasHigherOrEqualMae": 37
+        },
+        "in_sample_hybrid_minus_OOF_hybrid": {
+          "mean": 3.1224296296296197e-06,
+          "bootstrap95": [
+            -2.2264835185185196e-06,
+            1.2958283148148113e-05
+          ],
+          "datesWhereFirstModelHasHigherMae": 30,
+          "datesWhereSecondModelHasHigherOrEqualMae": 45
+        }
+      }
+    },
+    "6": {
+      "nWindows": 975,
+      "nRainfallDates": 75,
+      "maeMm": {
+        "lstm": 6.332481025641026e-05,
+        "inSampleHybrid": 6.176289230769233e-05,
+        "oofHybrid": 6.267695384615384e-05
+      },
+      "pairedDifferencesMm": {
+        "LSTM_minus_OOF_hybrid": {
+          "mean": 6.478564102564181e-07,
+          "bootstrap95": [
+            -4.245364358974358e-06,
+            9.180452307692323e-06
+          ],
+          "datesWhereFirstModelHasHigherMae": 11,
+          "datesWhereSecondModelHasHigherOrEqualMae": 64
+        },
+        "in_sample_hybrid_minus_OOF_hybrid": {
+          "mean": -9.140615384615255e-07,
+          "bootstrap95": [
+            -4.2929794871794855e-06,
+            4.1769728205128285e-06
+          ],
+          "datesWhereFirstModelHasHigherMae": 17,
+          "datesWhereSecondModelHasHigherOrEqualMae": 58
+        }
+      }
+    }
+  }
+}
